@@ -32,7 +32,7 @@ from itertools import islice
 
 # one thread, as the rules ask: keep the linear-algebra library from starting its own (must be set before NumPy loads)
 for _v in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS", "NUMEXPR_NUM_THREADS", "VECLIB_MAXIMUM_THREADS"):
-    os.environ.setdefault(_v, "1")
+    os.environ[_v] = "1"
 
 import numpy as np  # noqa: E402
 
@@ -56,12 +56,14 @@ GAIN_Z = np.array([0, 0.021256890787656885, 0, 0.073248875799799662, 0.129188695
 
 HOP = int(os.environ.get("PF_HOP", 8))   # solver block: rows per velocity sample
 CH = 2048            # rows per piece for per-row work, so that temporaries stay small
+RATE_MAX = 400.0     # Hz: a faster IMU is averaged to at most this rate (a 1 kHz file costs 5x per second otherwise)
 ROW_BUDGET = int(os.environ.get("PF_ROWS", 40000))   # most rows one solve holds; a faster stretch is averaged down
 # size caps of the one solve, so that a long file fits in the same memory as a short one (none binds below about 3 min)
 KNOTS_MAX = int(os.environ.get("PF_KNOTS", 24))      # knots per bias curve; a longer file gets wider knot spacing
 RES_MAX = int(os.environ.get("PF_RES", 200))       # residual rows (normally one per second); a longer file gets one every few seconds
 GAPS_MAX = int(os.environ.get("PF_GAPS", 20))       # dropouts that keep their own velocity step and tilt; shorter ones beyond this are bridged
 DTV = 0.1            # s, velocity track for the post-filter
+TRACK_MAX = 36000    # samples of that track at most (an hour at 0.1 s); longer files get a coarser track
 BRIDGE_HAND, BRIDGE_DRONE = 0.08, 0.25   # s, longest dead run filled by interpolation
 RATE_LIMIT = 0.3     # m/s^2, evidence-chosen accel drift rate above which a drone solve is distrusted
 DEBUG = bool(os.environ.get("PF_DEBUG"))
@@ -278,7 +280,7 @@ def values(chunk):
     what cannot be read is NaN."""
     try:
         a = np.loadtxt(chunk, delimiter=",", dtype=np.float64, ndmin=2)
-        if a.shape[1] < 7:
+        if a.shape[1] != 7:
             raise ValueError
         return a[:, 0].copy(), a[:, 1:7].astype(np.float32)
     except Exception:
@@ -302,29 +304,50 @@ def unit(step):
     return 1e-9 if step >= 1e5 else (1e-6 if step >= 1e2 else (1e-3 if step >= 0.5 else 1.0))
 
 
-def data_lines(path, lo=0, hi=None):
-    """The data lines of the file (stripped), rows lo..hi-1 counted in data rows."""
-    i = -1
-    with open(path, "r") as f:
+def lines_of(path):
+    """The stripped lines of the file: a UTF-8 byte-order mark is dropped, undecodable bytes are replaced."""
+    with open(path, "r", encoding="utf-8-sig", errors="replace") as f:
         for line in f:
-            c = line.strip()
-            if not is_data(c):
-                continue
-            i += 1
-            if i < lo:
-                continue
-            if hi is not None and i >= hi:
-                return
-            yield c
+            yield line.strip()
+
+
+def data_lines(path, lo=0, hi=None):
+    """The data lines of the file (stripped, at most the seven fields used), rows lo..hi-1 counted in data rows."""
+    i = -1
+    for c in lines_of(path):
+        if not is_data(c):
+            continue
+        i += 1
+        if i < lo:
+            continue
+        if hi is not None and i >= hi:
+            return
+        yield ",".join(c.split(",", 7)[:7]) if c.count(",") > 6 else c
 
 
 def num(h):
     """A timestamp's value in file units (int when it is a whole number), or None."""
     try:
         v = int(h) if h.lstrip("+-").isdigit() else float(h)
-        return v if v == v and abs(v) != float("inf") else None
+        return v if abs(v) < 2 ** 63 else None             # NaN and inf fail this test too
     except ValueError:
         return None
+
+
+def usable(v, gyro_first):
+    """Rows that can be used: finite, not all zero, within the gyro (100 rad/s) and accelerometer (1000 m/s^2) limits."""
+    w, a = (v[:, :3], v[:, 3:]) if gyro_first else (v[:, 3:], v[:, :3])
+    return np.isfinite(v).all(1) & (v != 0).any(1) & (np.abs(w).max(1) < 100.0) & (np.abs(a).max(1) < 1000.0)
+
+
+def gravity_first(v):
+    """True when the gyro comes first: the accelerometer is the triplet whose size is near gravity. None if unsure."""
+    nz = np.isfinite(v).all(1) & (v != 0).any(1)
+    if nz.sum() <= 10:
+        return None
+    n1 = float(np.median(np.sqrt((v[nz, :3].astype(np.float64) ** 2).sum(1))))
+    n2 = float(np.median(np.sqrt((v[nz, 3:].astype(np.float64) ** 2).sum(1))))
+    return abs(n2 - 9.81) <= abs(n1 - 9.81)
 
 
 def read_cells(lines, first, last, width, scale):
@@ -337,7 +360,7 @@ def read_cells(lines, first, last, width, scale):
     acc = np.zeros((top + 1, 6), np.float32)
     used = np.zeros(top + 1, np.uint32)
     rows = np.zeros(top + 1, np.uint32)
-    state = dict(prev=0, row=np.full(6, np.nan, np.float32))
+    state = dict(prev=0, row=np.full(6, np.nan, np.float32), gf=True)
     chunk = []
     f0 = float(first)
 
@@ -350,23 +373,25 @@ def read_cells(lines, first, last, width, scale):
         c = np.maximum.accumulate(np.concatenate([[state["prev"]], c]))[1:].astype(np.int64)
         state["prev"] = int(c[-1])
         np.add.at(rows, c, 1)
-        good = np.isfinite(v).all(1) & (v != 0).any(1) & (np.abs(v[:, :3]).max(1) < 100.0) & (np.abs(v[:, 3:]).max(1) < 1000.0)
+        gf = gravity_first(v)
+        if gf is not None:
+            state["gf"] = gf
+        gyro_first = state["gf"]
+        good = usable(v, gyro_first)
         rep = np.zeros(len(v), bool)
         rep[0] = bool((v[0] == state["row"]).all())
         rep[1:] = (v[1:] == v[:-1]).all(1)                # a frozen sensor repeats all six values exactly
         state["row"] = v[-1].copy()
         good &= ~rep
         if good.sum() > 16 and len(v) > 8:                # spikes: far from the median of five rows, as in repair()
-            n1 = float(np.median(np.sqrt((v[good, :3].astype(np.float64) ** 2).sum(1))))
-            n2 = float(np.median(np.sqrt((v[good, 3:].astype(np.float64) ** 2).sum(1))))
-            gyro_first = abs(n2 - 9.81) <= abs(n1 - 9.81)
-            inner = good[2:-2].copy()
+            inner = good[:-4] & good[1:-3] & good[2:-2] & good[3:-1] & good[4:]
             flag = np.zeros(len(v) - 4, bool)
-            for j in range(6):
-                x = v[:, j]
-                dev = np.abs(x[2:-2] - np.median(np.stack([x[:-4], x[1:-3], x[2:-2], x[3:-1], x[4:]]), axis=0))
-                if inner.any():
-                    flag |= dev > 10.0 * 1.4826 * float(np.median(dev[inner])) + (0.02 if gyro_first == (j < 3) else 0.3)
+            if inner.any():
+                for j in range(6):
+                    x = v[:, j]
+                    dev = np.abs(x[2:-2] - np.median(np.stack([x[:-4], x[1:-3], x[2:-2], x[3:-1], x[4:]]), axis=0))
+                    floor = 0.02 if gyro_first == (j < 3) else 0.3
+                    flag |= inner & (dev > 10.0 * 1.4826 * float(np.median(dev[inner])) + floor)
             good[2:-2] &= ~flag
         np.add.at(acc, c[good], v[good])
         np.add.at(used, c[good], 1)
@@ -394,12 +419,10 @@ def spread(chunks, counts):
         rep = counts[base:base + k]
         base += k
         cs = np.cumsum(rep)
-        a = 0
-        while a < k:
-            before = int(cs[a - 1]) if a else 0
-            b = max(a + 1, int(np.searchsorted(cs, before + CH, side="right")))
-            yield np.repeat(P[a:b], rep[a:b], axis=0), np.repeat(Q[a:b], rep[a:b], axis=0)
-            a = b
+        total = int(cs[-1]) if k else 0
+        for r0 in range(0, total, CH):                  # pieces of CH rows, however many rows one cell holds
+            cells = np.searchsorted(cs, np.arange(r0, min(r0 + CH, total)), side="right")
+            yield P[cells], Q[cells]
 
 
 def read_rows(lines, scale):
@@ -423,6 +446,8 @@ def read_rows(lines, scale):
                     else:
                         v = float(h)
                         state["ints"] = False
+                    if not abs(v) < 2 ** 63:              # out of range (or NaN, inf): unreadable
+                        raise ValueError
                     if state["first"] is None:
                         state["first"] = v
                     r[i] = v - state["first"]             # whole numbers subtract exactly before the float conversion
@@ -452,23 +477,40 @@ def read_rows(lines, scale):
     return [t, v]
 
 
-def stamps(path, exact_ns, scale):
-    """The timestamp of every data row, in file order, as the text to write (seconds)."""
-    with open(path, "r") as f:
-        for line in f:
-            c = line.strip()
-            if not is_data(c):
-                continue
-            h = c.split(",", 1)[0].strip()
-            d = h.lstrip("+-")
-            if exact_ns and d.isdigit():
-                d = d.zfill(10)
-                yield ("-" if h[0] == "-" else "") + d[:-9] + "." + d[-9:]
-            else:
-                try:
-                    yield "%.9f" % (float(h) * scale)
-                except ValueError:
-                    yield "0.000000000"
+def header_unit(path):
+    """Seconds per timestamp unit when the header names it (e.g. "#timestamp [ns]"), else None."""
+    for c in lines_of(path):
+        if is_data(c):
+            return None
+        f = c.split(",", 1)[0].lower().replace("\u00b5", "u").replace("\u03bc", "u")
+        for name, sc in (("ns", 1e-9), ("us", 1e-6), ("ms", 1e-3), ("s", 1.0)):
+            if "[" + name + "]" in f or "(" + name + ")" in f:
+                return sc
+    return None
+
+
+def stamps(path, scale):
+    """The timestamp of every data row, in file order, as the text to write: seconds with 9 decimals, converted from the
+    row's own text exactly (integer digits are shifted, decimals use decimal arithmetic). A row whose stamp cannot be
+    read, or is out of range, repeats the stamp before it."""
+    from decimal import Decimal, InvalidOperation
+    k = {1e-9: 9, 1e-6: 6, 1e-3: 3, 1.0: 0}.get(scale)
+    factor = Decimal(repr(scale))
+    prev = "0.000000000"
+    for c in data_lines(path):
+        h = c.split(",", 1)[0].strip()
+        d = h.lstrip("+-")
+        if k is not None and d.isdigit() and len(d) <= 19:
+            d = d.zfill(k + 1)
+            prev = ("-" if h[0] == "-" and d.strip("0") else "") + d[:len(d) - k] + "." + (d[len(d) - k:] + "000000000")[:9]
+        else:
+            try:
+                x = Decimal(h)
+                if x.is_finite() and abs(x) < 2 ** 63:
+                    prev = format((x * factor).quantize(Decimal("1e-9")), "f")
+            except (InvalidOperation, ValueError):
+                pass
+        yield prev
 
 
 # ---------------------------------------------------------------- grid, validity and repair
@@ -476,7 +518,7 @@ class Rows:
     pass
 
 
-def make_grid(t_in, v):
+def make_grid(t_in, v, gyro_first=True):
     """Regular grid at the median sample period. Missing rows are re-inserted as dead rows; a repeated timestamp maps to
     the same grid row. Returns the grid and, for every input row, its grid row."""
     n_in = len(t_in)
@@ -487,8 +529,8 @@ def make_grid(t_in, v):
     n = int(gi[-1]) + 1
     R = Rows()
     R.med = med
-    R.fs = int(round(1.0 / med))
-    good = np.isfinite(v).all(1) & (v != 0).any(1) & (np.abs(v[:, :3]).max(1) < 100.0) & (np.abs(v[:, 3:]).max(1) < 1000.0)
+    R.fs = max(1, int(round(1.0 / med)))
+    good = usable(v, gyro_first)
     rep = np.zeros(n_in, bool)
     rep[1:] = (v[1:] == v[:-1]).all(1)        # a frozen sensor repeats all six values exactly
     good &= ~rep
@@ -587,6 +629,12 @@ def rotor_windows(R):
     win = max(1, R.fs)
     nw = (R.n + win - 1) // win
     on = np.zeros(nw, bool)
+    for w in range(nw):                       # each one-second window judged on its own rows
+        a, b = w * win, min(R.n, (w + 1) * win)
+        if b - a > 5:
+            d3 = np.abs(np.diff(filled(R, R.ac, a, b), 3, axis=0))
+            on[w] = np.median(d3) / (0.6745 * np.sqrt(20.0)) > 0.35
+    return on, win
     for a in range(0, R.n, CH):
         b = min(R.n, a + CH + 3)
         d3 = np.abs(np.diff(filled(R, R.ac, a, b), 3, axis=0))
@@ -618,7 +666,8 @@ def rest_bias(R, g):
         ratio = float((sd / np.maximum(n3(w), 1e-4)).max())
         aN3 = float(n3(a).max())
         if (ratio < 1.8 or sd.max() < 0.006) and a.std(0).max() / max(aN3, 1e-4) < 3.0 and aN3 < 0.3:
-            out.append(w.mean(0))
+            if np.linalg.norm(w.mean(0)) <= 0.2:
+                out.append(w.mean(0))
     if len(out) < 2:
         return None
     return np.median(np.array(out), 0)
@@ -759,7 +808,10 @@ class Solver:
     def gyro_at(self, cg, want, q0=None, knots=None):
         """Attitude at the rows `want` (ascending)."""
         out = np.empty((len(want), 4))
+        stop = int(want[-1]) if len(want) else -1
         for a, b, qc in chain_chunks(self.n, self.t, self.rates(cg, knots), self.q0 if q0 is None else q0):
+            if a > stop:
+                break
             lo, hi = np.searchsorted(want, [a, b])
             if hi > lo:
                 out[lo:hi] = qc[want[lo:hi] - a]
@@ -1215,8 +1267,12 @@ class Solver:
         for a in range(0, self.last + 1, CH):
             b = min(self.last + 1, a + CH)
             ta += filled(R, R.ac, a, b)[sel[a:b]].sum(0)
+        if np.linalg.norm(ta) < 1e-9:
+            return
         ta /= np.linalg.norm(ta)
         e1 = np.cross(ta, [0, 1, 0.0])
+        if np.linalg.norm(e1) < 1e-3:                    # thrust along body y: use the axis least aligned with it
+            e1 = np.cross(ta, np.eye(3)[int(np.argmin(np.abs(ta)))])
         e1 /= np.linalg.norm(e1)
         e2 = np.cross(ta, e1)
         E = np.stack([e1, e2], 1)
@@ -1280,13 +1336,13 @@ class Solver:
 
 
 # ---------------------------------------------------------------- velocity post-filter and the blind tail
-def slow_rms(v):
+def slow_rms(v, dt=DTV):
     """RMS of the 5 s running mean of velocity (one axis at a time, to keep temporaries small)."""
-    k = int(5.0 / DTV)
+    k = max(1, int(round(5.0 / dt)))
     return float(np.sqrt(sum((box(v[:, i], k) ** 2).sum() for i in range(v.shape[1])) / len(v)))
 
 
-def post_filter(v, mode, tau=0.0):
+def post_filter(v, mode, tau=0.0, dt=DTV):
     """mode 0: high-pass with time constant tau. 1: Wiener gain per octave from this file's own band power (drones).
     2: fixed gain per octave (handheld). Works on the mirrored spectrum of the mean-free velocity."""
     n = len(v)
@@ -1298,7 +1354,7 @@ def post_filter(v, mode, tau=0.0):
         x = v[:, i] - mean[i]
         return np.fft.rfft(np.concatenate([x, x[::-1]]))           # n + 1 bins
 
-    f = np.arange(n + 1) / (N * DTV)
+    f = np.arange(n + 1) / (N * dt)
     if mode == 0:
         a = 2 * np.pi * f * tau
         gxy = gz = a * a / (1 + a * a)
@@ -1369,15 +1425,10 @@ def estimate(data, averaged=False):
         yield from still()
         return
     # which triplet is the accelerometer: the one whose size is near gravity
-    nz = (v_in != 0).any(1) & np.isfinite(v_in).all(1)
-    gyro_first = True
-    if nz.sum() > 10:
-        n1 = float(np.median(np.sqrt((v_in[nz, :3].astype(np.float64) ** 2).sum(1))))
-        n2 = float(np.median(np.sqrt((v_in[nz, 3:].astype(np.float64) ** 2).sum(1))))
-        gyro_first = abs(n2 - 9.81) <= abs(n1 - 9.81)
-    del nz
+    gyro_first = gravity_first(v_in)
+    gyro_first = True if gyro_first is None else gyro_first
     mark("read")
-    R, gi = make_grid(t_in, v_in)
+    R, gi = make_grid(t_in, v_in, gyro_first)
     gi = gi.astype(np.int32)
     R.gyro_first = gyro_first
     R.gy, R.ac = (slice(0, 3), slice(3, 6)) if gyro_first else (slice(3, 6), slice(0, 3))
@@ -1419,21 +1470,22 @@ def estimate(data, averaged=False):
     mark("solve")
     dbg("drone", drone, "b0", np.round(b0, 5), "K", S.K, "G", S.G, "Ka", S.Ka, "rate", round(S.rate, 4))
     # velocity track at 10 Hz, self-check, band gains
-    tk = np.arange(S.tb[0], S.tb[-1], DTV)
+    dt = max(DTV, float(S.tb[-1] - S.tb[0]) / TRACK_MAX)     # 0.1 s up to an hour of data
+    tk = np.arange(S.tb[0], S.tb[-1], dt)
     vk = np.stack([np.interp(tk, S.tb, S.v[:, i]) for i in range(3)], 1)
     del S.v
-    check = slow_rms(vk)
+    check = slow_rms(vk, dt)
     c0 = 1.0 if drone else 0.5
     fell = check > c0 or (drone and S.rate > RATE_LIMIT and check > 0.6 * c0)
     if fell:
-        vf = post_filter(vk, 0, 8.0 if drone else 1.0)
+        vf = post_filter(vk, 0, 8.0 if drone else 1.0, dt)
     else:
-        vf = post_filter(vk, 1 if drone else 2)
+        vf = post_filter(vk, 1 if drone else 2, 0.0, dt)
     del vk
     dbg("check", round(check, 3), "fell", fell)
-    v0 = vf[-5:].mean(0)
+    v0 = vf[-max(1, int(round(0.5 / dt))):].mean(0)
     xk = np.cumsum(vf, axis=0, out=vf)        # positions, in the velocity's own array
-    xk *= DTV
+    xk *= dt
     del vf
     # the blind tail: hold plus a damped share of the last velocity
     t_last, x_end = tk[-1], xk[-1].copy()
@@ -1442,7 +1494,7 @@ def estimate(data, averaged=False):
         a0 = max(0, last - int(2.0 * R.fs))
         descend = bool(on[np.arange(a0, last + 1) // win].mean() > 0.5)       # rotors still on: logged flights end by landing
     else:
-        gain, tau = fit_tail(xk)
+        gain, tau = fit_tail(xk) if dt == DTV else (0.0, 0.35)    # coarse: hold
         descend = False
     mark("filter")
     for a, b, q in S.attitudes():
@@ -1459,8 +1511,8 @@ def estimate(data, averaged=False):
             pt[:, 1] += 0.005 * np.sin(th)
             pos[tl] = pt
         lo, hi = np.searchsorted(gi, [a, b])
-        if hi > lo:
-            idx = gi[lo:hi] - a
+        for r0 in range(lo, hi, CH):
+            idx = gi[r0:min(r0 + CH, hi)] - a
             yield pos[idx], q[idx][:, [1, 2, 3, 0]]
     mark("estimate")
 
@@ -1481,10 +1533,15 @@ def probe(path):
             heads.append(v)
         if n >= 4096:
             break
-    if len(heads) < 3:
+    if len(heads) < 2:
         return n, None, None, 0.0, ints
     size = os.path.getsize(path)
-    rows = n if n < 4096 else int(size / max(nbytes / n, 1.0)) + 1
+    rows = n
+    if n >= 4096:                              # at most one row per line: count line ends, a fast pass over bytes
+        rows = 1
+        with open(path, "rb") as f:
+            for block in iter(lambda: f.read(1 << 20), b""):
+                rows += block.count(b"\n")
     last = heads[-1]
     if n >= 4096:
         with open(path, "rb") as f:
@@ -1508,12 +1565,30 @@ def poses_of(path, scale, known):
     k = 1
     if first is not None and step > 0 and last > first:
         k = int(np.ceil(max(n, (last - first) / step + 1) / ROW_BUDGET))
-    dbg("about", n, "rows, averaged by", k)
-    if k > 1:
-        data, counts = read_cells(data_lines(path), first, last, k * step, scale)
-        yield from spread(estimate(data, True), counts)
-    else:
-        yield from estimate(read_rows(data_lines(path), scale))
+        k = max(k, int(np.ceil(1.0 / (step * scale) / RATE_MAX - 1e-9)))    # an IMU faster than RATE_MAX is averaged
+    elif n > ROW_BUDGET:
+        k = 2                                     # no usable step (one repeated stamp): one cell
+    dbg("at most", n, "rows, averaged by", k)
+    if k == 1:
+        data = read_rows(data_lines(path), scale)
+        d = np.diff(data[0])
+        pos = d[d > 0]
+        med = float(np.median(pos)) if len(pos) else 0.005
+        grid = 1 + float(np.maximum(np.rint(d / med), 0).sum())       # the rows make_grid would hold
+        del d, pos
+        if grid <= ROW_BUDGET:
+            yield from estimate(data)
+            return
+        del data                                  # the rate changes inside the file: average it instead
+        dbg("grid of", int(grid), "rows: averaged instead")
+    if first is None:
+        return                                    # no readable stamps: main writes a constant pose for every row
+    span = max(last - first, 0)
+    width = max(step, span / (ROW_BUDGET - 1), 1.0 if span == 0 else 0.0)
+    if k > 1 and step > 0 and span > 0:
+        width = max(width, k * step)
+    data, counts = read_cells(data_lines(path), first, max(last, first), width, scale)
+    yield from spread(estimate(data, True), counts)
 
 
 FMT = "%s %.6f %.6f %.6f %.9f %.9f %.9f %.9f\n"
@@ -1539,10 +1614,10 @@ def main():
     out = args[1] if len(args) > 1 else "estimated_trajectory.txt"
     known = probe(path)
     _, first, last, step, ints = known
-    scale = unit(step) if step > 0 else 1e-9
+    scale = header_unit(path) or (unit(step) if step > 0 else 1e-9)
     dbg("seconds", round((last - first) * scale, 1) if first is not None else 0.0)
     lastp, lastq = np.zeros(3), np.array([0.0, 0.0, 0.0, 1.0])
-    st = stamps(path, bool(ints and scale == 1e-9), scale)    # the input's own rows: one output line for each
+    st = stamps(path, scale)                  # the input's own rows: one output line for each
     with open(out, "w") as f:
         f.write("# timestamp tx ty tz qx qy qz qw\n")
         try:

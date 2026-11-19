@@ -29,8 +29,8 @@ keeps changing.
 3. **`rotor_windows` (what platform is this?).** Rotors shake the accelerometer at high frequency. The third
    difference of the accel cancels slow motion and keeps that vibration. If more than 30% of 1 s windows have it,
    the file is a drone. This identifies a sensor rig, never a sequence. Drones then bridge holes up to 0.25 s.
-4. **`rest_bias`, `window_bias` (gyro calibration).** Drones start from the declared calibration, but only if the file
-   confirms it.
+4. **`rest_bias`, `window_bias` (gyro calibration).** Drones start from the declared calibration, unless the file
+   contradicts it.
    - If the file has a still moment and the gyro there disagrees by more than 0.02 rad/s, we trust the file.
    - If there is no still moment, `window_bias` estimates the bias from the file. In each 4 s window the up direction
      at the start is carried to the end by the gyro and compared with the up direction seen there. The mismatch is
@@ -85,7 +85,8 @@ keeps changing.
 13. **`poses_of`, `read_cells`, `spread` (fast or long files).** Above 40 000 rows, rows are averaged into cells as
     they are read (spikes, frozen and invalid rows left out), the solve runs on the cells, and each input row gets
     its cell's pose (`np.repeat` of the poses by the row count of each cell). Long files also hit the caps of the
-    solve: at most 24 knots per bias curve, 200 residual rows and 20 dropouts with their own velocity step.
+    solve: 25 knots per bias curve, about 200 residual sites and 20 dropouts with their own velocity step. An IMU
+    faster than 400 Hz is averaged too.
 
 ## How we know it is right
 

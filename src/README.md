@@ -27,13 +27,14 @@ Tested with Python 3.12 and NumPy 1.26 and 2.x on Ubuntu 24.04 (WSL 2). The Dock
 
 - Input: EuRoC-format IMU CSV, `timestamp [ns], w_x, w_y, w_z, a_x, a_y, a_z`, header optional. The two sensor
   triplets are told apart by which one carries gravity, so accel-first files work too. Timestamps in ns, us, ms or s.
-- Output: `timestamp tx ty tz qx qy qz qw`, space separated, timestamp in seconds with every nanosecond digit of the
-  input. **Exactly one pose per input row, in the input order; nothing is appended** (FAQ, 17 Nov): the blind 5 s
+- Output: `timestamp tx ty tz qx qy qz qw`, space separated, timestamp in seconds with 9 decimals, converted exactly
+  from each row's own text (unit from the header's `[ns]`/`[us]`/`[ms]`/`[s]`, else from the usual step). **Exactly one pose per input row, in the input order; nothing is appended** (FAQ, 17 Nov): the blind 5 s
   window is already in the input as rows with unusable values, and those rows get the forecast. Duplicated input
   rows keep their duplicated timestamp.
-- Robust to: missing rows (dropouts), duplicated or out-of-order timestamps, NaN / empty / non-numeric values, all-zero
-  or frozen rows, spikes, Windows line ends, extra columns, a missing header. Whatever happens inside the solver, the
-  output always has one finite pose per input row.
+- Robust to: missing rows (dropouts), duplicated, out-of-order or unreadable timestamps, NaN / empty / non-numeric
+  values, all-zero or frozen rows, spikes, a UTF-8 byte-order mark, Windows line ends, extra columns, a missing
+  header, a rate that changes inside the file. Whatever happens inside the solver, the output always has one finite
+  pose per input row. Tested on 72 such inputs, 50 of them written by an independent reviewer.
 
 ## Resources
 
@@ -41,9 +42,9 @@ Limits: 8 MB peak memory (FAQ: measured at the algorithm / heap level), 20 ms pe
 
 | Input | Peak heap of the algorithm | Time per second of IMU (whole process) |
 |---|---|---|
-| EuRoC flights, TUM-VI rooms (200 Hz, 1.4-3 min), organisers' degradation | 2.5-4.8 MB | 3.5-6.1 ms |
+| EuRoC flights, TUM-VI rooms (200 Hz, 1.4-3 min), organisers' degradation | 2.5-4.8 MB | 3.5-5.9 ms |
 | Long walks, 5-24.5 min, and a synthetic 59 min file | 6.1-7.3 MB | 0.6-2.8 ms |
-| 1 kHz IMU | 5.4 MB | 5.8 ms |
+| 1 kHz IMU | 5.4 MB | 6.1 ms |
 
 Peak heap: `tracemalloc` peak while the estimator reads, solves and writes, after Python and NumPy are loaded
 (NumPy reports its array buffers to `tracemalloc`). Time: wall time of the whole `python3 main.py` run, interpreter
@@ -52,8 +53,10 @@ start included. Both are recorded in `metadata.json` by `tools/measure.py`.
 How memory stays bounded: rows are processed in pieces of 2048, the solver works on 8-row blocks with a float32
 Jacobian, poses are written as they are made, and timestamps are re-read from the file at write time. A file faster
 than about 40 000 rows per solve is averaged into cells as it is read (spikes, frozen and invalid rows left out). The
-one least-squares solve has caps that only bind on files longer than about 3 minutes: at most 24 knots per bias curve,
-200 residual rows and 20 dropouts with their own velocity step (shorter extra dropouts are bridged).
+one least-squares solve has caps: 25 knots per bias curve and about 200 residual sites (binding beyond about
+3 minutes) and 20 dropouts with their own velocity step (binding on any file with more than 20; shorter extra
+dropouts are bridged). An IMU faster than 400 Hz, or a rate that changes inside the file, also goes through the
+averaging reader. Very short files are dominated by Python start-up (about 0.1 s).
 
 ## What the estimator does
 

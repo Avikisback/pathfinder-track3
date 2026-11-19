@@ -42,8 +42,10 @@ The whole file is read before any pose is written, so slow sensor errors are sol
    are dropped; holes up to 0.08 s (handheld) or 0.25 s (drone) are interpolated; longer ones stay dropouts.
 2. **Platform.** Rotor vibration in the accelerometer tells a drone from a handheld device.
 3. **Gyro calibration.** A rest period in the file is used when there is one. A drone without one starts from the
-   declared calibration only if the file agrees: the gyro bias across the up direction is estimated from 4 s windows
-   of the file itself, and if it is more than 0.03 rad/s away the file's own estimate is used.
+   declared calibration unless the file disagrees: the gyro bias across the up direction is estimated from 4 s windows
+   of the file itself, and if it is more than 0.03 rad/s away the file's own estimate is used. With fewer than 5 usable
+   windows there is no evidence either way and the declared calibration is kept. A "rest" whose gyro reads over
+   0.2 rad/s is a steady turn, not a bias (the official script's largest bias is 0.008 rad/s), and is not used.
 4. **Attitude.** Gyro integration with a bias curve (linear spline, 8 s knots), first fitted against gravity.
 5. **Self-calibration.** One Levenberg-Marquardt solve finds the gyro and accel bias curves, a tilt for each stretch
    between dropouts and a velocity step at each dropout, such that the 5 s average velocity and the position stay
@@ -56,25 +58,30 @@ The whole file is read before any pose is written, so slow sensor errors are sol
 7. **Blind 5 s.** Hold, plus a damped share of the last velocity. A handheld file fits that share on its own path (how
    well did the velocity at every earlier second predict the next 5 s?). A drone uses 0.5, and descends 0.25 m over
    3 s if its rotors are still on at the cut, because logged flights end by landing; if the self-check failed, it
-   holds. A 5 mm curve keeps the tail from being a straight line, which would break evo's alignment of the tail alone.
+   carries no velocity (the descent still applies). A 5 mm curve keeps the tail from being a straight line, which would break evo's alignment of the tail alone.
 
 **Memory and time are bounded by design**, for any file length or rate:
 - Rows are worked through in pieces of 2048; the solver works on 8-row blocks with a float32 Jacobian that is freed as
   soon as the normal equations hold it; poses are written as they are made; timestamps are re-read at write time.
-- A file faster or longer than 40 000 rows is averaged into cells as it is read (spikes, frozen and invalid rows left
-  out), and every input row gets its cell's pose. Nothing is ever held at the full rate.
-- The one solve has size caps that only bind beyond about 3 minutes: at most 24 knots per bias curve, 200 residual
-  rows, and 20 dropouts with their own velocity step (shorter extra ones are bridged). Cutting long files into
-  separately solved windows was tried and was worse than standing still (see below).
-- Robust to malformed input: NaN, empty or text values, missing header, CRLF, extra columns, out-of-order or duplicated
-  stamps, ns/µs/ms/s units, all-zero files, empty files. Any failure inside the solver still yields one finite pose
-  per row (`experiments/scripts/odd_inputs.py`, 22 cases).
+- An IMU faster than 400 Hz, or a file whose grid would exceed 40 000 rows (long, fast, or a rate that changes inside
+  the file), is averaged into cells as it is read (spikes, frozen and invalid rows left out), and every input row gets
+  its cell's pose, in pieces of 2048 however many rows share a cell. Only the seven fields used are kept per line.
+- The one solve has size caps: 25 knots per bias curve and about 200 residual sites (these bind beyond about
+  3 minutes), and 20 dropouts with their own velocity step (this binds on any file with more than 20 internal
+  dropouts; the shortest extra ones are bridged). A velocity track longer than an hour is coarsened. Cutting long
+  files into separately solved windows was tried and was worse than standing still (see below).
+- Robust to malformed input: NaN, empty or text values, missing header, a UTF-8 byte-order mark, CRLF, extra
+  columns, out-of-order, duplicated or out-of-range stamps, all-zero files, empty files. Timestamps are written from
+  each row's own text exactly, in the unit the header names (`[ns]`, `[us]`, `[ms]`, `[s]`) or else the one the step
+  implies; an unreadable stamp repeats the one before. BLAS is forced to one thread whatever the environment says.
+  Any failure inside the solver still yields one finite pose per row (`experiments/scripts/odd_inputs.py`, 22 cases,
+  and `codex_cases.py`, 50 cases from an independent review: all pass).
 
 ## Declared constants (top of `src/main.py`)
 
 All come from training data only; none names a sequence or a place.
-- Drone gyro calibration: the mean gyro bias of the EuRoC flights, used only if the file confirms it (rest within
-  0.02 rad/s, or the windowed estimate within 0.03 rad/s).
+- Drone gyro calibration: the mean gyro bias of the EuRoC flights, kept unless the file contradicts it (a rest more
+  than 0.02 rad/s away, or the windowed estimate more than 0.03 rad/s away).
 - Rotor drag k = 0.195 /s, IMU lever arm (0.019, 0.016, 0.103) m, rotor-rate term (-0.013, 0.014, 0.030), fitted
   jointly on the EuRoC flights (lever arm within 6 mm across leave-one-out folds).
 - Post-filter: error power per band for drones (EuRoC), gain per band for handheld (TUM-VI rooms 1-5).
@@ -89,14 +96,18 @@ rooms 1-5 (handheld).
 
 | Set (seed 42 unless noted) | ATE, m | still | better than still | RPE 1 s, m (still) | blind 5 s, m (hold) |
 |---|---|---|---|---|---|
-| EuRoC `_sw` | 2.247 | 3.449 | 11 / 11 | 0.315 (0.777) | 0.307 (0.335) |
-| EuRoC `_og` | 2.448 | 3.449 | 11 / 11 | 0.385 (0.777) | 0.323 (0.335) |
+| EuRoC `_sw` | 2.328 | 3.449 | 11 / 11 | 0.317 (0.777) | 0.309 (0.335) |
+| EuRoC `_og` | 2.476 | 3.449 | 11 / 11 | 0.383 (0.777) | 0.321 (0.335) |
 | Rooms `_sw` | 0.515 | 1.096 | 5 / 5 | 0.223 (0.859) | 0.498 (0.490) |
 | Rooms `_og` | 0.530 | 1.096 | 5 / 5 | 0.233 (0.859) | 0.496 (0.490) |
-| EuRoC `_sw`, seeds 1 / 2 / 3 | 2.332 / 2.369 / 2.372 | 3.448 | 11 / 11 each | | |
+| EuRoC `_sw`, seeds 1 / 2 / 3 | 2.191 / 2.210 / 2.186 | 3.448 | 11 / 11 each | | |
 | Rooms `_sw`, seeds 1 / 2 / 3 | 0.561 / 0.486 / 0.508 | 1.096 | 5 / 5 each | | |
-| TUM-VI walks, 22 files of 1.5-24.5 min (never tuned on) | 0.790 | 0.878 | 20 / 22 | 0.467 (0.712) | 0.889 (0.891) | | |
-| Long rooms, 4.7-9.3 min (forward + reversed copies) | 0.721 | 1.096 | 5 / 5 | 0.397 (0.853) | 0.299 (0.301) | | |
+| TUM-VI walks, 22 files of 1.5-24.5 min (never tuned on) | 0.787 | 0.878 | 20 / 22 | 0.456 (0.712) | 0.885 (0.891) |
+| Long rooms, 4.7-9.3 min (forward + reversed copies) | 0.722 | 1.096 | 5 / 5 | 0.396 (0.853) | 0.299 (0.301) |
+| Samsung Odyssey+ headset, 10 recordings, real 1 kHz IMU, calibrated, no degradation | 0.671 | 0.782 | 9 / 10 | 0.232 (0.440) | |
+
+Averaged over the five official EuRoC runs (seed 42 both orders, seeds 1-3) the drone error is 2.278 m against
+3.449 m standing still (-34%); rooms 0.520 m against 1.096 m (-53%).
 
 RPE, the other metric the deck names, has a margin of 2.5 to 4 times over standing still. In rooms a blind-window hold
 is the floor: with the true positions, moving home or to the centre of the path scores no better (`86_endings.py`).
@@ -119,15 +130,27 @@ Time: the whole `python3 main.py` process, interpreter start included, best of t
 
 | Input | Peak heap (limit 8 MB) | Time per second of IMU (limit 20 ms) |
 |---|---|---|
-| EuRoC flights and TUM-VI rooms, 200 Hz, 1.4-3 min | 2.5-4.8 MB | 3.5-6.1 ms |
-| 1 kHz IMU, 2.4 min | 5.4 MB | 5.8 ms |
-| Real walks 5-24.5 min; synthetic 59 min | 6.1-7.3 MB | 0.6-2.8 ms |
+| EuRoC flights and TUM-VI rooms, 200 Hz, 1.4-3 min | 2.5-4.8 MB | 3.5-5.9 ms |
+| 1 kHz IMU, 2.4 min | 5.4 MB | 6.1 ms |
+| 1 kHz drone, 30 s (start-up weighs most on short files) | 2.3 MB | 11.9 ms |
+| Real walks 5-24.5 min; synthetic 59 min | 6.1-7.3 MB | 0.8-2.8 ms |
+
+Very short files are the exception: Python with NumPy takes about 0.1 s to start, which on a file of a few seconds is
+more than 20 ms per second whatever the estimator does.
 
 The laptop these were measured on slows down up to 3x when hot (after half an hour of 8-process scoring the same
-files took 17-22 ms per s); the figures above are from a cool machine. Ask the organisers whether start-up counts. Python with NumPy loaded holds about 10 MB before the estimator starts and the process peaks near
-45-55 MB resident; the FAQ measures at the heap level, which is the first column.
+files took 17-22 ms per s); the figures above are from a cool machine. Ask the organisers whether start-up counts.
+Python with NumPy loaded holds about 10 MB before the estimator starts and the process peaks near 45-55 MB resident;
+the FAQ measures at the heap level, which is the first column.
 
 ## Tested and not adopted
+
+- **From the independent review (19 Nov)**, scored on all 80 official files: anchoring the blind forecast at the last
+  live row instead of the last 0.1 s track sample made the blind error slightly worse on every set (e.g. 0.307 to
+  0.317 m); building the tilt Jacobian from bias-corrected acceleration changed the mean by 0.2% and dropped one `_og`
+  flight behind standing still. Neither shipped. The rotor-window fix from the same review did ship: windows that
+  straddled a 2048-row boundary were never judged, and judging them cut the mean EuRoC error 3% (2.354 to 2.278 m),
+  with one flight (MH04, seed 42) worse because its self-check value moved from 0.96 to 1.01, over the threshold.
 
 - **Independent windows for long files** (17 Nov). Solving 3-minute stretches separately and joining them on heading
   and position was worse than standing still on long files (1.21 m against 1.10), and a warm-up overlap made it worse

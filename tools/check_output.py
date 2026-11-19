@@ -3,7 +3,9 @@
 
   - exactly one pose per input data row, in the input order, nothing appended (the blind 5 s window is already in
     the input as rows with unusable values)
-  - each pose's timestamp equals its row's timestamp (compared in nanoseconds; duplicated input stamps stay duplicated)
+  - each pose's timestamp equals its row's timestamp in exact decimal arithmetic: the unit comes from the header
+    (`[ns]`, `[us]`, `[ms]`, `[s]`) or else from the usual step; duplicated input stamps stay duplicated; a row whose
+    stamp cannot be read is expected to repeat the stamp before it (main.py's convention)
   - 8 columns: timestamp tx ty tz qx qy qz qw, all finite, unit quaternions
 It also reports the largest position step between rows. This is our own checker, not the organisers' evaluator.
 
@@ -11,42 +13,44 @@ Usage: check_output.py <imu.csv> <estimated_trajectory.txt>
 """
 import math
 import sys
+from decimal import Decimal, InvalidOperation
+
+UNITS = (("ns", Decimal("1e-9")), ("us", Decimal("1e-6")), ("ms", Decimal("1e-3")), ("s", Decimal(1)))
 
 
-def to_ns(s):
-    """Seconds text to integer nanoseconds without going through a float."""
-    neg = s.startswith("-")
-    sec, _, frac = s.lstrip("+-").partition(".")
-    v = int(sec or "0") * 10**9 + int((frac + "000000000")[:9])
-    return -v if neg else v
-
-
-def stamp_ns(h, scale_ns):
-    h = h.strip()
-    if h.lstrip("+-").isdigit():
-        return int(h) * scale_ns
-    return to_ns(h) if scale_ns == 10**9 else round(float(h) * scale_ns)
+def is_data(c):
+    return bool(c) and c[0] != "#" and (c[0].isdigit() or c[0] in "+-.")
 
 
 def main():
     if len(sys.argv) != 3:
         sys.exit(__doc__)
-    heads = []
-    with open(sys.argv[1]) as f:
+    heads, header = [], []
+    with open(sys.argv[1], encoding="utf-8-sig", errors="replace") as f:
         for line in f:
             c = line.strip()
-            if c and c[0] != "#" and (c[0].isdigit() or c[0] in "+-."):
-                heads.append(c.split(",", 1)[0])
-    # the unit of the input stamps, from the usual step (ns, us, ms or s), as main.py reads them
-    nums = []
+            if is_data(c):
+                heads.append(c.split(",", 1)[0].strip())
+            elif c and not heads:
+                header.append(c)
+    unit = None
+    for h in header:
+        field = h.split(",", 1)[0].lower().replace("µ", "u").replace("μ", "u")
+        for name, u in UNITS:
+            if "[" + name + "]" in field or "(" + name + ")" in field:
+                unit = unit or u
+    vals = []
     for h in heads[:4096]:
         try:
-            nums.append(float(h))
-        except ValueError:
+            d = Decimal(h)
+            if d.is_finite():
+                vals.append(d)
+        except InvalidOperation:
             pass
-    steps = sorted(b - a for a, b in zip(nums, nums[1:]) if b > a)
-    step = steps[len(steps) // 2] if steps else 1e9
-    scale_ns = 1 if step >= 1e5 else (1000 if step >= 1e2 else (10**6 if step >= 0.5 else 10**9))
+    if unit is None:
+        steps = sorted(b - a for a, b in zip(vals, vals[1:]) if b > a)
+        s = float(steps[len(steps) // 2]) if steps else 1e9
+        unit = UNITS[0][1] if s >= 1e5 else UNITS[1][1] if s >= 1e2 else UNITS[2][1] if s >= 0.5 else UNITS[3][1]
 
     errors, est, max_step, max_qerr, prev = [], [], 0.0, 0.0, None
     with open(sys.argv[2]) as f:
@@ -57,31 +61,41 @@ def main():
             if len(c) != 8:
                 errors.append(f"line {i}: {len(c)} columns, need 8")
                 continue
-            vals = [float(x) for x in c[1:]]
-            if not all(math.isfinite(v) for v in vals):
+            vals8 = [float(x) for x in c[1:]]
+            if not all(math.isfinite(v) for v in vals8):
                 errors.append(f"line {i}: non-finite value")
                 continue
-            est.append(to_ns(c[0]))
-            max_qerr = max(max_qerr, abs(math.sqrt(sum(v * v for v in vals[3:])) - 1.0))
+            try:
+                est.append(Decimal(c[0]))
+            except InvalidOperation:
+                errors.append(f"line {i}: unreadable timestamp {c[0]!r}")
+                continue
+            max_qerr = max(max_qerr, abs(math.sqrt(sum(v * v for v in vals8[3:])) - 1.0))
             if prev is not None:
-                max_step = max(max_step, math.dist(prev, vals[:3]))
-            prev = vals[:3]
+                max_step = max(max_step, math.dist(prev, vals8[:3]))
+            prev = vals8[:3]
 
     if len(est) != len(heads):
         errors.append(f"{len(est)} poses for {len(heads)} input rows")
-    wrong = 0
+    wrong, bad_in, last = 0, 0, Decimal(0)
     for h, t in zip(heads, est):
         try:
-            if stamp_ns(h, scale_ns) != t:
-                wrong += 1
-        except ValueError:
-            pass                     # an unreadable input stamp: any value is accepted for that row
+            d = Decimal(h)
+            if d.is_finite() and abs(d) < 2 ** 63:
+                last = (d * unit).quantize(Decimal("1e-9"))
+            else:
+                bad_in += 1
+        except InvalidOperation:
+            bad_in += 1
+        if t != last:
+            wrong += 1
     if wrong:
         errors.append(f"{wrong} poses whose timestamp differs from their input row")
     if max_qerr > 1e-6:
         errors.append(f"quaternion norm off by {max_qerr:.2e}")
 
-    print(f"input rows {len(heads)}, poses {len(est)}, timestamp mismatches {wrong}")
+    print(f"input rows {len(heads)}, poses {len(est)}, timestamp mismatches {wrong}"
+          + (f", unreadable input stamps {bad_in} (expected to repeat the one before)" if bad_in else ""))
     print(f"largest position step {max_step * 1000:.2f} mm, worst quaternion norm error {max_qerr:.1e}")
     if errors:
         print("FAIL")
