@@ -1,0 +1,33 @@
+  baseline tilt filter               clean att_org_pre 2.152/2.754 tilt_pre 1.334/2.080 rpe_r_pre 0.992/1.125 att_org 9.133/19.707 rpe_r 6.412/12.769
+  baseline tilt filter               mild  att_org_pre 61.673/92.934 tilt_pre 9.567/29.456 rpe_r_pre 11.737/20.582 att_org 63.634/96.339 rpe_r 13.836/23.107
+  baseline tilt filter               full  att_org_pre 58.552/87.064 tilt_pre 9.822/30.189 rpe_r_pre 11.743/20.569 att_org 60.171/88.414 rpe_r 13.839/23.105
+  gaps lerp only + residual 5 s      clean att_org_pre 1.604/2.519 tilt_pre 0.675/1.072 rpe_r_pre 0.666/0.857 att_org 9.050/20.188 rpe_r 6.361/12.745
+  gaps lerp only + residual 5 s      mild  att_org_pre 54.702/98.769 tilt_pre 39.406/97.087 rpe_r_pre 11.182/21.207 att_org 57.568/101.860 rpe_r 13.676/22.716
+  gaps lerp only + residual 5 s      full  att_org_pre 56.878/98.064 tilt_pre 39.082/96.541 rpe_r_pre 11.208/21.312 att_org 60.026/101.270 rpe_r 13.692/22.731
+  fit knots 60 s_r 0.03 s_b 0.003 resid 5 clean att_org_pre 6.630/9.284 tilt_pre 2.768/4.192 rpe_r_pre 1.010/1.576 att_org 12.794/21.954 rpe_r 6.441/12.778
+  fit knots 60 s_r 0.03 s_b 0.003 resid 5 mild  att_org_pre 35.736/82.715 tilt_pre 5.750/22.683 rpe_r_pre 9.100/19.369 att_org 37.958/81.514 rpe_r 11.950/22.734
+  fit knots 60 s_r 0.03 s_b 0.003 resid 5 full  att_org_pre 35.933/86.922 tilt_pre 5.536/20.236 rpe_r_pre 9.124/20.048 att_org 38.298/85.351 rpe_r 11.967/23.451
+  fit knots 60 s_r 0.03 s_b 0.01 resid 5 clean att_org_pre 49.964/90.856 tilt_pre 3.329/4.528 rpe_r_pre 1.648/3.064 att_org 52.364/92.933 rpe_r 6.645/12.826
+  fit knots 60 s_r 0.03 s_b 0.01 resid 5 mild  att_org_pre 49.581/116.834 tilt_pre 9.089/31.240 rpe_r_pre 9.895/21.600 att_org 52.864/116.407 rpe_r 12.600/24.739
+  fit knots 60 s_r 0.03 s_b 0.01 resid 5 full  att_org_pre 48.144/118.510 tilt_pre 8.312/32.148 rpe_r_pre 10.089/22.139 att_org 50.518/116.984 rpe_r 12.719/25.200
+  fit knots 60 s_r 0.03 s_b 0.03 resid 5 clean att_org_pre 74.799/99.080 tilt_pre 3.655/5.136 rpe_r_pre 3.125/5.065 att_org 75.890/102.402 rpe_r 7.446/13.158
+  fit knots 60 s_r 0.03 s_b 0.03 resid 5 mild  att_org_pre 73.919/143.132 tilt_pre 11.118/36.028 rpe_r_pre 10.013/21.894 att_org 76.039/143.223 rpe_r 12.682/21.712
+  fit knots 60 s_r 0.03 s_b 0.03 resid 5 full  att_org_pre 76.578/130.925 tilt_pre 11.074/47.660 rpe_r_pre 10.063/22.604 att_org 78.740/132.041 rpe_r 12.654/22.368
+  fit knots 60 s_r 0.1 s_b 0.003 resid 5 clean att_org_pre 3.022/4.364 tilt_pre 2.413/4.169 rpe_r_pre 0.814/0.971 att_org 9.806/20.997 rpe_r 6.405/12.776
+  fit knots 60 s_r 0.1 s_b 0.003 resid 5 mild  att_org_pre 34.498/80.410 tilt_pre 5.223/23.447 rpe_r_pre 8.970/20.328 att_org 36.942/79.437 rpe_r 11.866/23.680
+  fit knots 60 s_r 0.1 s_b 0.003 resid 5 full  att_org_pre 35.085/84.171 tilt_pre 5.033/20.393 rpe_r_pre 9.011/21.144 att_org 37.798/82.645 rpe_r 11.890/24.363
+  fit knots 60 s_r 0.1 s_b 0.01 resid 5 clean att_org_pre 6.630/9.284 tilt_pre 2.768/4.192 rpe_r_pre 1.010/1.576 att_org 12.794/21.954 rpe_r 6.441/12.778
+  fit knots 60 s_r 0.1 s_b 0.01 resid 5 mild  att_org_pre 35.576/83.029 tilt_pre 5.761/23.276 rpe_r_pre 9.080/19.361 att_org 37.787/81.767 rpe_r 11.932/22.830
+  fit knots 60 s_r 0.1 s_b 0.01 resid 5 full  att_org_pre 35.824/87.530 tilt_pre 5.571/20.664 rpe_r_pre 9.102/20.187 att_org 38.200/85.959 rpe_r 11.950/23.566
+  fit knots 60 s_r 0.1 s_b 0.03 resid 5 clean att_org_pre 43.454/76.110 tilt_pre 3.302/4.438 rpe_r_pre 1.565/2.961 att_org 45.976/77.840 rpe_r 6.611/12.815
+  fit knots 60 s_r 0.1 s_b 0.03 resid 5 mild  att_org_pre 45.059/111.352 tilt_pre 8.598/32.107 rpe_r_pre 9.481/19.823 att_org 48.084/110.634 rpe_r 12.231/23.264
+  fit knots 60 s_r 0.1 s_b 0.03 resid 5 full  att_org_pre 44.891/111.680 tilt_pre 8.203/37.837 rpe_r_pre 9.461/20.773 att_org 47.075/113.074 rpe_r 12.195/24.056
+  fit knots 60 s_r 0.3 s_b 0.003 resid 5 clean att_org_pre 2.958/4.203 tilt_pre 2.364/4.154 rpe_r_pre 0.804/0.969 att_org 9.735/20.893 rpe_r 6.403/12.776
+  fit knots 60 s_r 0.3 s_b 0.003 resid 5 mild  att_org_pre 34.280/80.018 tilt_pre 5.345/25.644 rpe_r_pre 8.957/19.852 att_org 36.747/79.045 rpe_r 11.851/23.289
+  fit knots 60 s_r 0.3 s_b 0.003 resid 5 full  att_org_pre 35.022/83.963 tilt_pre 5.192/22.166 rpe_r_pre 8.996/20.683 att_org 37.766/82.440 rpe_r 11.877/23.980
+  fit knots 60 s_r 0.3 s_b 0.01 resid 5 clean att_org_pre 3.042/4.406 tilt_pre 2.423/4.171 rpe_r_pre 0.818/0.972 att_org 9.834/21.025 rpe_r 6.405/12.776
+  fit knots 60 s_r 0.3 s_b 0.01 resid 5 mild  att_org_pre 34.593/80.284 tilt_pre 5.357/24.920 rpe_r_pre 8.994/19.729 att_org 36.881/79.198 rpe_r 11.871/23.187
+  fit knots 60 s_r 0.3 s_b 0.01 resid 5 full  att_org_pre 35.386/84.663 tilt_pre 5.203/21.573 rpe_r_pre 9.012/20.706 att_org 37.978/83.131 rpe_r 11.891/23.999
+  fit knots 60 s_r 0.3 s_b 0.03 resid 5 clean att_org_pre 6.630/9.284 tilt_pre 2.768/4.192 rpe_r_pre 1.010/1.576 att_org 12.794/21.954 rpe_r 6.441/12.778
+  fit knots 60 s_r 0.3 s_b 0.03 resid 5 mild  att_org_pre 35.716/82.930 tilt_pre 5.735/20.663 rpe_r_pre 9.178/20.285 att_org 37.787/81.515 rpe_r 11.985/23.648
+  fit knots 60 s_r 0.3 s_b 0.03 resid 5 full  att_org_pre 37.130/89.027 tilt_pre 5.537/17.618 rpe_r_pre 9.193/20.922 att_org 39.449/87.514 rpe_r 12.009/24.184

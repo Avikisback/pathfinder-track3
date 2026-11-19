@@ -1,0 +1,45 @@
+
+=== EuRoC: rms error of the 5 s forecast, truth state at failure. inner points / real end of file
+  hold             inner 1.993  end 0.926
+  v                inner 1.727  end 0.593
+  v+a              inner 1.672  end 0.612
+  v+a+pull         inner 1.709  end 0.956
+  v+a+pull+turn    inner 1.689  end 0.917
+  all+axes         inner 1.683  end 1.016
+  analog           inner 1.937  end 0.955
+  hold_same        inner 2.049  end 0.926
+  coefficients at horizons 0.5, 1, 2, 3, 4, 5 s (v, a, pull):
+[[ 4.800e-01  8.490e-01  1.301e+00  1.513e+00  1.575e+00  1.592e+00]
+ [ 1.280e-01  3.080e-01  5.390e-01  7.090e-01  7.440e-01  7.250e-01]
+ [-1.000e-03  8.000e-03  5.400e-02  1.140e-01  1.830e-01  2.490e-01]]
+   MH01  last 5 s: speed at failure 0.79 m/s, hold error 1.30 m, path length 1.95 m
+   MH02  last 5 s: speed at failure 0.65 m/s, hold error 0.96 m, path length 1.42 m
+   MH03  last 5 s: speed at failure 0.49 m/s, hold error 0.46 m, path length 0.85 m
+   MH04  last 5 s: speed at failure 0.39 m/s, hold error 0.52 m, path length 0.88 m
+   MH05  last 5 s: speed at failure 1.05 m/s, hold error 2.03 m, path length 2.69 m
+   V101  last 5 s: speed at failure 0.12 m/s, hold error 0.32 m, path length 0.58 m
+   V102  last 5 s: speed at failure 0.96 m/s, hold error 1.18 m, path length 2.04 m
+   V103  last 5 s: speed at failure 0.34 m/s, hold error 0.45 m, path length 0.86 m
+   V201  last 5 s: speed at failure 0.28 m/s, hold error 0.22 m, path length 0.33 m
+   V202  last 5 s: speed at failure 0.48 m/s, hold error 0.42 m, path length 0.82 m
+   V203  last 5 s: speed at failure 0.40 m/s, hold error 0.54 m, path length 1.15 m
+
+=== TUM: rms error of the 5 s forecast, truth state at failure. inner points / real end of file
+  hold             inner 1.669  end 0.531
+  v                inner 1.589  end 0.583
+  v+a              inner 1.466  end 0.628
+  v+a+pull         inner 0.884  end 0.802
+  v+a+pull+turn    inner 0.892  end 0.800
+  all+axes         inner 0.911  end 0.666
+  analog           inner 1.046  end 0.656
+  hold_same        inner 1.709  end 0.531
+  coefficients at horizons 0.5, 1, 2, 3, 4, 5 s (v, a, pull):
+[[ 0.457  0.695  0.843  0.658  0.165 -0.358]
+ [ 0.134  0.239  0.146  0.075  0.015 -0.032]
+ [-0.005  0.129  0.742  1.279  1.552  1.456]]
+   1     last 5 s: speed at failure 0.83 m/s, hold error 0.90 m, path length 4.55 m
+   2     last 5 s: speed at failure 1.05 m/s, hold error 0.33 m, path length 2.04 m
+   3     last 5 s: speed at failure 0.13 m/s, hold error 0.22 m, path length 1.59 m
+   4     last 5 s: speed at failure 0.11 m/s, hold error 0.45 m, path length 3.96 m
+   5     last 5 s: speed at failure 0.61 m/s, hold error 0.49 m, path length 1.96 m
+done 5s

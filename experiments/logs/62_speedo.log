@@ -1,0 +1,33 @@
+no sklearn No module named 'sklearn'
+features 4s
+EuRoC clean      y  ridge corr  0.35 R2  0.01 rms 0.453 (speed mean 0.68 std 0.46)
+EuRoC clean      yh ridge corr  0.29 R2 -0.05 rms 0.478 (speed mean 0.64 std 0.47)
+EuRoC full       y  ridge corr  0.38 R2  0.05 rms 0.450 (speed mean 0.67 std 0.46)
+EuRoC full       yh ridge corr  0.31 R2 -0.01 rms 0.474 (speed mean 0.62 std 0.47)
+EuRoC randomwalk y  ridge corr  0.41 R2  0.12 rms 0.428 (speed mean 0.67 std 0.46)
+EuRoC randomwalk yh ridge corr  0.35 R2  0.06 rms 0.452 (speed mean 0.62 std 0.47)
+TUM   clean      y  ridge corr  0.77 R2  0.58 rms 0.235 (speed mean 0.93 std 0.36)
+TUM   clean      yh ridge corr  0.76 R2  0.57 rms 0.236 (speed mean 0.86 std 0.36)
+TUM   full       y  ridge corr  0.77 R2  0.60 rms 0.234 (speed mean 0.92 std 0.37)
+TUM   full       yh ridge corr  0.76 R2  0.58 rms 0.236 (speed mean 0.85 std 0.37)
+TUM   randomwalk y  ridge corr  0.77 R2  0.60 rms 0.231 (speed mean 0.93 std 0.36)
+TUM   randomwalk yh ridge corr  0.77 R2  0.59 rms 0.232 (speed mean 0.85 std 0.36)
+
+per file on clean (ridge, 3D speed), and share of variance by feature family
+  MH01  corr  0.60 rms 0.350 speed 0.45
+  MH02  corr  0.36 rms 0.402 speed 0.50
+  MH03  corr  0.41 rms 0.650 speed 1.02
+  MH04  corr  0.27 rms 0.674 speed 0.97
+  MH05  corr  0.32 rms 0.562 speed 0.90
+  V101  corr  0.44 rms 0.510 speed 0.42
+  V102  corr  0.59 rms 0.299 speed 0.94
+  V103  corr  0.59 rms 0.280 speed 0.78
+  V201  corr  0.34 rms 0.366 speed 0.34
+  V202  corr  0.15 rms 0.329 speed 0.75
+  V203  corr  0.33 rms 0.351 speed 0.78
+  1     corr  0.68 rms 0.285 speed 1.05
+  2     corr  0.68 rms 0.211 speed 1.00
+  3     corr  0.85 rms 0.212 speed 0.99
+  4     corr  0.62 rms 0.204 speed 0.61
+  5     corr  0.84 rms 0.248 speed 0.95
+done 4s

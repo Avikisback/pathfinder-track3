@@ -1,0 +1,7 @@
+/mnt/e/clipping-pipeline/xr_track3/experiments/scripts/32_e2e.py:316: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  torch.save(dict(state=net.state_dict(), cfg=net.net.cfg, a=float(net.a), b=float(net.b), train=train, cal=cal, best_hp=best_hp, tau=tau),
+loro fold 2 test [3] 203s hp {'drone': 0.016666666666666666, 'hand': 0.06666666666666667} tau {'hand': (3, 1.0)} a 0.42 b 0.50 scale {'hand': 0.38}
+loro fold 3 test [4] 97s hp {'drone': 0.016666666666666666, 'hand': 0.06666666666666667} tau {'hand': (3, 1.0)} a 0.48 b 0.50 scale {'hand': 0.48}
+loro fold 4 test [5] 103s hp {'drone': 0.016666666666666666, 'hand': 0.06666666666666667} tau {'hand': (4, 1.0)} a 0.37 b 0.50 scale {'hand': 0.36}
+loro E2E_DONE

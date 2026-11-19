@@ -1,0 +1,281 @@
+fold test ['MH01', 'MH02', 'MH03', 'MH04', 'MH05']: k only 0.184 | k 0.189 r [0.019 0.016 0.103] d [-0.007  0.015  0.03 ]
+fold test ['V101', 'V102', 'V103']: k only 0.196 | k 0.197 r [0.021 0.015 0.102] d [-0.006  0.008  0.031]
+fold test ['V201', 'V202', 'V203']: k only 0.193 | k 0.195 r [0.015 0.017 0.104] d [-0.024  0.017  0.024]
+429 solves
+gap MH01 0.0039
+gap MH01 0.0208
+gap MH01 0.0208
+gap MH01 0.0042
+gap MH01 0.0042
+gap MH01 0.0038
+gap MH01 0.0038
+gap MH01 0.0042
+gap MH01 0.0039
+gap MH01 0.0891
+gap MH01 0.0038
+gap MH01 0.0038
+gap MH01 0.0204
+gap MH01 0.0274
+gap MH01 0.0028
+gap MH01 0.0028
+gap MH01 0.0036
+gap MH01 0.0029
+gap MH01 0.0029
+gap MH01 0.0036
+0 ('MH01', ('longgap', 'x', 1), 'lev') 19s elapsed 20s
+gap MH01 0.0204
+gap MH01 0.0274
+gap MH01 0.0042
+gap MH01 0.0891
+gap MH01 0.0208
+gap MH01 0.0042
+gap MH01 0.0039
+gap MH01 0.0028
+gap MH01 0.0038
+gap MH01 0.0029
+gap MH01 0.0042
+gap MH01 0.0891
+gap MH01 0.0038
+gap MH01 0.0036
+gap MH01 0.0204
+gap MH01 0.0274
+gap MH01 0.0208
+gap MH01 0.0042
+gap MH01 0.0039
+gap MH02 0.0231
+20 ('MH02', ('warmup', 'x', 1), 'base') 12s elapsed 34s
+gap MH02 0.0038
+gap MH02 0.0039
+gap MH02 0.0023
+gap MH02 0.0024
+gap MH02 0.0027
+gap MH02 0.0027
+gap MH02 0.0037
+gap MH02 0.0218
+gap MH02 0.0038
+gap MH02 0.0288
+gap MH02 0.088
+gap MH02 0.0231
+gap MH02 0.0038
+gap MH02 0.0039
+gap MH02 0.0023
+gap MH02 0.0037
+gap MH02 0.0027
+gap MH02 0.0027
+gap MH02 0.0024
+gap MH02 0.0218
+40 ('MH02', ('longgap', 'x', 1), 'base') 8s elapsed 41s
+gap MH02 0.0288
+gap MH02 0.0038
+gap MH02 0.088
+gap MH02 0.0231
+gap MH02 0.0038
+gap MH02 0.0039
+gap MH02 0.0023
+gap MH02 0.0024
+gap MH02 0.0027
+gap MH02 0.0037
+gap MH02 0.0027
+gap MH02 0.0218
+gap MH02 0.0288
+gap MH02 0.0038
+60 ('MH02', ('rot', 'x', 1), 'lev2') 8s elapsed 50s
+gap MH02 0.088
+gap MH02 0.0231
+gap MH02 0.0038
+gap MH02 0.0039
+80 ('MH02', ('noisy', 'x', 1), 'base2') 11s elapsed 60s
+100 ('V101', ('rot', 'x', 1), 'lev2') 9s elapsed 69s
+gap MH03 0.0138
+gap MH03 0.0028
+gap MH03 0.0029
+gap MH03 0.002
+gap MH03 0.0017
+gap MH03 0.0018
+gap MH03 0.0017
+gap MH03 0.0027
+gap MH03 0.0222
+gap MH03 0.0156
+gap MH03 0.0029
+gap MH03 0.0868
+gap MH03 0.0138
+gap MH03 0.0029
+gap MH03 0.0028
+gap MH03 0.002
+gap MH03 0.0017
+120 ('MH03', ('longgap', 'x', 1), 'base') 9s elapsed 78s
+gap MH03 0.0017
+gap MH03 0.0018
+gap MH03 0.0027
+gap MH03 0.0222
+gap MH03 0.0156
+gap MH03 0.0029
+gap MH03 0.0868
+gap MH03 0.0138
+gap MH03 0.0029
+gap MH03 0.0028
+gap MH03 0.002
+gap MH03 0.0017
+gap MH03 0.0017
+gap MH03 0.0027
+gap MH03 0.0018
+gap MH03 0.0222
+gap MH03 0.0156
+gap MH03 0.0029
+gap MH03 0.0868
+gap MH03 0.0138
+gap MH03 0.0029
+140 ('MH03', ('rot', 'x', 1), 'lev2') 9s elapsed 87s
+gap MH03 0.0028
+160 ('MH03', ('noisy', 'x', 1), 'base2') 8s elapsed 93s
+180 ('V202', ('longgap', 'x', 1), 'lev2') 6s elapsed 100s
+200 ('V203', ('clean', 'delete', 1), 'lev') 7s elapsed 106s
+220 ('V203', ('clean', 'delete', 1), 'base2') 6s elapsed 113s
+240 ('V201', ('burst', 'x', 1), 'lev') 7s elapsed 119s
+gap MH05 0.0034
+gap MH05 0.0022
+260 ('V201', ('rot', 'x', 1), 'lev2') 7s elapsed 126s
+gap MH05 0.002
+gap MH05 0.0021
+gap MH05 0.0023
+gap MH05 0.0025
+gap MH05 0.0023
+gap MH05 0.0026
+gap MH05 0.0273
+gap MH05 0.0223
+gap MH05 0.0022
+gap MH05 0.0862
+gap MH05 0.0034
+gap MH05 0.0022
+gap MH05 0.002
+gap MH05 0.0023
+gap MH05 0.0021
+gap MH05 0.0025
+gap MH05 0.0026
+gap MH05 0.0023
+gap MH05 0.0273
+gap MH05 0.0223
+gap MH05 0.0022
+gap MH05 0.0862
+gap MH05 0.0034
+280 ('MH05', ('randomwalk', 'x', 1), 'lev') 6s elapsed 133s
+gap MH05 0.0022
+gap MH05 0.002
+gap MH05 0.0021
+gap MH05 0.0023
+gap MH05 0.0023
+gap MH05 0.0025
+gap MH05 0.0026
+gap MH05 0.0273
+gap MH05 0.0022
+gap MH05 0.0223
+gap MH05 0.0022
+gap MH05 0.0862
+gap MH05 0.0034
+gap MH05 0.002
+gap V103 0.0038
+gap V103 0.0026
+gap V103 0.0024
+300 ('MH05', ('mild', 'zero', 1), 'base2') 6s elapsed 139s
+gap V103 0.0028
+gap V103 0.0027
+gap V103 0.0027
+gap V103 0.0029
+gap V103 0.0029
+gap V103 0.0228
+gap V103 0.0292
+gap V103 0.0026
+gap V103 0.0856
+gap V103 0.0026
+gap V103 0.0038
+gap V103 0.0024
+gap V103 0.0028
+gap V103 0.0027
+gap V103 0.0027
+gap V103 0.0029
+gap V103 0.0029
+gap V103 0.0292
+gap V103 0.0228
+gap V103 0.0026
+gap V103 0.0856
+gap V103 0.0038
+320 ('V103', ('sine', 'x', 1), 'lev') 7s elapsed 146s
+gap V103 0.0026
+gap V103 0.0024
+gap V103 0.0028
+gap V103 0.0027
+gap V103 0.0027
+gap V103 0.0029
+gap V103 0.0029
+gap V103 0.0292
+gap V103 0.0228
+gap V103 0.0026
+gap V103 0.0038
+gap V103 0.0856
+gap V103 0.0026
+gap V103 0.0024
+gap MH04 0.0158
+gap MH04 0.0036
+gap MH04 0.0044
+340 ('V103', ('clean', 'delete', 1), 'base2') 6s elapsed 151s
+gap MH04 0.0019
+gap MH04 0.0018
+gap MH04 0.0024
+gap MH04 0.0021
+gap MH04 0.0029
+gap MH04 0.0164
+gap MH04 0.0231
+gap MH04 0.0036
+gap MH04 0.0877
+gap MH04 0.0158
+gap MH04 0.0036
+gap MH04 0.0019
+gap MH04 0.0044
+gap MH04 0.0018
+gap MH04 0.0024
+gap MH04 0.0021
+gap MH04 0.0029
+gap MH04 0.0231
+360 ('MH04', ('hold', 'x', 1), 'lev') 6s elapsed 157s
+gap MH04 0.0164
+gap MH04 0.0036
+gap MH04 0.0877
+gap MH04 0.0158
+gap MH04 0.0044
+gap MH04 0.0036
+gap MH04 0.0018
+gap MH04 0.0019
+gap MH04 0.0024
+gap MH04 0.0021
+gap MH04 0.0029
+gap MH04 0.0231
+gap MH04 0.0164
+gap MH04 0.0036
+gap MH04 0.0877
+gap MH04 0.0158
+gap MH04 0.0036
+gap MH04 0.0044
+gap V102 0.0015
+380 ('MH04', ('full', 'zero', 1), 'base2') 7s elapsed 165s
+gap V102 0.004
+gap V102 0.0015
+gap V102 0.004
+gap V102 0.0015
+400 ('V102', ('longgap', 'x', 1), 'lev') 5s elapsed 169s
+gap V102 0.004
+gap V102 0.0015
+420 ('V102', ('sine', 'x', 1), 'base2') 4s elapsed 174s
+solved 175.10141897201538
+base   final clean 2.22 mild 2.35 full 2.32 burst 2.49 steps 2.95 randomwalk 3.30 sine 4.36 hold 2.53 rot 3.02 warmup 2.90 longgap 2.39 noisy 2.54 | mean known 2.296 all 2.780
+       nocheck clean 2.22 mild 2.35 full 2.32 burst 2.49 steps 2.95 randomwalk 3.38 sine 6.08 hold 2.53 rot 3.03 warmup 2.90 longgap 2.39 noisy 2.54
+       blind_rel 0.351 rpe 0.504 | per seq clean MH01 3.87 MH02 4.48 MH03 2.03 MH04 2.15 MH05 2.70 V101 1.65 V102 0.94 V103 1.38 V201 2.07 V202 1.59 V203 1.54
+lev    final clean 2.21 mild 2.35 full 2.32 burst 2.49 steps 2.87 randomwalk 3.15 sine 4.34 hold 2.54 rot 2.99 warmup 2.92 longgap 2.40 noisy 2.56 | mean known 2.292 all 2.760
+       nocheck clean 2.21 mild 2.35 full 2.32 burst 2.49 steps 2.87 randomwalk 3.22 sine 5.73 hold 2.54 rot 3.00 warmup 2.92 longgap 2.40 noisy 2.56
+       blind_rel 0.349 rpe 0.502 | per seq clean MH01 3.87 MH02 4.48 MH03 2.00 MH04 2.14 MH05 2.69 V101 1.63 V102 0.95 V103 1.37 V201 2.09 V202 1.59 V203 1.50
+lev2   final clean 2.16 mild 2.30 full 2.30 burst 2.44 steps 2.81 randomwalk 3.01 sine 4.27 hold 2.52 rot 2.95 warmup 2.84 longgap 2.40 noisy 2.53 | mean known 2.252 all 2.710
+       nocheck clean 2.16 mild 2.30 full 2.30 burst 2.44 steps 2.81 randomwalk 3.10 sine 5.69 hold 2.52 rot 2.96 warmup 2.84 longgap 2.40 noisy 2.53
+       blind_rel 0.343 rpe 0.485 | per seq clean MH01 3.91 MH02 4.42 MH03 1.96 MH04 1.94 MH05 2.48 V101 1.58 V102 0.86 V103 1.38 V201 2.12 V202 1.57 V203 1.50
+base2  final clean 2.16 mild 2.29 full 2.29 burst 2.43 steps 2.88 randomwalk 3.15 sine 4.62 hold 2.51 rot 2.98 warmup 2.83 longgap 2.40 noisy 2.50 | mean known 2.249 all 2.755
+       nocheck clean 2.16 mild 2.29 full 2.29 burst 2.43 steps 2.88 randomwalk 3.25 sine 6.06 hold 2.51 rot 2.99 warmup 2.83 longgap 2.40 noisy 2.50
+       blind_rel 0.343 rpe 0.489 | per seq clean MH01 3.91 MH02 4.42 MH03 1.99 MH04 1.97 MH05 2.51 V101 1.61 V102 0.86 V103 1.39 V201 2.05 V202 1.57 V203 1.52
+done

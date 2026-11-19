@@ -1,0 +1,35 @@
+causal2s r1 step 0 mse 0.3365
+causal2s r1 step 1000 mse 0.0291
+causal2s r1 step 2000 mse 0.0207
+causal2s r1 step 3000 mse 0.0174
+causal2s r1 step 4000 mse 0.0123
+causal2s r1 step 5000 mse 0.0139
+causal2s room1 done in 54s params 81542 macs/forward 731488
+causal2s r2 step 0 mse 0.3157
+causal2s r2 step 1000 mse 0.0335
+causal2s r2 step 2000 mse 0.0217
+causal2s r2 step 3000 mse 0.0330
+causal2s r2 step 4000 mse 0.0160
+causal2s r2 step 5000 mse 0.0198
+causal2s room2 done in 45s params 81542 macs/forward 731488
+causal2s r3 step 0 mse 0.3046
+causal2s r3 step 1000 mse 0.0453
+causal2s r3 step 2000 mse 0.0123
+causal2s r3 step 3000 mse 0.0211
+causal2s r3 step 4000 mse 0.0158
+causal2s r3 step 5000 mse 0.0121
+causal2s room3 done in 46s params 81542 macs/forward 731488
+causal2s r4 step 0 mse 0.3798
+causal2s r4 step 1000 mse 0.0392
+causal2s r4 step 2000 mse 0.0223
+causal2s r4 step 3000 mse 0.0220
+causal2s r4 step 4000 mse 0.0145
+causal2s r4 step 5000 mse 0.0113
+causal2s room4 done in 49s params 81542 macs/forward 731488
+causal2s r5 step 0 mse 0.3031
+causal2s r5 step 1000 mse 0.0244
+causal2s r5 step 2000 mse 0.0170
+causal2s r5 step 3000 mse 0.0144
+causal2s r5 step 4000 mse 0.0111
+causal2s r5 step 5000 mse 0.0136
+causal2s room5 done in 50s params 81542 macs/forward 731488

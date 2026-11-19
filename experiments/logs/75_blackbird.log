@@ -1,0 +1,24 @@
+sequences: ['bb_test_clover_maxSpeed5p0', 'bb_test_egg_maxSpeed8p0', 'bb_test_halfMoon_maxSpeed4p0', 'bb_test_star_maxSpeed5p0', 'bb_test_winter_maxSpeed4p0', 'bb_train_clover_maxSpeed5p0', 'bb_train_egg_maxSpeed8p0', 'bb_train_halfMoon_maxSpeed4p0', 'bb_train_star_maxSpeed5p0', 'bb_train_winter_maxSpeed4p0']
+solved 8s
+bb_test_clover_maxSpeed5p0 clean     25s gt    30s | stationary 2.36 old 1.72 new 1.71 (raw 4.63/1.99, check 1.79/0.89) | python 27 ms per s
+bb_test_clover_maxSpeed5p0 full      25s gt    30s | stationary 2.36 old 2.10 new 2.13 (raw 4.22/2.29, check 1.62/0.67) | python 27 ms per s
+bb_test_egg_maxSpeed8p0 clean     20s gt    25s | stationary 6.49 old 5.91 new 6.28 (raw 5.86/6.22, check 0.59/0.33) | python 43 ms per s
+bb_test_egg_maxSpeed8p0 full      18s gt    25s | stationary 6.60 old 6.52 new 6.54 (raw 6.57/6.56, check 0.31/0.31) | python 48 ms per s
+bb_test_halfMoon_maxSpeed4p0 clean     31s gt    36s | stationary 1.70 old 1.31 new 1.18 (raw 7.34/2.48, check 2.26/0.68) | python 27 ms per s
+bb_test_halfMoon_maxSpeed4p0 full      31s gt    36s | stationary 1.70 old 1.62 new 1.54 (raw 8.50/3.19, check 2.61/0.94) | python 28 ms per s
+bb_test_star_maxSpeed5p0 clean     20s gt    25s | stationary 3.53 old 2.77 new 3.01 (raw 5.02/2.70, check 1.59/0.60) | python 29 ms per s
+bb_test_star_maxSpeed5p0 full      18s gt    25s | stationary 3.53 old 3.17 new 3.35 (raw 5.90/3.34, check 1.98/0.63) | python 34 ms per s
+bb_test_winter_maxSpeed4p0 clean     25s gt    30s | stationary 2.94 old 2.79 new 2.91 (raw 3.22/2.92, check 0.87/0.44) | python 29 ms per s
+bb_test_winter_maxSpeed4p0 full      25s gt    30s | stationary 2.94 old 2.88 new 2.89 (raw 3.42/2.96, check 0.92/0.48) | python 28 ms per s
+bb_train_clover_maxSpeed5p0 clean     86s gt    91s | stationary 2.42 old 1.79 new 1.80 (raw 4.54/3.49, check 1.19/0.87) | python 18 ms per s
+bb_train_clover_maxSpeed5p0 full      86s gt    91s | stationary 2.42 old 2.15 new 2.11 (raw 4.84/3.33, check 1.19/0.74) | python 19 ms per s
+bb_train_egg_maxSpeed8p0 clean     65s gt    70s | stationary 6.47 old 5.99 new 6.27 (raw 6.09/6.44, check 0.58/0.42) | python 38 ms per s
+bb_train_egg_maxSpeed8p0 full      65s gt    70s | stationary 6.47 old 6.10 new 6.27 (raw 6.18/6.39, check 0.51/0.42) | python 38 ms per s
+bb_train_halfMoon_maxSpeed4p0 clean     85s gt    90s | stationary 1.68 old 1.17 new 1.00 (raw 6.13/2.71, check 1.61/0.51) | python 16 ms per s
+bb_train_halfMoon_maxSpeed4p0 full      85s gt    90s | stationary 1.68 old 1.33 new 1.22 (raw 6.11/3.02, check 1.62/0.62) | python 15 ms per s
+bb_train_star_maxSpeed5p0 clean     35s gt    40s | stationary 3.52 old 2.58 new 2.79 (raw 6.10/2.61, check 2.09/1.00) | python 10 ms per s
+bb_train_star_maxSpeed5p0 full      35s gt    40s | stationary 3.52 old 3.31 new 3.37 (raw 7.63/3.96, check 2.08/0.70) | python 12 ms per s
+bb_train_winter_maxSpeed4p0 clean     95s gt   100s | stationary 2.90 old 2.62 new 2.61 (raw 3.23/3.11, check 0.67/0.51) | python 17 ms per s
+bb_train_winter_maxSpeed4p0 full      95s gt   100s | stationary 2.90 old 2.86 new 3.18 (raw 3.77/3.67, check 0.66/0.44) | python 17 ms per s
+MEAN clean: stationary 3.40 old 2.86 new 2.95 | beats stationary old 1.00 new 1.00
+MEAN full: stationary 3.41 old 3.20 new 3.26 | beats stationary old 1.00 new 0.90

@@ -1,0 +1,11 @@
+causal2s_seg r1 step 0 mse 0.2436
+causal2s_seg r1 step 1000 mse 0.0707
+causal2s_seg r1 step 2000 mse 0.0157
+causal2s_seg r1 step 3000 mse 0.0356
+causal2s_seg r1 step 4000 mse 0.0207
+causal2s_seg r1 step 5000 mse 0.0083
+causal2s_seg room1 done in 89s params 81542 macs/forward 731488
+causal2s_seg r2 step 0 mse 0.1836
+causal2s_seg r2 step 1000 mse 0.1129
+causal2s_seg r2 step 2000 mse 0.0255
+causal2s_seg r2 step 3000 mse 0.0685

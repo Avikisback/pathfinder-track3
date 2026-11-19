@@ -1,0 +1,14 @@
+/mnt/e/clipping-pipeline/xr_track3/experiments/scripts/32_e2e.py:316: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  torch.save(dict(state=net.state_dict(), cfg=net.net.cfg, a=float(net.a), b=float(net.b), train=train, cal=cal, best_hp=best_hp, tau=tau),
+loso fold 1 test ['MH02'] 383s hp {'drone': 0.011111111111111112, 'hand': 0.016666666666666666} tau {'drone': (24, 0.5)} a 0.47 b 0.29 scale {'drone': 0.67}
+loso fold 2 test ['MH03'] 52s hp {'drone': 0.008333333333333333, 'hand': 0.016666666666666666} tau {'drone': (40, 1.0)} a 0.55 b 0.22 scale {'drone': 0.62}
+loso fold 3 test ['MH04'] 58s hp {'drone': 0.008333333333333333, 'hand': 0.016666666666666666} tau {'drone': (24, 1.0)} a 0.47 b 0.26 scale {'drone': 0.62}
+loso fold 4 test ['MH05'] 63s hp {'drone': 0.011111111111111112, 'hand': 0.016666666666666666} tau {'drone': (24, 1.0)} a 0.53 b 0.22 scale {'drone': 0.62}
+loso fold 5 test ['V101'] 103s hp {'drone': 0.008333333333333333, 'hand': 0.016666666666666666} tau {'drone': (40, 1.0)} a 0.48 b 0.33 scale {'drone': 0.64}
+loso fold 6 test ['V102'] 80s hp {'drone': 0.008333333333333333, 'hand': 0.016666666666666666} tau {'drone': (40, 1.0)} a 0.50 b 0.22 scale {'drone': 0.63}
+loso fold 7 test ['V103'] 109s hp {'drone': 0.008333333333333333, 'hand': 0.016666666666666666} tau {'drone': (40, 1.0)} a 0.48 b 0.33 scale {'drone': 0.64}
+loso fold 8 test ['V201'] 103s hp {'drone': 0.011111111111111112, 'hand': 0.016666666666666666} tau {'drone': (24, 1.0)} a 0.48 b 0.22 scale {'drone': 0.65}
+loso fold 9 test ['V202'] 78s hp {'drone': 0.011111111111111112, 'hand': 0.016666666666666666} tau {'drone': (24, 0.5)} a 0.48 b 0.27 scale {'drone': 0.65}
+loso fold 10 test ['V203'] 70s hp {'drone': 0.008333333333333333, 'hand': 0.016666666666666666} tau {'drone': (40, 1.0)} a 0.50 b 0.29 scale {'drone': 0.64}
+loso E2E_DONE

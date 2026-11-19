@@ -1,0 +1,67 @@
+degrade check MH02 delete: same stamps True max diff 0.0e+00
+degrade check MH02 zero: same stamps True max diff 0.0e+00
+
+SURVEY seq dur path radius speed | max dt | still: secs, first at, quietest s gyro std, first s gyro std, gt start | gt bias median | still-mean minus gt bias | gravity-fit minus gt bias, sig | hand-eye deg, clock ms, world accel
+MH01 184.1s path 80.6 rad 4.31 v 0.44 | maxdt 5.0ms | still 13s first 22.0 quiet 0.0023 first1s 0.0970 gt_start 1.08s | bias [-0.0032  0.0213  0.0784] | still-gt [ 0.0001 -0.0005  0.0014] | grav-gt [ 0.0068 -0.0004 -0.0025] sig [0.003  0.0002 0.0002] | R 0.04 clk +5.0 a [0.01 0.12 9.75]
+MH02 152.0s path 73.5 rad 4.65 v 0.49 | maxdt 5.0ms | still 2s first 27.0 quiet 0.0043 first1s 0.0505 gt_start 0.90s | bias [-0.0025  0.0212  0.0772] | still-gt [-0.     -0.0009  0.0012] | grav-gt [ 0.005  -0.0001 -0.0015] sig [0.0017 0.0002 0.0002] | R 0.17 clk -0.0 a [0.03 0.11 9.76]
+MH03 135.0s path 130.9 rad 3.58 v 1.00 | maxdt 5.0ms | still 3s first 11.0 quiet 0.0033 first1s 0.0223 gt_start 2.39s | bias [-0.0026  0.0213  0.0768] | still-gt [ 0.0005 -0.001   0.0009] | grav-gt [ 0.0265  0.0014 -0.0087] sig [0.0112 0.0004 0.0004] | R 0.80 clk -15.0 a [0.07 0.03 9.77]
+MH04 101.6s path 91.7 rad 6.82 v 0.93 | maxdt 5.0ms | still 2s first 12.0 quiet 0.0028 first1s 0.0117 gt_start 1.67s | bias [-0.0021  0.0211  0.0766] | still-gt [-0.0001 -0.0008  0.0014] | grav-gt [ 0.0268  0.0011 -0.01  ] sig [0.0082 0.0003 0.0003] | R 0.91 clk -0.0 a [ 0.09 -0.07  9.75]
+MH05 113.6s path 97.6 rad 6.88 v 0.88 | maxdt 5.0ms | still 4s first 0.0 quiet 0.0024 first1s 0.0025 gt_start 1.40s | bias [-0.0018  0.0209  0.0769] | still-gt [-0.0001 -0.0006  0.001 ] | grav-gt [ 0.0266  0.0005 -0.0098] sig [0.0082 0.0002 0.0002] | R 0.65 clk -0.0 a [ 0.1  -0.05  9.78]
+V101 145.6s path 58.4 rad 1.85 v 0.40 | maxdt 5.0ms | still 1s first 144.0 quiet 0.0075 first1s 0.0490 gt_start 0.00s | bias [-0.0022  0.0211  0.0765] | still-gt [-0.0001 -0.0006  0.0013] | grav-gt [ 0.0266 -0.0017 -0.0084] sig [0.0146 0.0002 0.0002] | R 0.17 clk -5.0 a [ 0.03 -0.09  9.75]
+V102 85.5s path 75.9 rad 1.78 v 0.91 | maxdt 5.0ms | still 0s first None quiet 0.0109 first1s 0.0118 gt_start 1.00s | bias [-0.0022  0.0208  0.0758] | still-gt None | grav-gt [ 0.024   0.0079 -0.0156] sig [0.0341 0.0007 0.0007] | R 0.12 clk -0.0 a [ 0.01 -0.04  9.77]
+V103 107.5s path 79.0 rad 1.57 v 0.75 | maxdt 5.0ms | still 4s first 0.0 quiet 0.0020 first1s 0.0020 gt_start 1.83s | bias [-0.0024  0.0218  0.0766] | still-gt [ 0.0002 -0.0022  0.0009] | grav-gt [ 0.0272  0.0038 -0.0077] sig [0.0511 0.0008 0.0008] | R 0.20 clk -5.0 a [ 0.02 -0.03  9.71]
+V201 114.0s path 36.5 rad 2.30 v 0.33 | maxdt 5.0ms | still 2s first 111.0 quiet 0.0046 first1s 0.0144 gt_start 1.26s | bias [-0.0023  0.0249  0.0816] | still-gt [ 0.0003 -0.0015  0.0004] | grav-gt [ 0.027  -0.0002 -0.0077] sig [0.0186 0.0002 0.0002] | R 0.48 clk +10.0 a [0.12 0.07 9.77]
+V202 117.4s path 83.2 rad 2.11 v 0.72 | maxdt 5.0ms | still 1s first 116.00000000000001 quiet 0.0068 first1s 0.0122 gt_start 1.25s | bias [-0.0014  0.0257  0.0789] | still-gt [-0.0001 -0.0017  0.0013] | grav-gt [ 0.0247 -0.0037 -0.0108] sig [0.0339 0.0006 0.0006] | R 0.16 clk -0.0 a [0.03 0.12 9.8 ]
+V203 116.8s path 86.1 rad 2.06 v 0.75 | maxdt 5.0ms | still 0s first None quiet 0.0143 first1s 0.0404 gt_start 1.22s | bias [-0.0015  0.0247  0.0805] | still-gt None | grav-gt [ 0.0255  0.0073 -0.0105] sig [0.033  0.0006 0.0006] | R 0.29 clk -5.0 a [0.04 0.08 9.79]
+bias spread over sequences: mean [-0.0022  0.0223  0.0778] std [0.0005 0.0018 0.0018]
+
+references on EuRoC (mean/worst over sequences, seeds, gap modes)
+  stationary                         clean ate_se3 3.446/6.879 ate_org 4.415/8.077 rpe_t 0.763/1.188 att_org 113.150/142.187 blind_rel 0.334/0.719
+  stationary                         mild  ate_se3 3.439/6.885 ate_org 4.396/8.077 rpe_t 0.793/1.419 att_org 110.432/144.167 blind_rel 0.334/0.719
+  stationary                         full  ate_se3 3.439/6.885 ate_org 4.396/8.077 rpe_t 0.793/1.419 att_org 109.477/144.263 blind_rel 0.334/0.719
+  stationary                         clean rpe_r 3.726/4.956 tilt 38.843/96.995 ate_se3_pre 3.453/6.956 ate_org_pre 4.477/8.221 rpe_t_pre 0.776/1.207
+  stationary                         mild  rpe_r 5.831/13.161 tilt 37.317/99.445 ate_se3_pre 3.448/6.971 ate_org_pre 4.459/8.221 rpe_t_pre 0.807/1.451
+  stationary                         full  rpe_r 5.845/13.059 tilt 37.222/104.302 ate_se3_pre 3.448/6.971 ate_org_pre 4.459/8.221 rpe_t_pre 0.807/1.451
+  baseline                           clean ate_se3 4.244/6.795 ate_org 5.681/8.182 rpe_t 1.051/1.404 att_org 48.891/118.978 blind_rel 0.930/2.169
+  baseline                           mild  ate_se3 4.134/6.763 ate_org 5.590/8.247 rpe_t 1.078/1.530 att_org 54.088/135.632 blind_rel 0.877/1.809
+  baseline                           full  ate_se3 4.097/6.735 ate_org 5.599/8.407 rpe_t 1.078/1.529 att_org 56.118/132.912 blind_rel 0.877/1.940
+  baseline                           clean rpe_r 2.264/4.956 tilt 11.993/30.591
+  baseline                           mild  rpe_r 4.699/13.160 tilt 12.131/26.531
+  baseline                           full  rpe_r 4.728/13.059 tilt 12.420/25.667
+
+attitude methods
+  gyro only, no bias                 clean att_org_pre 118.472/135.562 tilt_pre 85.390/104.223 rpe_r_pre 4.615/4.882 att_org 118.902/135.949 rpe_r 4.661/5.445
+  gyro only, no bias                 mild  att_org_pre 119.231/137.240 tilt_pre 87.199/107.294 rpe_r_pre 6.366/13.689 att_org 119.460/137.995 rpe_r 6.346/13.354
+  gyro only, no bias                 full  att_org_pre 119.218/138.303 tilt_pre 86.505/108.719 rpe_r_pre 6.365/13.568 att_org 119.409/138.624 rpe_r 6.346/13.235
+  tilt filter, no bias               clean att_org_pre 111.527/142.372 tilt_pre 38.789/96.126 rpe_r_pre 3.642/4.188 att_org 113.150/142.187 rpe_r 3.726/4.956
+  tilt filter, no bias               mild  att_org_pre 108.797/144.514 tilt_pre 37.315/98.483 rpe_r_pre 5.836/13.492 att_org 110.432/144.167 rpe_r 5.831/13.161
+  tilt filter, no bias               full  att_org_pre 108.422/144.706 tilt_pre 37.199/103.793 rpe_r_pre 5.848/13.388 att_org 109.477/144.263 rpe_r 5.845/13.059
+  tilt filter, still bias            clean att_org_pre 47.855/118.585 tilt_pre 11.830/30.148 rpe_r_pre 1.999/4.188 att_org 48.904/118.977 rpe_r 2.264/4.956
+  tilt filter, still bias            mild  att_org_pre 52.765/134.390 tilt_pre 12.012/26.427 rpe_r_pre 4.640/13.492 att_org 54.013/135.632 rpe_r 4.699/13.161
+  tilt filter, still bias            full  att_org_pre 54.836/132.443 tilt_pre 12.255/25.375 rpe_r_pre 4.672/13.388 att_org 56.054/132.911 rpe_r 4.728/13.059
+  tilt filter, gravity bias          clean att_org_pre 86.316/116.918 tilt_pre 2.115/4.271 rpe_r_pre 1.473/1.810 att_org 88.856/117.545 rpe_r 1.774/3.271
+  tilt filter, gravity bias          mild  att_org_pre 83.947/122.373 tilt_pre 3.882/11.552 rpe_r_pre 4.247/13.034 att_org 86.298/124.280 rpe_r 4.324/12.721
+  tilt filter, gravity bias          full  att_org_pre 85.854/129.754 tilt_pre 4.949/11.821 rpe_r_pre 4.323/12.992 att_org 87.602/131.551 rpe_r 4.398/12.680
+  tilt filter, still else gravity    clean att_org_pre 45.628/116.918 tilt_pre 1.788/4.271 rpe_r_pre 0.998/1.810 att_org 47.047/117.545 rpe_r 1.372/3.271
+  tilt filter, still else gravity    mild  att_org_pre 50.511/122.373 tilt_pre 3.578/11.479 rpe_r_pre 4.056/13.034 att_org 52.030/124.280 rpe_r 4.143/12.721
+  tilt filter, still else gravity    full  att_org_pre 52.897/129.754 tilt_pre 4.165/12.116 rpe_r_pre 4.114/12.992 att_org 54.328/131.551 rpe_r 4.198/12.680
+  tilt filter, calib other seqs      clean att_org_pre 3.179/8.013 tilt_pre 1.705/3.128 rpe_r_pre 0.460/0.672 att_org 3.747/8.192 rpe_r 0.996/2.886
+  tilt filter, calib other seqs      mild  att_org_pre 22.169/75.335 tilt_pre 3.551/11.299 rpe_r_pre 3.901/12.982 att_org 22.828/77.532 rpe_r 4.002/12.668
+  tilt filter, calib other seqs      full  att_org_pre 30.808/84.013 tilt_pre 4.361/11.827 rpe_r_pre 3.957/12.969 att_org 32.144/86.798 rpe_r 4.053/12.657
+  tilt filter, calib other envs      clean att_org_pre 3.541/7.923 tilt_pre 2.183/4.485 rpe_r_pre 0.472/0.686 att_org 4.042/8.058 rpe_r 1.002/2.889
+  tilt filter, calib other envs      mild  att_org_pre 22.315/75.752 tilt_pre 3.890/11.279 rpe_r_pre 3.904/12.982 att_org 22.969/77.966 rpe_r 4.004/12.669
+  tilt filter, calib other envs      full  att_org_pre 30.892/84.433 tilt_pre 4.608/11.789 rpe_r_pre 3.959/12.970 att_org 32.229/87.237 rpe_r 4.055/12.658
+  offline, still else gravity        clean att_org_pre 45.569/116.925 tilt_pre 1.533/3.100 rpe_r_pre 0.824/1.660 att_org 47.006/117.550 rpe_r 1.296/3.217
+  offline, still else gravity        mild  att_org_pre 46.919/121.557 tilt_pre 2.307/7.254 rpe_r_pre 3.297/10.229 att_org 48.258/121.382 rpe_r 3.423/10.039
+  offline, still else gravity        full  att_org_pre 50.272/121.444 tilt_pre 2.770/8.498 rpe_r_pre 3.476/10.308 att_org 51.613/120.561 rpe_r 3.582/10.116
+  offline, calib other seqs          clean att_org_pre 2.969/7.283 tilt_pre 1.334/2.196 rpe_r_pre 0.217/0.460 att_org 3.561/7.497 rpe_r 0.893/2.847
+  offline, calib other seqs          mild  att_org_pre 19.155/71.977 tilt_pre 2.177/7.423 rpe_r_pre 3.145/10.230 att_org 20.059/74.836 rpe_r 3.282/10.039
+  offline, calib other seqs          full  att_org_pre 27.915/79.258 tilt_pre 2.470/7.259 rpe_r_pre 3.346/10.305 att_org 29.520/81.916 rpe_r 3.460/10.113
+  offline, calib other envs          clean att_org_pre 2.986/6.610 tilt_pre 1.380/2.221 rpe_r_pre 0.221/0.470 att_org 3.552/6.810 rpe_r 0.894/2.848
+  offline, calib other envs          mild  att_org_pre 19.266/73.029 tilt_pre 2.249/7.600 rpe_r_pre 3.159/10.230 att_org 20.176/75.943 rpe_r 3.294/10.040
+  offline, calib other envs          full  att_org_pre 28.001/80.049 tilt_pre 2.528/7.243 rpe_r_pre 3.357/10.303 att_org 29.607/82.732 rpe_r 3.470/10.111
+
+safety on TUM-VI dev rooms for the automatic bias
+  offline, still else gravity, TUM   clean att_org_pre 26.927/75.979 tilt_pre 12.042/24.091 rpe_r_pre 2.283/3.198 att_org 29.735/80.018 rpe_r 6.930/13.123
+  offline, still else gravity, TUM   mild  att_org_pre 45.721/93.648 tilt_pre 12.306/32.194 rpe_r_pre 9.977/20.317 att_org 48.193/96.098 rpe_r 12.612/22.028
+  offline, still else gravity, TUM   full  att_org_pre 45.930/90.000 tilt_pre 13.648/42.197 rpe_r_pre 10.188/20.948 att_org 48.611/91.728 rpe_r 12.776/23.753

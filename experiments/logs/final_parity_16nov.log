@@ -1,0 +1,8 @@
+SUMMARY 64 files: worst position diff 0.22 mm, mean ATE cpp 1.8915 py 1.8915, peak memory 3.99 MB, worst 1.84 ms per s of IMU
+v4 / tests
+  euroc_full   gaps  33 | inside 2.386 m, outside 2.797 m | since gap start: entry 0.776 hold 1.069 line 0.788 m | rotation across gap: rms 18.5 median 9.4 deg (no rotation: rms 38.6 median 16.0)
+  euroc_hold   gaps  33 | inside 2.738 m, outside 3.057 m | since gap start: entry 0.730 hold 1.000 line 0.755 m | rotation across gap: rms 37.7 median 10.8 deg (no rotation: rms 35.3 median 16.8)
+  euroc_rot    gaps  33 | inside 2.763 m, outside 3.152 m | since gap start: entry 0.791 hold 1.000 line 0.801 m | rotation across gap: rms 53.8 median 20.3 deg (no rotation: rms 35.3 median 16.8)
+  room_full    gaps  15 | inside 0.993 m, outside 0.672 m | since gap start: entry 0.794 hold 0.984 line 0.843 m | rotation across gap: rms 51.5 median 26.5 deg (no rotation: rms 69.5 median 66.0)
+  room_noisy   gaps  12 | inside 1.267 m, outside 0.961 m | since gap start: entry 0.872 hold 0.987 line 0.895 m | rotation across gap: rms 98.6 median 48.2 deg (no rotation: rms 84.6 median 72.8)
+  room_rot     gaps  12 | inside 1.168 m, outside 0.898 m | since gap start: entry 0.779 hold 0.987 line 0.801 m | rotation across gap: rms 108.0 median 94.7 deg (no rotation: rms 84.6 median 72.8)

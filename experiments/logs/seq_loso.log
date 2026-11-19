@@ -1,0 +1,67 @@
+  step 0 loss 1.276 ate 0.753 rpe1 0.676 rpe5 0.739 a 0.40 b 0.30
+  step 500 loss 1.532 ate 0.834 rpe1 0.930 rpe5 0.933 a 0.29 b 0.34
+  step 1000 loss 1.162 ate 0.635 rpe1 0.702 rpe5 0.703 a 0.26 b 0.37
+  step 1500 loss 1.071 ate 0.569 rpe1 0.679 rpe5 0.652 a 0.27 b 0.38
+  step 2000 loss 0.817 ate 0.455 rpe1 0.497 rpe5 0.453 a 0.25 b 0.36
+seq loso fold 0 test ['MH01'] 62s
+  step 0 loss 1.324 ate 0.776 rpe1 0.717 rpe5 0.759 a 0.40 b 0.30
+  step 500 loss 1.321 ate 0.739 rpe1 0.773 rpe5 0.782 a 0.30 b 0.36
+  step 1000 loss 1.316 ate 0.792 rpe1 0.696 rpe5 0.704 a 0.30 b 0.40
+  step 1500 loss 0.883 ate 0.504 rpe1 0.508 rpe5 0.499 a 0.27 b 0.37
+  step 2000 loss 0.883 ate 0.488 rpe1 0.543 rpe5 0.495 a 0.25 b 0.35
+seq loso fold 1 test ['MH02'] 54s
+  step 0 loss 1.325 ate 0.772 rpe1 0.719 rpe5 0.774 a 0.40 b 0.30
+  step 500 loss 1.317 ate 0.783 rpe1 0.702 rpe5 0.734 a 0.24 b 0.35
+  step 1000 loss 1.141 ate 0.643 rpe1 0.651 rpe5 0.690 a 0.27 b 0.37
+  step 1500 loss 0.960 ate 0.540 rpe1 0.561 rpe5 0.561 a 0.27 b 0.37
+  step 2000 loss 1.099 ate 0.647 rpe1 0.616 rpe5 0.576 a 0.26 b 0.35
+seq loso fold 2 test ['MH03'] 52s
+  step 0 loss 1.363 ate 0.809 rpe1 0.722 rpe5 0.770 a 0.40 b 0.30
+  step 500 loss 1.265 ate 0.724 rpe1 0.720 rpe5 0.724 a 0.31 b 0.35
+  step 1000 loss 1.065 ate 0.597 rpe1 0.619 rpe5 0.634 a 0.33 b 0.39
+  step 1500 loss 1.112 ate 0.561 rpe1 0.739 rpe5 0.727 a 0.27 b 0.39
+  step 2000 loss 0.854 ate 0.449 rpe1 0.540 rpe5 0.537 a 0.27 b 0.39
+seq loso fold 3 test ['MH04'] 49s
+  step 0 loss 1.361 ate 0.789 rpe1 0.751 rpe5 0.790 a 0.40 b 0.30
+  step 500 loss 1.358 ate 0.818 rpe1 0.714 rpe5 0.732 a 0.31 b 0.33
+  step 1000 loss 1.348 ate 0.834 rpe1 0.667 rpe5 0.722 a 0.33 b 0.37
+  step 1500 loss 0.987 ate 0.537 rpe1 0.603 rpe5 0.594 a 0.34 b 0.36
+  step 2000 loss 0.855 ate 0.506 rpe1 0.467 rpe5 0.464 a 0.30 b 0.34
+seq loso fold 4 test ['MH05'] 48s
+  step 0 loss 1.374 ate 0.854 rpe1 0.666 rpe5 0.749 a 0.40 b 0.30
+  step 500 loss 1.263 ate 0.771 rpe1 0.649 rpe5 0.671 a 0.29 b 0.40
+  step 1000 loss 1.029 ate 0.530 rpe1 0.677 rpe5 0.645 a 0.31 b 0.43
+  step 1500 loss 0.962 ate 0.538 rpe1 0.570 rpe5 0.552 a 0.31 b 0.42
+  step 2000 loss 0.813 ate 0.442 rpe1 0.503 rpe5 0.477 a 0.28 b 0.40
+seq loso fold 5 test ['V101'] 40s
+  step 0 loss 1.361 ate 0.800 rpe1 0.739 rpe5 0.766 a 0.40 b 0.30
+  step 500 loss 1.228 ate 0.662 rpe1 0.754 rpe5 0.758 a 0.29 b 0.35
+  step 1000 loss 1.035 ate 0.556 rpe1 0.638 rpe5 0.640 a 0.28 b 0.38
+  step 1500 loss 1.069 ate 0.591 rpe1 0.645 rpe5 0.624 a 0.27 b 0.35
+  step 2000 loss 0.901 ate 0.454 rpe1 0.618 rpe5 0.552 a 0.26 b 0.32
+seq loso fold 6 test ['V102'] 36s
+  step 0 loss 1.393 ate 0.751 rpe1 0.857 rpe5 0.854 a 0.40 b 0.30
+  step 500 loss 1.413 ate 0.874 rpe1 0.701 rpe5 0.755 a 0.31 b 0.40
+  step 1000 loss 1.123 ate 0.672 rpe1 0.599 rpe5 0.603 a 0.30 b 0.42
+  step 1500 loss 1.057 ate 0.656 rpe1 0.534 rpe5 0.538 a 0.27 b 0.41
+  step 2000 loss 0.874 ate 0.442 rpe1 0.597 rpe5 0.538 a 0.27 b 0.41
+seq loso fold 7 test ['V103'] 32s
+  step 0 loss 1.268 ate 0.763 rpe1 0.652 rpe5 0.714 a 0.40 b 0.30
+  step 500 loss 1.100 ate 0.672 rpe1 0.557 rpe5 0.597 a 0.35 b 0.36
+  step 1000 loss 1.051 ate 0.670 rpe1 0.494 rpe5 0.535 a 0.37 b 0.38
+  step 1500 loss 0.874 ate 0.522 rpe1 0.464 rpe5 0.480 a 0.34 b 0.35
+  step 2000 loss 0.784 ate 0.418 rpe1 0.492 rpe5 0.481 a 0.32 b 0.33
+seq loso fold 8 test ['V201'] 34s
+  step 0 loss 1.411 ate 0.789 rpe1 0.827 rpe5 0.834 a 0.40 b 0.30
+  step 500 loss 1.316 ate 0.826 rpe1 0.637 rpe5 0.689 a 0.30 b 0.37
+  step 1000 loss 1.086 ate 0.604 rpe1 0.632 rpe5 0.663 a 0.31 b 0.40
+  step 1500 loss 0.983 ate 0.530 rpe1 0.606 rpe5 0.601 a 0.30 b 0.38
+  step 2000 loss 0.697 ate 0.358 rpe1 0.458 rpe5 0.438 a 0.30 b 0.37
+seq loso fold 9 test ['V202'] 26s
+  step 0 loss 1.297 ate 0.759 rpe1 0.705 rpe5 0.740 a 0.40 b 0.30
+  step 500 loss 1.386 ate 0.843 rpe1 0.710 rpe5 0.754 a 0.30 b 0.37
+  step 1000 loss 1.287 ate 0.740 rpe1 0.724 rpe5 0.743 a 0.32 b 0.41
+  step 1500 loss 1.174 ate 0.689 rpe1 0.664 rpe5 0.609 a 0.32 b 0.39
+  step 2000 loss 0.966 ate 0.518 rpe1 0.607 rpe5 0.578 a 0.31 b 0.38
+seq loso fold 10 test ['V203'] 32s
+SEQ_DONE

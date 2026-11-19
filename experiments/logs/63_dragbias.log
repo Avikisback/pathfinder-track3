@@ -1,0 +1,158 @@
+solved 616 in 301s
+
+=== EuRoC frozen L15 (reference)
+ clean      (11) stationary ate_se3 3.446 rpe_t 0.763 blind_rel 0.334 blind_abs 3.099
+   final        ate_se3 2.513 rpe_t 0.389 blind_rel 0.339 blind_abs 2.475 worst 4.44 beat 1.00
+   nocheck      ate_se3 2.335 rpe_t 0.378 blind_rel 0.338 blind_abs 2.211 worst 4.44 beat 1.00
+   raw          ate_se3 2.225 rpe_t 0.310 blind_rel 0.369 blind_abs 1.963 worst 4.26 beat 1.00
+ mild       (22) stationary ate_se3 3.444 rpe_t 0.793 blind_rel 0.334 blind_abs 3.056
+   final        ate_se3 2.621 rpe_t 0.466 blind_rel 0.335 blind_abs 2.390 worst 4.42 beat 1.00
+   nocheck      ate_se3 2.526 rpe_t 0.460 blind_rel 0.334 blind_abs 2.269 worst 4.42 beat 1.00
+   raw          ate_se3 2.436 rpe_t 0.402 blind_rel 0.365 blind_abs 2.081 worst 4.32 beat 0.86
+ full       (33) stationary ate_se3 3.445 rpe_t 0.783 blind_rel 0.334 blind_abs 3.071
+   final        ate_se3 2.587 rpe_t 0.462 blind_rel 0.335 blind_abs 2.358 worst 4.51 beat 0.97
+   nocheck      ate_se3 2.501 rpe_t 0.455 blind_rel 0.334 blind_abs 2.261 worst 4.51 beat 0.97
+   raw          ate_se3 2.523 rpe_t 0.421 blind_rel 0.366 blind_abs 2.072 worst 4.55 beat 0.79
+ burst      (22) stationary ate_se3 3.446 rpe_t 0.763 blind_rel 0.334 blind_abs 3.099
+   final        ate_se3 2.461 rpe_t 0.457 blind_rel 0.347 blind_abs 2.266 worst 4.44 beat 1.00
+   nocheck      ate_se3 2.461 rpe_t 0.457 blind_rel 0.347 blind_abs 2.266 worst 4.44 beat 1.00
+   raw          ate_se3 2.348 rpe_t 0.403 blind_rel 0.374 blind_abs 2.054 worst 4.28 beat 0.95
+ steps      (22) stationary ate_se3 3.445 rpe_t 0.816 blind_rel 0.334 blind_abs 3.087
+   final        ate_se3 2.837 rpe_t 0.523 blind_rel 0.361 blind_abs 2.771 worst 5.32 beat 0.91
+   nocheck      ate_se3 3.196 rpe_t 0.533 blind_rel 0.354 blind_abs 2.933 worst 8.36 beat 0.82
+   raw          ate_se3 3.477 rpe_t 0.588 blind_rel 0.377 blind_abs 3.155 worst 8.54 beat 0.41
+ randomwalk (22) stationary ate_se3 3.447 rpe_t 0.826 blind_rel 0.334 blind_abs 3.048
+   final        ate_se3 3.720 rpe_t 0.802 blind_rel 0.376 blind_abs 3.032 worst 5.48 beat 0.36
+   nocheck      ate_se3 4.128 rpe_t 0.830 blind_rel 0.362 blind_abs 3.140 worst 6.61 beat 0.27
+   raw          ate_se3 4.744 rpe_t 0.916 blind_rel 0.383 blind_abs 3.693 worst 6.77 beat 0.14
+ sine       (22) stationary ate_se3 3.446 rpe_t 0.763 blind_rel 0.334 blind_abs 3.099
+   final        ate_se3 4.050 rpe_t 0.783 blind_rel 0.394 blind_abs 3.359 worst 5.85 beat 0.18
+   nocheck      ate_se3 6.524 rpe_t 0.907 blind_rel 0.380 blind_abs 4.341 worst 11.13 beat 0.00
+   raw          ate_se3 7.181 rpe_t 0.997 blind_rel 0.403 blind_abs 4.971 worst 11.78 beat 0.00
+
+=== EuRoC coupled target, L15, c
+ clean      (11) stationary ate_se3 3.446 rpe_t 0.763 blind_rel 0.334 blind_abs 3.099
+   final        ate_se3 3.150 rpe_t 0.457 blind_rel 0.326 blind_abs 2.789 worst 6.67 beat 1.00
+   nocheck      ate_se3 3.150 rpe_t 0.457 blind_rel 0.326 blind_abs 2.789 worst 6.67 beat 1.00
+   raw          ate_se3 3.060 rpe_t 0.417 blind_rel 0.365 blind_abs 2.738 worst 6.54 beat 1.00
+ mild       (22) stationary ate_se3 3.444 rpe_t 0.793 blind_rel 0.334 blind_abs 3.056
+   final        ate_se3 3.232 rpe_t 0.544 blind_rel 0.328 blind_abs 2.854 worst 6.76 beat 1.00
+   nocheck      ate_se3 3.232 rpe_t 0.544 blind_rel 0.328 blind_abs 2.854 worst 6.76 beat 1.00
+   raw          ate_se3 3.129 rpe_t 0.498 blind_rel 0.346 blind_abs 2.713 worst 6.69 beat 1.00
+ full       (33) stationary ate_se3 3.445 rpe_t 0.783 blind_rel 0.334 blind_abs 3.071
+   final        ate_se3 3.238 rpe_t 0.534 blind_rel 0.322 blind_abs 2.818 worst 6.77 beat 1.00
+   nocheck      ate_se3 3.238 rpe_t 0.534 blind_rel 0.322 blind_abs 2.818 worst 6.77 beat 1.00
+   raw          ate_se3 3.166 rpe_t 0.504 blind_rel 0.338 blind_abs 2.631 worst 6.73 beat 0.97
+ burst      (22) stationary ate_se3 3.446 rpe_t 0.763 blind_rel 0.334 blind_abs 3.099
+   final        ate_se3 3.259 rpe_t 0.546 blind_rel 0.346 blind_abs 2.907 worst 6.77 beat 1.00
+   nocheck      ate_se3 3.259 rpe_t 0.546 blind_rel 0.346 blind_abs 2.907 worst 6.77 beat 1.00
+   raw          ate_se3 3.202 rpe_t 0.507 blind_rel 0.379 blind_abs 2.828 worst 6.65 beat 0.91
+ steps      (22) stationary ate_se3 3.445 rpe_t 0.816 blind_rel 0.334 blind_abs 3.087
+   final        ate_se3 3.235 rpe_t 0.563 blind_rel 0.319 blind_abs 2.708 worst 6.68 beat 0.91
+   nocheck      ate_se3 3.235 rpe_t 0.563 blind_rel 0.319 blind_abs 2.708 worst 6.68 beat 0.91
+   raw          ate_se3 3.295 rpe_t 0.592 blind_rel 0.350 blind_abs 2.789 worst 6.62 beat 0.50
+ randomwalk (22) stationary ate_se3 3.447 rpe_t 0.826 blind_rel 0.334 blind_abs 3.048
+   final        ate_se3 3.979 rpe_t 0.832 blind_rel 0.379 blind_abs 3.194 worst 11.34 beat 0.45
+   nocheck      ate_se3 5.527 rpe_t 0.943 blind_rel 0.357 blind_abs 3.458 worst 30.78 beat 0.45
+   raw          ate_se3 5.926 rpe_t 1.041 blind_rel 0.373 blind_abs 3.662 worst 30.96 beat 0.27
+ sine       (22) stationary ate_se3 3.446 rpe_t 0.763 blind_rel 0.334 blind_abs 3.099
+   final        ate_se3 3.666 rpe_t 0.646 blind_rel 0.373 blind_abs 3.129 worst 7.36 beat 0.68
+   nocheck      ate_se3 4.671 rpe_t 0.731 blind_rel 0.342 blind_abs 3.218 worst 19.42 beat 0.68
+   raw          ate_se3 4.995 rpe_t 0.800 blind_rel 0.376 blind_abs 3.526 worst 19.76 beat 0.41
+  drag scale per file on full: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+
+=== EuRoC coupled target, L15, ck
+ clean      (11) stationary ate_se3 3.446 rpe_t 0.763 blind_rel 0.334 blind_abs 3.099
+   final        ate_se3 3.208 rpe_t 0.473 blind_rel 0.343 blind_abs 3.008 worst 6.69 beat 1.00
+   nocheck      ate_se3 3.208 rpe_t 0.473 blind_rel 0.343 blind_abs 3.008 worst 6.69 beat 1.00
+   raw          ate_se3 3.113 rpe_t 0.408 blind_rel 0.359 blind_abs 3.064 worst 6.58 beat 1.00
+ mild       (22) stationary ate_se3 3.444 rpe_t 0.793 blind_rel 0.334 blind_abs 3.056
+   final        ate_se3 3.292 rpe_t 0.569 blind_rel 0.335 blind_abs 2.983 worst 6.84 beat 1.00
+   nocheck      ate_se3 3.292 rpe_t 0.569 blind_rel 0.335 blind_abs 2.983 worst 6.84 beat 1.00
+   raw          ate_se3 3.224 rpe_t 0.512 blind_rel 0.345 blind_abs 3.012 worst 6.75 beat 1.00
+ full       (33) stationary ate_se3 3.445 rpe_t 0.783 blind_rel 0.334 blind_abs 3.071
+   final        ate_se3 3.306 rpe_t 0.562 blind_rel 0.334 blind_abs 2.984 worst 6.84 beat 1.00
+   nocheck      ate_se3 3.306 rpe_t 0.562 blind_rel 0.334 blind_abs 2.984 worst 6.84 beat 1.00
+   raw          ate_se3 3.247 rpe_t 0.513 blind_rel 0.336 blind_abs 2.958 worst 6.77 beat 0.94
+ burst      (22) stationary ate_se3 3.446 rpe_t 0.763 blind_rel 0.334 blind_abs 3.099
+   final        ate_se3 3.311 rpe_t 0.570 blind_rel 0.346 blind_abs 3.011 worst 6.84 beat 1.00
+   nocheck      ate_se3 3.311 rpe_t 0.570 blind_rel 0.346 blind_abs 3.011 worst 6.84 beat 1.00
+   raw          ate_se3 3.267 rpe_t 0.524 blind_rel 0.356 blind_abs 3.088 worst 6.75 beat 1.00
+ steps      (22) stationary ate_se3 3.445 rpe_t 0.816 blind_rel 0.334 blind_abs 3.087
+   final        ate_se3 3.280 rpe_t 0.577 blind_rel 0.324 blind_abs 2.912 worst 6.76 beat 0.86
+   nocheck      ate_se3 3.280 rpe_t 0.577 blind_rel 0.324 blind_abs 2.912 worst 6.76 beat 0.86
+   raw          ate_se3 3.287 rpe_t 0.584 blind_rel 0.323 blind_abs 2.930 worst 6.68 beat 0.77
+ randomwalk (22) stationary ate_se3 3.447 rpe_t 0.826 blind_rel 0.334 blind_abs 3.048
+   final        ate_se3 3.898 rpe_t 0.813 blind_rel 0.353 blind_abs 3.081 worst 11.32 beat 0.50
+   nocheck      ate_se3 5.304 rpe_t 0.912 blind_rel 0.355 blind_abs 3.183 worst 30.90 beat 0.50
+   raw          ate_se3 5.646 rpe_t 0.995 blind_rel 0.371 blind_abs 3.369 worst 31.08 beat 0.36
+ sine       (22) stationary ate_se3 3.446 rpe_t 0.763 blind_rel 0.334 blind_abs 3.099
+   final        ate_se3 3.732 rpe_t 0.649 blind_rel 0.361 blind_abs 3.122 worst 7.27 beat 0.68
+   nocheck      ate_se3 4.808 rpe_t 0.738 blind_rel 0.335 blind_abs 3.198 worst 19.24 beat 0.68
+   raw          ate_se3 5.066 rpe_t 0.790 blind_rel 0.354 blind_abs 3.535 worst 19.55 beat 0.50
+  drag scale per file on full: [-0.696 -0.812 -0.131 -0.755 -0.55  -0.699 -0.523 -0.392 -0.657 -0.415
+ -0.363]
+
+=== EuRoC coupled target, L8, c
+ clean      (11) stationary ate_se3 3.446 rpe_t 0.763 blind_rel 0.334 blind_abs 3.099
+   final        ate_se3 3.292 rpe_t 0.533 blind_rel 0.341 blind_abs 2.993 worst 6.81 beat 1.00
+   nocheck      ate_se3 3.292 rpe_t 0.533 blind_rel 0.341 blind_abs 2.993 worst 6.81 beat 1.00
+   raw          ate_se3 3.220 rpe_t 0.475 blind_rel 0.344 blind_abs 2.764 worst 6.72 beat 1.00
+ mild       (22) stationary ate_se3 3.444 rpe_t 0.793 blind_rel 0.334 blind_abs 3.056
+   final        ate_se3 3.315 rpe_t 0.600 blind_rel 0.343 blind_abs 2.949 worst 6.85 beat 1.00
+   nocheck      ate_se3 3.315 rpe_t 0.600 blind_rel 0.343 blind_abs 2.949 worst 6.85 beat 1.00
+   raw          ate_se3 3.244 rpe_t 0.548 blind_rel 0.341 blind_abs 2.706 worst 6.79 beat 1.00
+ full       (33) stationary ate_se3 3.445 rpe_t 0.783 blind_rel 0.334 blind_abs 3.071
+   final        ate_se3 3.323 rpe_t 0.592 blind_rel 0.340 blind_abs 2.952 worst 6.85 beat 1.00
+   nocheck      ate_se3 3.323 rpe_t 0.592 blind_rel 0.340 blind_abs 2.952 worst 6.85 beat 1.00
+   raw          ate_se3 3.253 rpe_t 0.552 blind_rel 0.335 blind_abs 2.725 worst 6.78 beat 0.97
+ burst      (22) stationary ate_se3 3.446 rpe_t 0.763 blind_rel 0.334 blind_abs 3.099
+   final        ate_se3 3.327 rpe_t 0.590 blind_rel 0.341 blind_abs 2.963 worst 6.83 beat 1.00
+   nocheck      ate_se3 3.327 rpe_t 0.590 blind_rel 0.341 blind_abs 2.963 worst 6.83 beat 1.00
+   raw          ate_se3 3.261 rpe_t 0.556 blind_rel 0.346 blind_abs 2.768 worst 6.77 beat 1.00
+ steps      (22) stationary ate_se3 3.445 rpe_t 0.816 blind_rel 0.334 blind_abs 3.087
+   final        ate_se3 3.318 rpe_t 0.612 blind_rel 0.338 blind_abs 2.950 worst 6.88 beat 0.95
+   nocheck      ate_se3 3.318 rpe_t 0.612 blind_rel 0.338 blind_abs 2.950 worst 6.88 beat 0.95
+   raw          ate_se3 3.272 rpe_t 0.601 blind_rel 0.344 blind_abs 2.833 worst 6.81 beat 0.86
+ randomwalk (22) stationary ate_se3 3.447 rpe_t 0.826 blind_rel 0.334 blind_abs 3.048
+   final        ate_se3 4.107 rpe_t 0.850 blind_rel 0.341 blind_abs 2.947 worst 12.26 beat 0.77
+   nocheck      ate_se3 5.965 rpe_t 0.979 blind_rel 0.339 blind_abs 3.745 worst 33.37 beat 0.77
+   raw          ate_se3 6.119 rpe_t 1.027 blind_rel 0.342 blind_abs 3.972 worst 33.54 beat 0.59
+ sine       (22) stationary ate_se3 3.446 rpe_t 0.763 blind_rel 0.334 blind_abs 3.099
+   final        ate_se3 3.439 rpe_t 0.639 blind_rel 0.338 blind_abs 2.904 worst 6.89 beat 0.73
+   nocheck      ate_se3 3.536 rpe_t 0.650 blind_rel 0.332 blind_abs 2.885 worst 7.64 beat 0.73
+   raw          ate_se3 3.718 rpe_t 0.705 blind_rel 0.346 blind_abs 3.199 worst 8.12 beat 0.55
+  drag scale per file on full: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+
+=== EuRoC coupled target, L8, ck
+ clean      (11) stationary ate_se3 3.446 rpe_t 0.763 blind_rel 0.334 blind_abs 3.099
+   final        ate_se3 3.306 rpe_t 0.537 blind_rel 0.342 blind_abs 3.035 worst 6.82 beat 1.00
+   nocheck      ate_se3 3.306 rpe_t 0.537 blind_rel 0.342 blind_abs 3.035 worst 6.82 beat 1.00
+   raw          ate_se3 3.249 rpe_t 0.482 blind_rel 0.348 blind_abs 2.917 worst 6.76 beat 1.00
+ mild       (22) stationary ate_se3 3.444 rpe_t 0.793 blind_rel 0.334 blind_abs 3.056
+   final        ate_se3 3.334 rpe_t 0.609 blind_rel 0.345 blind_abs 2.998 worst 6.86 beat 1.00
+   nocheck      ate_se3 3.334 rpe_t 0.609 blind_rel 0.345 blind_abs 2.998 worst 6.86 beat 1.00
+   raw          ate_se3 3.281 rpe_t 0.555 blind_rel 0.346 blind_abs 2.863 worst 6.82 beat 1.00
+ full       (33) stationary ate_se3 3.445 rpe_t 0.783 blind_rel 0.334 blind_abs 3.071
+   final        ate_se3 3.343 rpe_t 0.600 blind_rel 0.344 blind_abs 3.015 worst 6.85 beat 1.00
+   nocheck      ate_se3 3.343 rpe_t 0.600 blind_rel 0.344 blind_abs 3.015 worst 6.85 beat 1.00
+   raw          ate_se3 3.289 rpe_t 0.554 blind_rel 0.346 blind_abs 2.880 worst 6.81 beat 1.00
+ burst      (22) stationary ate_se3 3.446 rpe_t 0.763 blind_rel 0.334 blind_abs 3.099
+   final        ate_se3 3.347 rpe_t 0.597 blind_rel 0.346 blind_abs 3.041 worst 6.84 beat 1.00
+   nocheck      ate_se3 3.347 rpe_t 0.597 blind_rel 0.346 blind_abs 3.041 worst 6.84 beat 1.00
+   raw          ate_se3 3.297 rpe_t 0.558 blind_rel 0.341 blind_abs 2.925 worst 6.84 beat 1.00
+ steps      (22) stationary ate_se3 3.445 rpe_t 0.816 blind_rel 0.334 blind_abs 3.087
+   final        ate_se3 3.329 rpe_t 0.620 blind_rel 0.338 blind_abs 2.994 worst 6.88 beat 1.00
+   nocheck      ate_se3 3.329 rpe_t 0.620 blind_rel 0.338 blind_abs 2.994 worst 6.88 beat 1.00
+   raw          ate_se3 3.295 rpe_t 0.597 blind_rel 0.343 blind_abs 2.885 worst 6.85 beat 0.91
+ randomwalk (22) stationary ate_se3 3.447 rpe_t 0.826 blind_rel 0.334 blind_abs 3.048
+   final        ate_se3 4.098 rpe_t 0.863 blind_rel 0.352 blind_abs 2.906 worst 11.84 beat 0.77
+   nocheck      ate_se3 5.781 rpe_t 0.995 blind_rel 0.356 blind_abs 3.445 worst 31.80 beat 0.77
+   raw          ate_se3 5.943 rpe_t 1.041 blind_rel 0.358 blind_abs 3.860 worst 31.98 beat 0.64
+ sine       (22) stationary ate_se3 3.446 rpe_t 0.763 blind_rel 0.334 blind_abs 3.099
+   final        ate_se3 3.718 rpe_t 0.694 blind_rel 0.359 blind_abs 2.949 worst 6.88 beat 0.68
+   nocheck      ate_se3 4.093 rpe_t 0.728 blind_rel 0.332 blind_abs 3.077 worst 9.27 beat 0.68
+   raw          ate_se3 4.276 rpe_t 0.771 blind_rel 0.352 blind_abs 3.370 worst 9.98 beat 0.59
+  drag scale per file on full: [-0.652 -0.586 -0.171 -0.575 -0.557 -0.902 -0.49  -0.36  -0.434 -0.406
+ -0.342]
+done 362s

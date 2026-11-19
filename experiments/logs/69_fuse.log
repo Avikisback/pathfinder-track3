@@ -1,0 +1,36 @@
+fold MH fusion coefficients per band (solver, drag): [[0.19, 0.67, -0.63, -0.21, 0.48, 0.81, 0.87, 0.92, 0.93, 0.84, 0.56], [-0.34, 0.09, 0.22, 0.31, 0.43, 0.05, 0.05, -0.03, -0.01, -0.02, 0.0]]
+fold V1 fusion coefficients per band (solver, drag): [[-1.11, 0.46, 0.05, 0.63, 0.61, 0.93, 0.93, 0.92, 0.9, 0.86, 0.54], [0.67, 0.18, 0.39, 0.37, 0.25, 0.02, -0.02, -0.02, 0.0, -0.0, 0.0]]
+fold V2 fusion coefficients per band (solver, drag): [[-0.75, 0.38, 0.21, 0.75, 0.5, 0.99, 0.91, 0.92, 0.94, 0.83, 0.53], [0.56, 0.18, 0.38, 0.31, 0.33, -0.01, 0.03, -0.01, -0.0, -0.0, 0.0]]
+
+=== 1. EuRoC two-input band fusion (unseen environment), mean ATE SE3 / RPE 1 s
+  clean      stationary 3.45/0.76 | frozen 2.51/0.39 | nocheck 2.34/0.38 | fused 3.07/0.39 | fused_check 2.92/0.37
+  mild       stationary 3.44/0.79 | frozen 2.62/0.47 | nocheck 2.53/0.46 | fused 3.21/0.48 | fused_check 3.12/0.47
+  full       stationary 3.44/0.78 | frozen 2.59/0.46 | nocheck 2.50/0.46 | fused 3.29/0.49 | fused_check 3.18/0.48
+  burst      stationary 3.45/0.76 | frozen 2.46/0.46 | nocheck 2.46/0.46 | fused 3.13/0.46 | fused_check 3.13/0.46
+  steps      stationary 3.45/0.82 | frozen 2.84/0.52 | nocheck 3.20/0.53 | fused 3.78/0.60 | fused_check 3.32/0.57
+  randomwalk stationary 3.45/0.83 | frozen 3.72/0.80 | nocheck 4.13/0.83 | fused 4.55/0.85 | fused_check 4.10/0.84
+  sine       stationary 3.45/0.76 | frozen 4.05/0.78 | nocheck 6.52/0.91 | fused 5.48/0.83 | fused_check 4.26/0.80
+
+=== 2. TUM gap yaw, band gains refitted on tracks treated the same way (unseen room)
+  none       final: clean 0.50 mild 0.73 full 0.75 burst 0.73 steps 0.97 randomwalk 0.98 sine 0.95
+             nocheck: clean 0.50 mild 0.73 full 0.76 burst 0.73 steps 1.07 randomwalk 1.46 sine 1.48
+  solved     final: clean 0.50 mild 0.74 full 0.77 burst 0.73 steps 0.96 randomwalk 0.97 sine 0.94
+             nocheck: clean 0.50 mild 0.74 full 0.77 burst 0.73 steps 1.05 randomwalk 1.42 sine 1.43
+  oracle     final: clean 0.51 mild 0.88 full 0.86 burst 0.82 steps 0.98 randomwalk 0.99 sine 0.98
+             nocheck: clean 0.51 mild 0.90 full 0.88 burst 0.82 steps 1.09 randomwalk 1.42 sine 1.46
+Traceback (most recent call last):
+  File "/mnt/e/clipping-pipeline/xr_track3/experiments/scripts/69_fuse.py", line 219, in <module>
+    part2()
+  File "/mnt/e/clipping-pipeline/xr_track3/experiments/scripts/69_fuse.py", line 175, in part2
+    r = evaluate(DEV_ROOMS, TU_FOLDS, kinds, L)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/e/clipping-pipeline/xr_track3/experiments/scripts/ev.py", line 92, in evaluate
+    F = fits(folds, loader, rooms)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/e/clipping-pipeline/xr_track3/experiments/scripts/ev.py", line 57, in fits
+    fit = m57.spec_fit([(n, loader(n, k)) for n in train for k in KNOWN], rooms)
+                            ^^^^^^^^^^^^
+  File "/mnt/e/clipping-pipeline/xr_track3/experiments/scripts/69_fuse.py", line 173, in L
+    d["v"] = V[(n, k)][var]
+             ~~~~~~~~~^^^^^
+KeyError: 'oracle_pos'

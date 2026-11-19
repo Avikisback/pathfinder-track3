@@ -1,0 +1,45 @@
+hold / tests: 64 files
+  euroc_clean    n 11 | ATE 2.160 (still 3.446) origin-ATE 3.041 | RPE 1 s 0.262 m 0.18 deg | attitude 6.0 deg | blind 0.284 (hold 0.334) | 3.99 MB 3.0 ms/s
+  euroc_full     n 11 | ATE 2.318 (still 3.446) origin-ATE 3.683 | RPE 1 s 0.345 m 3.11 deg | attitude 24.6 deg | blind 0.288 (hold 0.334) | 3.85 MB 3.0 ms/s
+  euroc_hold     n 11 | ATE 2.522 (still 3.446) origin-ATE 3.534 | RPE 1 s 0.367 m 4.01 deg | attitude 21.1 deg | blind 0.290 (hold 0.334) | 3.62 MB 3.0 ms/s
+  euroc_rot      n 11 | ATE 3.044 (still 3.446) origin-ATE 4.886 | RPE 1 s 1.014 m 25.81 deg | attitude 100.6 deg | blind 0.334 (hold 0.334) | 3.79 MB 3.0 ms/s
+  room_clean     n  5 | ATE 0.436 (still 1.096) origin-ATE 0.677 | RPE 1 s 0.182 m 0.68 deg | attitude 6.6 deg | blind 0.491 (hold 0.490) | 3.38 MB 1.4 ms/s
+  room_full      n  5 | ATE 0.686 (still 1.096) origin-ATE 0.936 | RPE 1 s 0.300 m 10.77 deg | attitude 34.2 deg | blind 0.491 (hold 0.490) | 3.56 MB 1.4 ms/s
+  room_noisy     n  5 | ATE 0.938 (still 1.096) origin-ATE 1.115 | RPE 1 s 0.401 m 10.31 deg | attitude 54.3 deg | blind 0.491 (hold 0.490) | 3.56 MB 1.4 ms/s
+  room_rot       n  5 | ATE 0.871 (still 1.096) origin-ATE 1.479 | RPE 1 s 1.189 m 52.91 deg | attitude 83.4 deg | blind 0.489 (hold 0.490) | 3.56 MB 1.3 ms/s
+gzero / tests: 64 files
+  euroc_clean    n 11 | ATE 2.160 (still 3.446) origin-ATE 3.041 | RPE 1 s 0.262 m 0.18 deg | attitude 6.0 deg | blind 0.284 (hold 0.334) | 3.79 MB 2.1 ms/s
+  euroc_full     n 11 | ATE 2.416 (still 3.446) origin-ATE 3.687 | RPE 1 s 0.362 m 4.02 deg | attitude 38.4 deg | blind 0.299 (hold 0.334) | 3.80 MB 2.3 ms/s
+  euroc_hold     n 11 | ATE 2.642 (still 3.446) origin-ATE 3.726 | RPE 1 s 0.406 m 4.27 deg | attitude 30.0 deg | blind 0.292 (hold 0.334) | 3.79 MB 2.3 ms/s
+  euroc_rot      n 11 | ATE 3.029 (still 3.446) origin-ATE 4.899 | RPE 1 s 1.018 m 25.36 deg | attitude 99.7 deg | blind 0.328 (hold 0.334) | 3.80 MB 2.4 ms/s
+  room_clean     n  5 | ATE 0.437 (still 1.096) origin-ATE 0.679 | RPE 1 s 0.182 m 0.68 deg | attitude 6.6 deg | blind 0.523 (hold 0.490) | 3.38 MB 1.0 ms/s
+  room_full      n  5 | ATE 0.879 (still 1.096) origin-ATE 1.188 | RPE 1 s 0.417 m 12.15 deg | attitude 58.7 deg | blind 0.501 (hold 0.490) | 3.56 MB 1.1 ms/s
+  room_noisy     n  5 | ATE 1.082 (still 1.096) origin-ATE 1.319 | RPE 1 s 0.371 m 13.51 deg | attitude 68.4 deg | blind 0.504 (hold 0.490) | 3.56 MB 1.1 ms/s
+  room_rot       n  5 | ATE 1.049 (still 1.096) origin-ATE 1.496 | RPE 1 s 1.131 m 52.63 deg | attitude 92.8 deg | blind 0.513 (hold 0.490) | 3.56 MB 1.1 ms/s
+gfade / tests: 64 files
+  euroc_clean    n 11 | ATE 2.160 (still 3.446) origin-ATE 3.041 | RPE 1 s 0.262 m 0.18 deg | attitude 6.0 deg | blind 0.284 (hold 0.334) | 3.79 MB 2.2 ms/s
+  euroc_full     n 11 | ATE 2.375 (still 3.446) origin-ATE 3.647 | RPE 1 s 0.357 m 3.57 deg | attitude 33.2 deg | blind 0.293 (hold 0.334) | 3.80 MB 2.3 ms/s
+  euroc_hold     n 11 | ATE 2.622 (still 3.446) origin-ATE 3.703 | RPE 1 s 0.401 m 3.80 deg | attitude 24.4 deg | blind 0.291 (hold 0.334) | 3.80 MB 2.3 ms/s
+  euroc_rot      n 11 | ATE 2.939 (still 3.446) origin-ATE 4.852 | RPE 1 s 0.975 m 25.43 deg | attitude 99.3 deg | blind 0.330 (hold 0.334) | 3.79 MB 2.5 ms/s
+  room_clean     n  5 | ATE 0.437 (still 1.096) origin-ATE 0.679 | RPE 1 s 0.182 m 0.68 deg | attitude 6.6 deg | blind 0.523 (hold 0.490) | 3.38 MB 1.2 ms/s
+  room_full      n  5 | ATE 0.809 (still 1.096) origin-ATE 1.027 | RPE 1 s 0.442 m 10.88 deg | attitude 42.4 deg | blind 0.487 (hold 0.490) | 3.56 MB 1.1 ms/s
+  room_noisy     n  5 | ATE 0.917 (still 1.096) origin-ATE 1.152 | RPE 1 s 0.381 m 10.23 deg | attitude 57.8 deg | blind 0.484 (hold 0.490) | 3.56 MB 1.1 ms/s
+  room_rot       n  5 | ATE 0.880 (still 1.096) origin-ATE 1.447 | RPE 1 s 1.140 m 52.30 deg | attitude 84.9 deg | blind 0.504 (hold 0.490) | 3.56 MB 1.1 ms/s
+gfade2 / tests: 64 files
+  euroc_clean    n 11 | ATE 2.160 (still 3.446) origin-ATE 3.041 | RPE 1 s 0.262 m 0.18 deg | attitude 6.0 deg | blind 0.284 (hold 0.334) | 3.57 MB 3.5 ms/s
+  euroc_full     n 11 | ATE 2.386 (still 3.446) origin-ATE 3.626 | RPE 1 s 0.360 m 3.76 deg | attitude 35.9 deg | blind 0.295 (hold 0.334) | 3.58 MB 3.5 ms/s
+  euroc_hold     n 11 | ATE 2.639 (still 3.446) origin-ATE 3.717 | RPE 1 s 0.406 m 3.99 deg | attitude 26.8 deg | blind 0.291 (hold 0.334) | 3.80 MB 3.8 ms/s
+  euroc_rot      n 11 | ATE 2.980 (still 3.446) origin-ATE 4.855 | RPE 1 s 1.005 m 25.40 deg | attitude 99.5 deg | blind 0.330 (hold 0.334) | 3.80 MB 3.5 ms/s
+  room_clean     n  5 | ATE 0.437 (still 1.096) origin-ATE 0.679 | RPE 1 s 0.182 m 0.68 deg | attitude 6.6 deg | blind 0.523 (hold 0.490) | 3.38 MB 1.3 ms/s
+  room_full      n  5 | ATE 0.835 (still 1.096) origin-ATE 1.089 | RPE 1 s 0.460 m 11.32 deg | attitude 48.0 deg | blind 0.494 (hold 0.490) | 3.56 MB 1.5 ms/s
+  room_noisy     n  5 | ATE 0.989 (still 1.096) origin-ATE 1.227 | RPE 1 s 0.386 m 11.32 deg | attitude 56.8 deg | blind 0.490 (hold 0.490) | 3.38 MB 1.5 ms/s
+  room_rot       n  5 | ATE 0.929 (still 1.096) origin-ATE 1.511 | RPE 1 s 1.154 m 52.36 deg | attitude 86.2 deg | blind 0.514 (hold 0.490) | 3.38 MB 1.5 ms/s
+gfade5 / tests: 64 files
+  euroc_clean    n 11 | ATE 2.160 (still 3.446) origin-ATE 3.041 | RPE 1 s 0.262 m 0.18 deg | attitude 6.0 deg | blind 0.284 (hold 0.334) | 3.79 MB 2.2 ms/s
+  euroc_full     n 11 | ATE 2.366 (still 3.446) origin-ATE 3.654 | RPE 1 s 0.354 m 3.39 deg | attitude 30.7 deg | blind 0.292 (hold 0.334) | 3.80 MB 2.3 ms/s
+  euroc_hold     n 11 | ATE 2.615 (still 3.446) origin-ATE 3.690 | RPE 1 s 0.398 m 3.64 deg | attitude 22.1 deg | blind 0.289 (hold 0.334) | 3.80 MB 2.5 ms/s
+  euroc_rot      n 11 | ATE 2.940 (still 3.446) origin-ATE 4.838 | RPE 1 s 0.972 m 25.46 deg | attitude 99.2 deg | blind 0.330 (hold 0.334) | 3.80 MB 2.4 ms/s
+  room_clean     n  5 | ATE 0.437 (still 1.096) origin-ATE 0.679 | RPE 1 s 0.182 m 0.68 deg | attitude 6.6 deg | blind 0.523 (hold 0.490) | 3.38 MB 0.9 ms/s
+  room_full      n  5 | ATE 0.787 (still 1.096) origin-ATE 0.981 | RPE 1 s 0.435 m 10.38 deg | attitude 39.2 deg | blind 0.489 (hold 0.490) | 3.56 MB 1.0 ms/s
+  room_noisy     n  5 | ATE 0.952 (still 1.096) origin-ATE 1.205 | RPE 1 s 0.377 m 9.82 deg | attitude 61.3 deg | blind 0.478 (hold 0.490) | 3.56 MB 1.0 ms/s
+  room_rot       n  5 | ATE 0.883 (still 1.096) origin-ATE 1.401 | RPE 1 s 1.141 m 52.38 deg | attitude 86.0 deg | blind 0.488 (hold 0.490) | 3.56 MB 1.0 ms/s

@@ -1,0 +1,22 @@
+  step 0 loss 1.386 ate 0.849 rpe1 0.697 rpe5 0.753 a 0.40 b 0.30
+  step 500 loss 1.177 ate 0.724 rpe1 0.596 rpe5 0.621 a 0.70 b 0.12
+  step 1000 loss 1.048 ate 0.629 rpe1 0.561 rpe5 0.557 a 0.69 b 0.14
+  step 1500 loss 0.828 ate 0.461 rpe1 0.490 rpe5 0.488 a 0.68 b 0.14
+  step 2000 loss 0.826 ate 0.469 rpe1 0.482 rpe5 0.463 a 0.67 b 0.14
+/mnt/e/clipping-pipeline/xr_track3/experiments/scripts/54_seq4.py:122: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  pickle.dump(dict(rows=rows, S=(Sxy, Sz), a=float(nets[0].a), b=float(nets[0].b)), open(out, "wb"))
+s4 loeo fold 0 test ['MH01', 'MH02', 'MH03'] 144s a 0.67 b 0.15
+  step 0 loss 1.165 ate 0.742 rpe1 0.562 rpe5 0.570 a 0.40 b 0.30
+  step 500 loss 0.990 ate 0.580 rpe1 0.542 rpe5 0.554 a 0.64 b 0.17
+  step 1000 loss 1.057 ate 0.597 rpe1 0.621 rpe5 0.598 a 0.69 b 0.18
+  step 1500 loss 0.652 ate 0.357 rpe1 0.400 rpe5 0.379 a 0.67 b 0.18
+  step 2000 loss 0.699 ate 0.380 rpe1 0.433 rpe5 0.413 a 0.65 b 0.19
+s4 loeo fold 1 test ['V101', 'V102', 'V103'] 115s a 0.65 b 0.19
+  step 0 loss 1.103 ate 0.659 rpe1 0.578 rpe5 0.621 a 0.40 b 0.30
+  step 500 loss 1.097 ate 0.642 rpe1 0.605 rpe5 0.608 a 0.69 b 0.17
+  step 1000 loss 0.851 ate 0.510 rpe1 0.450 rpe5 0.463 a 0.72 b 0.17
+  step 1500 loss 0.586 ate 0.345 rpe1 0.323 rpe5 0.316 a 0.70 b 0.16
+  step 2000 loss 0.638 ate 0.376 rpe1 0.353 rpe5 0.341 a 0.69 b 0.16
+s4 loeo fold 2 test ['V201', 'V202', 'V203'] 95s a 0.69 b 0.16
+S4_DONE

@@ -1,0 +1,32 @@
+10 recordings
+MOO01_hand_puncher_1: imu0/data.raw.csv, imu0/data.csv, gt/data.csv | fetched 26.1 MB of 1.64 GB
+MOO02_hand_puncher_2: imu0/data.raw.csv, imu0/data.csv, gt/data.csv | fetched 27.6 MB of 1.93 GB
+MOO03_hand_shooter_easy: imu0/data.raw.csv, imu0/data.csv, gt/data.csv | fetched 23.0 MB of 1.53 GB
+MOO04_hand_shooter_hard: imu0/data.raw.csv, imu0/data.csv, gt/data.csv | fetched 25.2 MB of 1.56 GB
+MOO05_inspect_easy: imu0/data.raw.csv, imu0/data.csv, gt/data.csv | fetched 15.0 MB of 1.09 GB
+MOO06_inspect_hard: imu0/data.raw.csv, imu0/data.csv, gt/data.csv | fetched 21.5 MB of 1.53 GB
+MOO07_mapping_easy already there
+MOO08_mapping_hard already there
+MOO13_sudden_movements: imu0/data.raw.csv, imu0/data.csv, gt/data.csv | fetched 21.7 MB of 1.57 GB
+MOO14_flickering_light: imu0/data.raw.csv, imu0/data.csv, gt/data.csv | fetched 24.8 MB of 1.91 GB
+total fetched 185 MB
+mo_MOO01_raw: 157420 rows, 1005 Hz, 157 s, path spread 0.89 m, mean gyro [ 0.0015 -0.0877  0.0179]
+mo_MOO01_cal: 157420 rows, 1005 Hz, 157 s, path spread 0.89 m, mean gyro [-0.0059 -0.123   0.0132]
+mo_MOO02_raw: 180764 rows, 1005 Hz, 180 s, path spread 0.85 m, mean gyro [ 0.0064  0.0683 -0.0137]
+mo_MOO02_cal: 180764 rows, 1005 Hz, 180 s, path spread 0.85 m, mean gyro [-0.0006  0.0335 -0.0175]
+mo_MOO03_raw: 147676 rows, 1005 Hz, 147 s, path spread 1.01 m, mean gyro [ 0.0155  0.0899 -0.0719]
+mo_MOO03_cal: 147676 rows, 1005 Hz, 147 s, path spread 1.01 m, mean gyro [ 0.0085  0.0555 -0.0758]
+mo_MOO04_raw: 147372 rows, 1005 Hz, 147 s, path spread 0.90 m, mean gyro [ 0.0212 -0.0407 -0.0443]
+mo_MOO04_cal: 147372 rows, 1005 Hz, 147 s, path spread 0.90 m, mean gyro [ 0.0139 -0.0757 -0.0491]
+mo_MOO05_raw: 100832 rows, 1005 Hz, 100 s, path spread 0.88 m, mean gyro [ 0.0182  0.1045 -0.0012]
+mo_MOO05_cal: 100832 rows, 1005 Hz, 100 s, path spread 0.88 m, mean gyro [ 0.0113  0.0697 -0.0047]
+mo_MOO06_raw: 139492 rows, 1005 Hz, 139 s, path spread 0.80 m, mean gyro [ 0.0883  0.0432 -0.0433]
+mo_MOO06_cal: 139492 rows, 1005 Hz, 139 s, path spread 0.80 m, mean gyro [ 0.0817  0.0082 -0.0477]
+mo_MOO07_raw: 41380 rows, 1005 Hz, 41 s, path spread 0.79 m, mean gyro [ 0.0102  0.0476 -0.012 ]
+mo_MOO07_cal: 41380 rows, 1005 Hz, 41 s, path spread 0.79 m, mean gyro [ 0.0032  0.0127 -0.016 ]
+mo_MOO08_raw: 19812 rows, 1005 Hz, 20 s, path spread 0.86 m, mean gyro [ 0.0208  0.091  -0.0942]
+mo_MOO08_cal: 19812 rows, 1005 Hz, 20 s, path spread 0.86 m, mean gyro [ 0.0139  0.0566 -0.0982]
+mo_MOO13_raw: 147260 rows, 1005 Hz, 147 s, path spread 0.79 m, mean gyro [-0.1204 -0.0638 -0.0716]
+mo_MOO13_cal: 147260 rows, 1005 Hz, 147 s, path spread 0.79 m, mean gyro [-0.1284 -0.0982 -0.0762]
+mo_MOO14_raw: 168120 rows, 1005 Hz, 167 s, path spread 0.80 m, mean gyro [0.09   0.0346 0.0174]
+mo_MOO14_cal: 168120 rows, 1005 Hz, 167 s, path spread 0.80 m, mean gyro [ 0.0833 -0.0008  0.0132]

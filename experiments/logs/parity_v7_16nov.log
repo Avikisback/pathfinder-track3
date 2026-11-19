@@ -1,0 +1,19 @@
+done (5, ('sine', 'x', 1))
+80
+MH01_sine              dp rms    0.000 mm max     0.00 mm | ang max 0.0000 deg | ATE cpp 4.323 py 4.323 | blind 0.334 0.334 | 3.98 MB 1.84 ms/s
+MH02_sine              dp rms    0.000 mm max     0.00 mm | ang max 0.0000 deg | ATE cpp 4.270 py 4.270 | blind 0.291 0.291 | 3.56 MB 1.70 ms/s
+MH03_sine              dp rms    0.000 mm max     0.00 mm | ang max 0.0000 deg | ATE cpp 3.496 py 3.496 | blind 0.194 0.194 | 3.38 MB 1.54 ms/s
+MH04_sine              dp rms    0.000 mm max     0.00 mm | ang max 0.0000 deg | ATE cpp 4.011 py 4.011 | blind 0.118 0.118 | 2.67 MB 1.35 ms/s
+MH05_sine              dp rms    0.000 mm max     0.00 mm | ang max 0.0000 deg | ATE cpp 5.439 py 5.439 | blind 0.721 0.721 | 3.00 MB 1.47 ms/s
+V101_sine              dp rms    0.000 mm max     0.00 mm | ang max 0.0000 deg | ATE cpp 2.367 py 2.367 | blind 0.085 0.085 | 3.51 MB 1.71 ms/s
+V102_sine              dp rms    0.011 mm max     0.07 mm | ang max 0.0000 deg | ATE cpp 2.199 py 2.199 | blind 0.482 0.482 | 2.59 MB 0.99 ms/s
+V103_sine              dp rms    0.000 mm max     0.00 mm | ang max 0.0000 deg | ATE cpp 2.944 py 2.944 | blind 0.416 0.416 | 2.91 MB 1.37 ms/s
+V201_sine              dp rms    0.000 mm max     0.00 mm | ang max 0.0000 deg | ATE cpp 2.984 py 2.984 | blind 0.188 0.188 | 3.15 MB 1.47 ms/s
+V202_sine              dp rms    0.000 mm max     0.00 mm | ang max 0.0000 deg | ATE cpp 4.240 py 4.240 | blind 0.366 0.366 | 3.00 MB 1.33 ms/s
+V203_sine              dp rms    0.000 mm max     0.00 mm | ang max 0.0000 deg | ATE cpp 2.279 py 2.279 | blind 0.330 0.330 | 3.00 MB 1.52 ms/s
+room1_sine             dp rms    0.000 mm max     0.00 mm | ang max 0.0000 deg | ATE cpp 0.762 py 0.762 | blind 0.797 0.797 | 3.38 MB 0.88 ms/s
+room2_sine             dp rms    0.000 mm max     0.00 mm | ang max 0.0000 deg | ATE cpp 1.107 py 1.107 | blind 0.253 0.253 | 3.56 MB 0.86 ms/s
+room3_sine             dp rms    0.000 mm max     0.00 mm | ang max 0.0000 deg | ATE cpp 1.037 py 1.037 | blind 0.225 0.225 | 3.38 MB 0.88 ms/s
+room4_sine             dp rms    0.000 mm max     0.00 mm | ang max 0.0000 deg | ATE cpp 1.076 py 1.076 | blind 0.500 0.500 | 3.00 MB 0.85 ms/s
+room5_sine             dp rms    0.000 mm max     0.00 mm | ang max 0.0000 deg | ATE cpp 0.813 py 0.813 | blind 0.680 0.680 | 3.56 MB 0.95 ms/s
+SUMMARY 80 files: worst position diff 0.22 mm, mean ATE cpp 2.0551 py 2.0551, peak memory 3.99 MB, worst 1.84 ms per s of IMU

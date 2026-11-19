@@ -1,0 +1,10 @@
+solved 40s
+EuRoC old frozen      final hold 2.59 rot 5.25 warmup 3.11 longgap 2.46 noisy 2.61 | stationary hold 3.45 rot 3.45 warmup 3.43 longgap 3.45 noisy 3.45
+                      rpe   hold 0.44 rot 1.55 warmup 0.74 longgap 0.43 noisy 0.44 | beats stationary 1.00 0.18 0.73 1.00 1.00
+TUM   old frozen      final hold 0.93 rot 0.93 warmup 0.97 longgap 0.89 noisy 0.94 | stationary hold 1.10 rot 1.10 warmup 1.09 longgap 1.10 noisy 1.10
+                      rpe   hold 0.36 rot 1.16 warmup 0.62 longgap 0.45 noisy 0.36 | beats stationary 0.80 0.80 0.60 0.80 0.80
+EuRoC evidence drift  final hold 2.53 rot 3.79 warmup 2.97 longgap 2.39 noisy 2.54 | stationary hold 3.45 rot 3.45 warmup 3.43 longgap 3.45 noisy 3.45
+                      rpe   hold 0.38 rot 1.25 warmup 0.65 longgap 0.38 noisy 0.38 | beats stationary 1.00 0.36 0.73 1.00 1.00
+TUM   evidence drift  final hold 0.91 rot 0.88 warmup 1.03 longgap 0.81 noisy 0.94 | stationary hold 1.10 rot 1.10 warmup 1.09 longgap 1.10 noisy 1.10
+                      rpe   hold 0.30 rot 1.19 warmup 0.60 longgap 0.32 noisy 0.40 | beats stationary 0.80 0.80 0.40 0.60 0.80
+done 45s

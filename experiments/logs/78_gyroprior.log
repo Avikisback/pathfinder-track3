@@ -1,0 +1,13 @@
+0 259 ('MH01', ('steps', 'x', 1), 'lev2_g01') 0s
+40 259 ('V102', ('clean', 'delete', 1), 'lev2_g01') 0s
+80 259 (1, ('randomwalk', 'x', 1), 'lev2_g01') 0s
+120 259 ('MH02', ('mild', 'zero', 1), 'lev2_g003') 0s
+160 259 ('V102', ('sine', 'x', 1), 'lev2_g003') 0s
+200 259 (1, ('sine', 'x', 1), 'lev2_g003') 0s
+240 259 (3, ('mild', 'zero', 1), 'lev2_g1') 8s
+EuRoC base      ATE clean 2.16 mild 2.30 full 2.30 burst 2.44 steps 2.81 randomwalk 3.01 sine 4.27 | blind 0.348 | attitude known 16.8 deg (heading range 37), hostile 28.8 deg
+TUM   base      ATE clean 0.45 mild 0.69 full 0.70 burst 0.83 steps 0.95 randomwalk 0.97 sine 1.00 | blind 0.512 | attitude known 25.1 deg (heading range 140), hostile 57.0 deg
+EuRoC lev2_g01  ATE clean 2.16 mild 2.29 full 2.29 burst 2.44 steps 2.81 randomwalk 3.05 sine 4.14 | blind 0.349 | attitude known 15.9 deg (heading range 35), hostile 28.6 deg
+TUM   lev2_g01  ATE clean 0.44 mild 0.67 full 0.69 burst 0.84 steps 0.95 randomwalk 0.96 sine 0.97 | blind 0.517 | attitude known 24.4 deg (heading range 138), hostile 57.3 deg
+EuRoC lev2_g003 ATE clean 2.17 mild 2.27 full 2.28 burst 2.45 steps 2.83 randomwalk 3.14 sine 4.27 | blind 0.354 | attitude known 14.8 deg (heading range 33), hostile 29.2 deg
+TUM   lev2_g003 ATE clean 0.43 mild 0.67 full 0.70 burst 0.84 steps 0.90 randomwalk 1.01 sine 0.99 | blind 0.519 | attitude known 24.2 deg (heading range 137), hostile 57.3 deg

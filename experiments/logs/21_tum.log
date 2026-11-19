@@ -1,0 +1,102 @@
+== center2s: 65 files, 5 sequences
+  stationary                         clean ate_se3 1.096/1.250 ate_org 1.238/1.569 rpe_t 0.904/1.122 blind_rel 0.490/0.794
+  stationary                         mild  ate_se3 1.093/1.250 ate_org 1.234/1.573 rpe_t 0.919/1.158 blind_rel 0.490/0.794
+  stationary                         full  ate_se3 1.093/1.250 ate_org 1.234/1.573 rpe_t 0.919/1.158 blind_rel 0.490/0.794
+  baseline binary                    clean ate_se3 0.987/1.197 ate_org 1.401/1.806 rpe_t 1.000/1.366 blind_rel 0.589/0.918
+  baseline binary                    mild  ate_se3 1.693/3.652 ate_org 1.940/3.827 rpe_t 1.117/1.482 blind_rel 0.728/1.873
+  baseline binary                    full  ate_se3 1.706/3.668 ate_org 1.957/3.848 rpe_t 1.123/1.471 blind_rel 0.748/1.925
+  net, no shrink                     clean ate_se3 2.078/3.622 ate_org 3.438/5.191 rpe_t 0.696/1.033 blind_rel 1.056/1.612
+  net, no shrink                     mild  ate_se3 1.934/3.923 ate_org 2.680/4.798 rpe_t 0.735/1.177 blind_rel 1.044/1.754
+  net, no shrink                     full  ate_se3 1.970/3.953 ate_org 2.684/4.842 rpe_t 0.733/1.184 blind_rel 1.004/1.643
+  net, fixed tau (cross-fit)         clean ate_se3 0.835/1.049 ate_org 1.071/1.412 rpe_t 0.664/0.953 blind_rel 0.564/0.838
+  net, fixed tau (cross-fit)         mild  ate_se3 1.028/1.427 ate_org 1.192/1.776 rpe_t 0.703/1.044 blind_rel 0.656/1.162
+  net, fixed tau (cross-fit)         full  ate_se3 1.034/1.422 ate_org 1.198/1.769 rpe_t 0.702/1.049 blind_rel 0.651/1.058
+     chosen {1: (2, 0.0), 2: (2, 0.0), 3: (2, 0.0), 4: (1, 0.0), 5: (2, 0.0)}
+     beats stationary on share of files: {'ate_se3': 0.85, 'ate_org': 0.82, 'rpe_t': 1.0}
+     full schedule by sequence, ATE SE3 net vs stationary: 1: 0.98 vs 1.00 | 2: 1.10 vs 1.21 | 3: 1.24 vs 1.25 | 4: 1.01 vs 1.07 | 5: 0.84 vs 0.93
+  net, sigma-driven (cross-fit)      clean ate_se3 0.837/1.060 ate_org 1.074/1.414 rpe_t 0.665/0.957 blind_rel 0.539/0.838
+  net, sigma-driven (cross-fit)      mild  ate_se3 1.027/1.417 ate_org 1.193/1.757 rpe_t 0.706/1.040 blind_rel 0.596/1.162
+  net, sigma-driven (cross-fit)      full  ate_se3 1.034/1.432 ate_org 1.198/1.754 rpe_t 0.705/1.044 blind_rel 0.591/1.058
+     chosen {1: (2, 0.0), 2: (2, 0.5), 3: (2, 0.5), 4: (1, 0.0), 5: (2, 0.0)}
+     beats stationary on share of files: {'ate_se3': 0.85, 'ate_org': 0.82, 'rpe_t': 1.0}
+     full schedule by sequence, ATE SE3 net vs stationary: 1: 0.98 vs 1.00 | 2: 1.09 vs 1.21 | 3: 1.24 vs 1.25 | 4: 1.01 vs 1.07 | 5: 0.84 vs 0.93
+  net, picked on origin ATE          clean ate_se3 0.835/1.049 ate_org 1.071/1.412 rpe_t 0.664/0.953 blind_rel 0.564/0.838
+  net, picked on origin ATE          mild  ate_se3 1.028/1.427 ate_org 1.192/1.776 rpe_t 0.703/1.044 blind_rel 0.656/1.162
+  net, picked on origin ATE          full  ate_se3 1.034/1.422 ate_org 1.198/1.769 rpe_t 0.702/1.049 blind_rel 0.651/1.058
+     chosen {1: (2, 0.0), 2: (2, 0.0), 3: (2, 0.0), 4: (1, 0.0), 5: (2, 0.0)}
+     full schedule by sequence, ATE origin: 1: 1.13 vs 1.12 | 2: 1.19 vs 1.29 | 3: 1.57 vs 1.57 | 4: 1.14 vs 1.19 | 5: 0.96 vs 1.00
+   sensitivity ate_se3 by tau alpha=0, all schedules: 1:1.013 2:1.002 3:1.019 4:1.039 6:1.080 8:1.117 12:1.183 16:1.240 24:1.342 40:1.513 80:1.760
+   sensitivity ate_se3 by tau alpha=1, all schedules: 1:1.014 2:1.003 3:1.016 4:1.030 6:1.060 8:1.088 12:1.138 16:1.180 24:1.252 40:1.371 80:1.597
+   sensitivity ate_org by tau alpha=0, all schedules: 1:1.171 2:1.171 3:1.194 4:1.222 6:1.291 8:1.365 12:1.494 16:1.592 24:1.738 40:1.978 80:2.385
+   sensitivity ate_org by tau alpha=1, all schedules: 1:1.184 2:1.186 3:1.205 4:1.231 6:1.297 8:1.365 12:1.478 16:1.562 24:1.680 40:1.850 80:2.178
+   sensitivity rpe_t by tau alpha=0, all schedules: 1:0.735 2:0.695 3:0.697 4:0.703 6:0.711 8:0.716 12:0.721 16:0.724 24:0.727 40:0.729 80:0.730
+   sensitivity rpe_t by tau alpha=1, all schedules: 1:0.751 2:0.709 3:0.706 4:0.708 6:0.712 8:0.715 12:0.719 16:0.721 24:0.724 40:0.727 80:0.729
+   (222s)
+== causal2s: 65 files, 5 sequences
+  stationary                         clean ate_se3 1.096/1.250 ate_org 1.238/1.569 rpe_t 0.904/1.122 blind_rel 0.490/0.794
+  stationary                         mild  ate_se3 1.093/1.250 ate_org 1.234/1.573 rpe_t 0.919/1.158 blind_rel 0.490/0.794
+  stationary                         full  ate_se3 1.093/1.250 ate_org 1.234/1.573 rpe_t 0.919/1.158 blind_rel 0.490/0.794
+  baseline binary                    clean ate_se3 0.987/1.197 ate_org 1.401/1.806 rpe_t 1.000/1.366 blind_rel 0.589/0.918
+  baseline binary                    mild  ate_se3 1.693/3.652 ate_org 1.940/3.827 rpe_t 1.117/1.482 blind_rel 0.728/1.873
+  baseline binary                    full  ate_se3 1.706/3.668 ate_org 1.957/3.848 rpe_t 1.123/1.471 blind_rel 0.748/1.925
+  net, no shrink                     clean ate_se3 2.190/3.363 ate_org 3.487/4.838 rpe_t 0.810/1.106 blind_rel 0.990/1.485
+  net, no shrink                     mild  ate_se3 2.325/3.052 ate_org 3.801/5.092 rpe_t 0.843/1.246 blind_rel 0.972/1.533
+  net, no shrink                     full  ate_se3 2.348/3.117 ate_org 3.824/5.173 rpe_t 0.843/1.243 blind_rel 0.950/1.472
+  net, fixed tau (cross-fit)         clean ate_se3 0.931/1.080 ate_org 1.141/1.471 rpe_t 0.767/1.021 blind_rel 0.574/0.972
+  net, fixed tau (cross-fit)         mild  ate_se3 1.043/1.362 ate_org 1.204/1.819 rpe_t 0.796/1.109 blind_rel 0.597/0.948
+  net, fixed tau (cross-fit)         full  ate_se3 1.050/1.371 ate_org 1.210/1.814 rpe_t 0.796/1.106 blind_rel 0.598/0.944
+     chosen {1: (2, 0.0), 2: (1, 0.0), 3: (2, 0.0), 4: (1, 0.0), 5: (1, 0.0)}
+     beats stationary on share of files: {'ate_se3': 0.85, 'ate_org': 0.85, 'rpe_t': 1.0}
+     full schedule by sequence, ATE SE3 net vs stationary: 1: 1.00 vs 1.00 | 2: 1.08 vs 1.21 | 3: 1.25 vs 1.25 | 4: 1.04 vs 1.07 | 5: 0.88 vs 0.93
+  net, sigma-driven (cross-fit)      clean ate_se3 0.933/1.087 ate_org 1.140/1.476 rpe_t 0.768/1.025 blind_rel 0.530/0.882
+  net, sigma-driven (cross-fit)      mild  ate_se3 1.042/1.363 ate_org 1.201/1.802 rpe_t 0.795/1.112 blind_rel 0.577/1.016
+  net, sigma-driven (cross-fit)      full  ate_se3 1.050/1.381 ate_org 1.207/1.798 rpe_t 0.795/1.106 blind_rel 0.577/1.029
+     chosen {1: (2, 0.5), 2: (1, 0.0), 3: (2, 0.5), 4: (1, 0.0), 5: (1, 0.0)}
+     beats stationary on share of files: {'ate_se3': 0.85, 'ate_org': 0.85, 'rpe_t': 1.0}
+     full schedule by sequence, ATE SE3 net vs stationary: 1: 1.00 vs 1.00 | 2: 1.08 vs 1.21 | 3: 1.25 vs 1.25 | 4: 1.04 vs 1.07 | 5: 0.88 vs 0.93
+  net, picked on origin ATE          clean ate_se3 0.943/1.108 ate_org 1.142/1.469 rpe_t 0.763/1.011 blind_rel 0.525/0.839
+  net, picked on origin ATE          mild  ate_se3 1.031/1.260 ate_org 1.189/1.663 rpe_t 0.790/1.076 blind_rel 0.562/0.902
+  net, picked on origin ATE          full  ate_se3 1.035/1.266 ate_org 1.193/1.659 rpe_t 0.790/1.073 blind_rel 0.559/0.873
+     chosen {1: (1, 0.0), 2: (1, 0.0), 3: (1, 0.0), 4: (1, 0.0), 5: (1, 0.0)}
+     full schedule by sequence, ATE origin: 1: 1.11 vs 1.12 | 2: 1.17 vs 1.29 | 3: 1.55 vs 1.57 | 4: 1.16 vs 1.19 | 5: 0.97 vs 1.00
+   sensitivity ate_se3 by tau alpha=0, all schedules: 1:1.026 2:1.028 3:1.054 4:1.079 6:1.127 8:1.170 12:1.247 16:1.315 24:1.438 40:1.664 80:2.024
+   sensitivity ate_se3 by tau alpha=1, all schedules: 1:1.029 2:1.029 3:1.046 4:1.064 6:1.099 8:1.131 12:1.189 16:1.238 24:1.323 40:1.472 80:1.783
+   sensitivity ate_org by tau alpha=0, all schedules: 1:1.187 2:1.205 3:1.243 4:1.283 6:1.375 8:1.471 12:1.644 16:1.785 24:2.029 40:2.484 80:3.205
+   sensitivity ate_org by tau alpha=1, all schedules: 1:1.197 2:1.213 3:1.246 4:1.285 6:1.373 8:1.462 12:1.613 16:1.731 24:1.913 40:2.215 80:2.828
+   sensitivity rpe_t by tau alpha=0, all schedules: 1:0.788 2:0.778 3:0.793 4:0.804 6:0.817 8:0.823 12:0.829 16:0.832 24:0.835 40:0.837 80:0.839
+   sensitivity rpe_t by tau alpha=1, all schedules: 1:0.797 2:0.785 3:0.794 4:0.802 6:0.811 8:0.817 12:0.823 16:0.827 24:0.831 40:0.834 80:0.837
+   (235s)
+== center2s_seg: 65 files, 5 sequences
+  stationary                         clean ate_se3 1.096/1.250 ate_org 1.238/1.569 rpe_t 0.904/1.122 blind_rel 0.490/0.794
+  stationary                         mild  ate_se3 1.093/1.250 ate_org 1.234/1.573 rpe_t 0.919/1.158 blind_rel 0.490/0.794
+  stationary                         full  ate_se3 1.093/1.250 ate_org 1.234/1.573 rpe_t 0.919/1.158 blind_rel 0.490/0.794
+  baseline binary                    clean ate_se3 0.987/1.197 ate_org 1.401/1.806 rpe_t 1.000/1.366 blind_rel 0.589/0.918
+  baseline binary                    mild  ate_se3 1.693/3.652 ate_org 1.940/3.827 rpe_t 1.117/1.482 blind_rel 0.728/1.873
+  baseline binary                    full  ate_se3 1.706/3.668 ate_org 1.957/3.848 rpe_t 1.123/1.471 blind_rel 0.748/1.925
+  net, no shrink                     clean ate_se3 1.924/3.214 ate_org 3.092/4.745 rpe_t 0.677/1.034 blind_rel 0.907/1.756
+  net, no shrink                     mild  ate_se3 1.977/2.901 ate_org 2.818/4.324 rpe_t 0.717/1.187 blind_rel 0.988/1.951
+  net, no shrink                     full  ate_se3 1.982/2.911 ate_org 2.780/4.419 rpe_t 0.715/1.189 blind_rel 0.927/2.024
+  net, fixed tau (cross-fit)         clean ate_se3 0.836/1.032 ate_org 1.062/1.405 rpe_t 0.658/0.949 blind_rel 0.550/1.077
+  net, fixed tau (cross-fit)         mild  ate_se3 1.016/1.431 ate_org 1.185/1.784 rpe_t 0.698/1.046 blind_rel 0.653/1.205
+  net, fixed tau (cross-fit)         full  ate_se3 1.021/1.420 ate_org 1.190/1.773 rpe_t 0.696/1.049 blind_rel 0.628/1.239
+     chosen {1: (2, 0.0), 2: (2, 0.0), 3: (2, 0.0), 4: (2, 0.0), 5: (2, 0.0)}
+     beats stationary on share of files: {'ate_se3': 0.88, 'ate_org': 0.85, 'rpe_t': 1.0}
+     full schedule by sequence, ATE SE3 net vs stationary: 1: 0.96 vs 1.00 | 2: 1.10 vs 1.21 | 3: 1.23 vs 1.25 | 4: 0.99 vs 1.07 | 5: 0.83 vs 0.93
+  net, sigma-driven (cross-fit)      clean ate_se3 0.837/1.039 ate_org 1.066/1.404 rpe_t 0.658/0.952 blind_rel 0.453/0.721
+  net, sigma-driven (cross-fit)      mild  ate_se3 1.015/1.435 ate_org 1.188/1.764 rpe_t 0.700/1.035 blind_rel 0.594/1.125
+  net, sigma-driven (cross-fit)      full  ate_se3 1.021/1.434 ate_org 1.192/1.755 rpe_t 0.699/1.038 blind_rel 0.567/1.131
+     chosen {1: (2, 0.5), 2: (2, 0.5), 3: (2, 0.5), 4: (2, 0.5), 5: (2, 0.0)}
+     beats stationary on share of files: {'ate_se3': 0.88, 'ate_org': 0.83, 'rpe_t': 1.0}
+     full schedule by sequence, ATE SE3 net vs stationary: 1: 0.96 vs 1.00 | 2: 1.10 vs 1.21 | 3: 1.23 vs 1.25 | 4: 0.99 vs 1.07 | 5: 0.83 vs 0.93
+  net, picked on origin ATE          clean ate_se3 0.899/1.032 ate_org 1.093/1.405 rpe_t 0.687/0.949 blind_rel 0.472/0.779
+  net, picked on origin ATE          mild  ate_se3 1.025/1.431 ate_org 1.190/1.784 rpe_t 0.729/1.046 blind_rel 0.599/1.016
+  net, picked on origin ATE          full  ate_se3 1.031/1.420 ate_org 1.196/1.773 rpe_t 0.728/1.049 blind_rel 0.576/1.009
+     chosen {1: (2, 0.0), 2: (1, 0.0), 3: (2, 0.0), 4: (1, 0.0), 5: (2, 0.0)}
+     full schedule by sequence, ATE origin: 1: 1.12 vs 1.12 | 2: 1.19 vs 1.29 | 3: 1.56 vs 1.57 | 4: 1.16 vs 1.19 | 5: 0.95 vs 1.00
+   sensitivity ate_se3 by tau alpha=0, all schedules: 1:1.017 2:1.004 3:1.018 4:1.035 6:1.067 8:1.098 12:1.155 16:1.206 24:1.301 40:1.475 80:1.748
+   sensitivity ate_se3 by tau alpha=1, all schedules: 1:1.019 2:1.004 3:1.012 4:1.023 6:1.047 8:1.070 12:1.113 16:1.151 24:1.216 40:1.336 80:1.589
+   sensitivity ate_org by tau alpha=0, all schedules: 1:1.178 2:1.178 3:1.199 4:1.223 6:1.276 8:1.331 12:1.433 16:1.518 24:1.661 40:1.928 80:2.404
+   sensitivity ate_org by tau alpha=1, all schedules: 1:1.194 2:1.197 3:1.217 4:1.241 6:1.292 8:1.342 12:1.428 16:1.495 24:1.599 40:1.781 80:2.188
+   sensitivity rpe_t by tau alpha=0, all schedules: 1:0.738 2:0.694 3:0.691 4:0.693 6:0.698 8:0.701 12:0.705 16:0.707 24:0.709 40:0.711 80:0.712
+   sensitivity rpe_t by tau alpha=1, all schedules: 1:0.751 2:0.704 3:0.695 4:0.694 6:0.695 8:0.697 12:0.700 16:0.702 24:0.704 40:0.707 80:0.710
+   (238s)

@@ -1,0 +1,19 @@
+degrade check delete: rows 25929 max abs diff 0.00e+00
+degrade check zero: rows 27125 max abs diff 0.00e+00
+room1: imu 141.1s rows 28122 | gt 141.0s rate 120.0Hz gaps>0.05s 9 max 1.058s | clock offset +0.0 ms corr 0.9873 | R_gt_imu angle 0.15 deg | mean world accel [0.02  0.014 9.771] | RMS radius 1.001 m speed 1.04 m/s
+room2: imu 144.1s rows 28732 | gt 144.1s rate 120.0Hz gaps>0.05s 22 max 2.492s | clock offset +0.0 ms corr 0.9568 | R_gt_imu angle 0.14 deg | mean world accel [5.00e-03 1.20e-02 9.78e+00] | RMS radius 1.218 m speed 0.98 m/s
+room3: imu 141.1s rows 28124 | gt 141.0s rate 120.0Hz gaps>0.05s 31 max 1.992s | clock offset +0.0 ms corr 0.9591 | R_gt_imu angle 0.22 deg | mean world accel [-5.000e-03  2.000e-03  9.782e+00] | RMS radius 1.250 m speed 0.96 m/s
+room4: imu 111.4s rows 22212 | gt 111.4s rate 120.0Hz gaps>0.05s 13 max 0.483s | clock offset +0.0 ms corr 0.9820 | R_gt_imu angle 0.13 deg | mean world accel [9.000e-03 9.000e-03 9.782e+00] | RMS radius 1.076 m speed 0.62 m/s
+room5: imu 142.3s rows 28381 | gt 142.3s rate 120.0Hz gaps>0.05s 3 max 0.167s | clock offset +0.0 ms corr 0.9928 | R_gt_imu angle 0.08 deg | mean world accel [0.019 0.012 9.782] | RMS radius 0.933 m speed 0.93 m/s
+room1 seed1 delete baseline
+  ate_se3  mine 1.2475  evo 1.2475  diff +0.0000
+  ate_org  mine 1.4486  evo 1.4486  diff +0.0000
+  att_org  mine 86.2552  evo 86.2552  diff -0.0000
+  rpe_t    mine 1.0482  evo 1.0524  diff -0.0042
+  rpe_r    mine 22.8563  evo 23.1049  diff -0.2486
+room3 seed2 zero baseline
+  ate_se3  mine 1.2350  evo 1.2350  diff +0.0000
+  ate_org  mine 1.5745  evo 1.5745  diff +0.0000
+  att_org  mine 83.9957  evo 83.9957  diff -0.0000
+  rpe_t    mine 1.2713  evo 1.2720  diff -0.0006
+  rpe_r    mine 7.9988  evo 7.7249  diff +0.2739

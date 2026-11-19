@@ -1,0 +1,21 @@
+start --name eu2s --scheme loso --T 100 --center 1
+start --name tum --scheme loro --T 100 --center 1
+start --name tumc --scheme loro --T 100 --center 0
+end --name tum --scheme loro --T 100 --center 1 rc 0
+start --name eu2s --scheme loeo --T 100 --center 1
+end --name tumc --scheme loro --T 100 --center 0 rc 0
+start --name eu2sc --scheme loso --T 100 --center 0
+end --name eu2s --scheme loeo --T 100 --center 1 rc 0
+start --name eu2s --scheme tum2euroc --T 100 --center 1
+end --name eu2s --scheme loso --T 100 --center 1 rc 0
+start --name eu2s --scheme euroc2tum --T 100 --center 1
+end --name eu2s --scheme tum2euroc --T 100 --center 1 rc 0
+start --name xd --scheme tum2euroc --T 100 --center 1 --yaw_aug 1 --no_up 1
+end --name eu2s --scheme euroc2tum --T 100 --center 1 rc 0
+start --name xd --scheme euroc2tum --T 100 --center 1 --yaw_aug 1 --no_up 1
+end --name xd --scheme tum2euroc --T 100 --center 1 --yaw_aug 1 --no_up 1 rc 0
+start --name xd --scheme both --T 100 --center 1 --yaw_aug 1 --no_up 1 --per_room 1
+end --name xd --scheme euroc2tum --T 100 --center 1 --yaw_aug 1 --no_up 1 rc 0
+start --name eu2sy --scheme loso --T 100 --center 1 --yaw_aug 1
+end --name eu2sc --scheme loso --T 100 --center 0 rc 0
+end --name eu2sy --scheme loso --T 100 --center 1 --yaw_aug 1 rc 0

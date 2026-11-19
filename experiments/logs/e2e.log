@@ -1,0 +1,13 @@
+/mnt/e/clipping-pipeline/xr_track3/experiments/scripts/32_e2e.py:316: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  torch.save(dict(state=net.state_dict(), cfg=net.net.cfg, a=float(net.a), b=float(net.b), train=train, cal=cal, best_hp=best_hp, tau=tau),
+loro fold 0 test [1] 183s hp {'drone': 0.016666666666666666, 'hand': 0.06666666666666667} tau {'hand': (4, 1.0)} a 0.28 b 0.50 scale {'hand': 0.39}
+/mnt/e/clipping-pipeline/xr_track3/experiments/scripts/32_e2e.py:316: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  torch.save(dict(state=net.state_dict(), cfg=net.net.cfg, a=float(net.a), b=float(net.b), train=train, cal=cal, best_hp=best_hp, tau=tau),
+/mnt/e/clipping-pipeline/xr_track3/experiments/scripts/32_e2e.py:316: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  torch.save(dict(state=net.state_dict(), cfg=net.net.cfg, a=float(net.a), b=float(net.b), train=train, cal=cal, best_hp=best_hp, tau=tau),
+loso fold 0 test ['MH01'] 206s hp {'drone': 0.011111111111111112, 'hand': 0.016666666666666666} tau {'drone': (24, 1.0)} a 0.49 b 0.23 scale {'drone': 0.65}
+loeo fold 0 test ['MH01', 'MH02', 'MH03'] 243s hp {'drone': 0.022222222222222223, 'hand': 0.016666666666666666} tau {'drone': (12, 1.0)} a 0.41 b 0.27 scale {'drone': 0.61}
+loro fold 1 test [2] 136s hp {'drone': 0.016666666666666666, 'hand': 0.06666666666666667} tau {'hand': (3, 1.0)} a 0.38 b 0.50 scale {'hand': 0.33}

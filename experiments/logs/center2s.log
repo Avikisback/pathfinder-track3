@@ -1,0 +1,35 @@
+center2s r1 step 0 mse 0.3365
+center2s r1 step 1000 mse 0.0294
+center2s r1 step 2000 mse 0.0232
+center2s r1 step 3000 mse 0.0125
+center2s r1 step 4000 mse 0.0099
+center2s r1 step 5000 mse 0.0093
+center2s room1 done in 58s params 81542 macs/forward 731488
+center2s r2 step 0 mse 0.3157
+center2s r2 step 1000 mse 0.0358
+center2s r2 step 2000 mse 0.0191
+center2s r2 step 3000 mse 0.0307
+center2s r2 step 4000 mse 0.0177
+center2s r2 step 5000 mse 0.0155
+center2s room2 done in 44s params 81542 macs/forward 731488
+center2s r3 step 0 mse 0.3048
+center2s r3 step 1000 mse 0.0394
+center2s r3 step 2000 mse 0.0145
+center2s r3 step 3000 mse 0.0193
+center2s r3 step 4000 mse 0.0152
+center2s r3 step 5000 mse 0.0172
+center2s room3 done in 46s params 81542 macs/forward 731488
+center2s r4 step 0 mse 0.3798
+center2s r4 step 1000 mse 0.0311
+center2s r4 step 2000 mse 0.0200
+center2s r4 step 3000 mse 0.0207
+center2s r4 step 4000 mse 0.0102
+center2s r4 step 5000 mse 0.0131
+center2s room4 done in 48s params 81542 macs/forward 731488
+center2s r5 step 0 mse 0.3031
+center2s r5 step 1000 mse 0.0223
+center2s r5 step 2000 mse 0.0311
+center2s r5 step 3000 mse 0.0175
+center2s r5 step 4000 mse 0.0133
+center2s r5 step 5000 mse 0.0160
+center2s room5 done in 50s params 81542 macs/forward 731488

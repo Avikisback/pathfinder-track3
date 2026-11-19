@@ -1,0 +1,12 @@
+base / long: 44 files
+  walk_clean     n 22 | ATE 0.599 (still 0.881) origin-ATE 0.727 | RPE 1 s 0.281 m 2.70 deg | attitude 15.0 deg | blind 0.849 (hold 0.891) | 5.91 MB 5.0 ms/s
+  walk_full      n 22 | ATE 0.737 (still 0.881) origin-ATE 0.907 | RPE 1 s 0.362 m 7.20 deg | attitude 38.9 deg | blind 0.846 (hold 0.891) | 6.05 MB 5.0 ms/s
+new / long: 44 files
+  walk_clean     n 22 | ATE 0.602 (still 0.881) origin-ATE 0.730 | RPE 1 s 0.282 m 2.70 deg | attitude 15.0 deg | blind 0.891 (hold 0.891) | 6.01 MB 4.7 ms/s
+  walk_full      n 22 | ATE 0.738 (still 0.881) origin-ATE 0.907 | RPE 1 s 0.363 m 7.20 deg | attitude 38.9 deg | blind 0.892 (hold 0.891) | 6.11 MB 4.6 ms/s
+new / bb: 20 files
+  bb_clean       n 10 | ATE 3.021 (still 3.401) origin-ATE 4.876 | RPE 1 s 3.284 m 65.04 deg | attitude 72.3 deg | blind 5.025 (hold 5.038) | 3.36 MB 4.0 ms/s
+  bb_full        n 10 | ATE 3.262 (still 3.412) origin-ATE 4.819 | RPE 1 s 3.307 m 76.50 deg | attitude 100.0 deg | blind 5.014 (hold 5.021) | 3.75 MB 3.8 ms/s
+base / bb: 20 files
+  bb_clean       n 10 | ATE 3.019 (still 3.401) origin-ATE 4.878 | RPE 1 s 3.285 m 65.04 deg | attitude 72.3 deg | blind 4.991 (hold 5.038) | 3.56 MB 4.3 ms/s
+  bb_full        n 10 | ATE 3.262 (still 3.412) origin-ATE 4.817 | RPE 1 s 3.308 m 76.50 deg | attitude 100.0 deg | blind 5.013 (hold 5.021) | 3.27 MB 4.0 ms/s

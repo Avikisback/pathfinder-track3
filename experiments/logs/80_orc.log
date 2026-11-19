@@ -1,0 +1,100 @@
+MH01 true mean body velocity (IMU axes) [ 0.022 -0.05   0.046]
+MH02 true mean body velocity (IMU axes) [ 0.018 -0.008  0.03 ]
+MH03 true mean body velocity (IMU axes) [ 0.079 -0.206  0.13 ]
+MH04 true mean body velocity (IMU axes) [0.073 0.018 0.108]
+MH05 true mean body velocity (IMU axes) [0.06  0.021 0.091]
+V101 true mean body velocity (IMU axes) [0.055 0.014 0.141]
+V102 true mean body velocity (IMU axes) [ 0.116 -0.105  0.264]
+V103 true mean body velocity (IMU axes) [ 0.027 -0.118  0.051]
+V201 true mean body velocity (IMU axes) [ 0.045 -0.056  0.141]
+V202 true mean body velocity (IMU axes) [ 0.075 -0.016  0.19 ]
+V203 true mean body velocity (IMU axes) [ 0.11  -0.174  0.292]
+gap MH02 0.0027
+gap MH02 0.0038
+gap MH01 0.0891
+gap MH01 0.0042
+gap MH01 0.0042
+gap MH01 0.0039
+gap MH01 0.0038
+gap MH01 0.0208
+gap MH02 0.0037
+gap MH02 0.0288
+gap MH02 0.0218
+gap MH01 0.0204
+gap MH01 0.0274
+gap MH01 0.0038
+gap MH02 0.0027
+gap MH02 0.0024
+gap MH02 0.0023
+gap MH01 0.0028
+gap MH01 0.0029
+gap MH01 0.0036
+0 ('MH02', ('clean', 'delete', 1), 'orc') 25s elapsed 26s
+gap MH02 0.088
+gap MH02 0.0231
+gap MH02 0.0038
+gap MH02 0.0039
+gap MH03 0.0017
+gap MH03 0.002
+gap MH03 0.0027
+gap MH03 0.0017
+gap MH03 0.0018
+gap MH03 0.0222
+gap MH03 0.0156
+gap MH03 0.0868
+gap MH03 0.0029
+gap MH03 0.0138
+gap MH03 0.0028
+gap MH03 0.0029
+gap MH04 0.0019
+gap MH04 0.0018
+gap MH04 0.0024
+gap MH04 0.0029
+gap MH04 0.0021
+gap MH04 0.0231
+gap MH04 0.0164
+gap MH04 0.0036
+30 ('MH04', ('mild', 'zero', 1), 'orc') 6s elapsed 35s
+gap MH04 0.0158
+gap MH04 0.0877
+gap MH04 0.0036
+gap MH04 0.0044
+gap MH05 0.0021
+gap MH05 0.0023
+gap MH05 0.0023
+gap MH05 0.0025
+gap MH05 0.0026
+gap MH05 0.0273
+gap MH05 0.0223
+gap MH05 0.0022
+gap MH05 0.0034
+gap MH05 0.0862
+gap MH05 0.0022
+gap MH05 0.002
+gap V102 0.004
+60 ('V102', ('clean', 'delete', 1), 'orc') 3s elapsed 46s
+gap V102 0.0015
+gap V103 0.0027
+gap V103 0.0028
+gap V103 0.0027
+gap V103 0.0029
+gap V103 0.0029
+gap V103 0.0026
+gap V103 0.0292
+gap V103 0.0228
+gap V103 0.0856
+gap V103 0.0038
+gap V103 0.0026
+gap V103 0.0024
+90 ('V103', ('noisy', 'x', 1), 'orc') 5s elapsed 54s
+120 ('V202', ('longgap', 'x', 1), 'orc') 6s elapsed 63s
+solved 64.51576042175293
+lev2  final clean 2.16 mild 2.30 full 2.30 burst 2.44 steps 2.81 randomwalk 3.01 sine 4.27 hold 2.52 rot 2.95 warmup 2.84 longgap 2.40 noisy 2.53 | known 2.252
+      nocheck clean 2.16 mild 2.30 full 2.30 burst 2.44 steps 2.81 randomwalk 3.10 sine 5.69 hold 2.52 rot 2.96 warmup 2.84 longgap 2.40 noisy 2.53
+      raw clean 2.12 mild 2.19 full 2.27 burst 2.39 steps 2.96 randomwalk 3.59 sine 6.26 hold 2.42 rot 3.02 warmup 2.90 longgap 2.36 noisy 2.47
+      per seq clean MH01 3.91 MH02 4.42 MH03 1.96 MH04 1.94 MH05 2.48 V101 1.58 V102 0.86 V103 1.38 V201 2.12 V202 1.57 V203 1.50 | rpe 0.485
+orc   final clean 2.09 mild 2.24 full 2.25 burst 2.40 steps 2.73 randomwalk 3.01 sine 4.38 hold 2.45 rot 2.94 warmup 2.77 longgap 2.38 noisy 2.46 | known 2.193
+      nocheck clean 2.09 mild 2.24 full 2.25 burst 2.40 steps 2.73 randomwalk 3.08 sine 5.78 hold 2.45 rot 2.95 warmup 2.77 longgap 2.38 noisy 2.46
+      raw clean 1.97 mild 2.10 full 2.20 burst 2.31 steps 2.85 randomwalk 3.54 sine 6.26 hold 2.32 rot 3.01 warmup 2.78 longgap 2.28 noisy 2.36
+      per seq clean MH01 3.90 MH02 4.42 MH03 1.88 MH04 1.71 MH05 2.27 V101 1.63 V102 0.82 V103 1.37 V201 2.09 V202 1.54 V203 1.39 | rpe 0.473
+done

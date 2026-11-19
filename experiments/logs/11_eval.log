@@ -1,0 +1,7 @@
+reference rows (mean/worst over rooms, seeds, gap modes)
+  stationary                         clean ate_se3 1.096/1.250 ate_org 1.238/1.569 rpe_t 0.904/1.122 att_org 9.133/19.707 blind_rel 0.490/0.794
+  stationary                         mild  ate_se3 1.093/1.250 ate_org 1.234/1.573 rpe_t 0.919/1.158 att_org 63.634/96.339 blind_rel 0.490/0.794
+  stationary                         full  ate_se3 1.093/1.250 ate_org 1.234/1.573 rpe_t 0.919/1.158 att_org 60.171/88.414 blind_rel 0.490/0.794
+  baseline                           clean ate_se3 0.987/1.197 ate_org 1.401/1.806 rpe_t 1.000/1.366 att_org 9.140/19.700 blind_rel 0.589/0.918
+  baseline                           mild  ate_se3 1.693/3.652 ate_org 1.940/3.827 rpe_t 1.117/1.482 att_org 63.631/96.339 blind_rel 0.728/1.873
+  baseline                           full  ate_se3 1.706/3.668 ate_org 1.957/3.848 rpe_t 1.123/1.471 att_org 60.164/88.412 blind_rel 0.748/1.925

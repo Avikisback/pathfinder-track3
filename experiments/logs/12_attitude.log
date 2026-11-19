@@ -1,0 +1,58 @@
+  baseline tilt filter               clean att_org 9.133/19.707 tilt 6.574/18.826 rpe_r 6.412/12.769 rpe1_r 0.406/0.487
+  baseline tilt filter               mild  att_org 63.634/96.339 tilt 13.465/29.006 rpe_r 13.836/23.107 rpe1_r 0.807/1.750
+  baseline tilt filter               full  att_org 60.171/88.414 tilt 13.612/29.734 rpe_r 13.839/23.105 rpe1_r 0.807/1.749
+     118 ms per file in Python
+  low-gain tilt kp=0.02              clean att_org 8.962/19.579 tilt 6.320/18.739 rpe_r 6.335/12.734 rpe1_r 0.406/0.488
+  low-gain tilt kp=0.02              mild  att_org 68.169/96.307 tilt 24.464/79.066 rpe_r 13.816/23.044 rpe1_r 0.805/1.749
+  low-gain tilt kp=0.02              full  att_org 65.284/88.183 tilt 24.503/76.252 rpe_r 13.822/23.041 rpe1_r 0.805/1.749
+     124 ms per file in Python
+  gyro only                          clean att_org 8.956/19.655 tilt 6.281/18.812 rpe_r 6.333/12.733 rpe1_r 0.406/0.488
+  gyro only                          mild  att_org 71.420/96.342 tilt 31.132/92.429 rpe_r 13.851/23.045 rpe1_r 0.806/1.749
+  gyro only                          full  att_org 68.815/93.227 tilt 30.981/89.384 rpe_r 13.858/23.030 rpe1_r 0.806/1.748
+     117 ms per file in Python
+  offline no bias fit, gaps decay    clean att_org 9.050/20.188 tilt 6.427/19.392 rpe_r 6.361/12.745 rpe1_r 0.406/0.488
+  offline no bias fit, gaps decay    mild  att_org 71.375/96.610 tilt 31.421/86.541 rpe_r 13.914/22.896 rpe1_r 0.807/1.732
+  offline no bias fit, gaps decay    full  att_org 68.781/89.332 tilt 31.111/83.539 rpe_r 13.920/22.882 rpe1_r 0.808/1.732
+     147 ms per file in Python
+  offline no bias fit, gaps lerp     clean att_org 9.050/20.188 tilt 6.427/19.392 rpe_r 6.361/12.745 rpe1_r 0.406/0.488
+  offline no bias fit, gaps lerp     mild  att_org 57.568/101.860 tilt 43.075/99.153 rpe_r 13.676/22.716 rpe1_r 0.783/1.921
+  offline no bias fit, gaps lerp     full  att_org 60.026/101.270 tilt 42.637/98.869 rpe_r 13.692/22.731 rpe1_r 0.784/1.926
+     118 ms per file in Python
+  offline bias 60 s knots, gaps lerp clean att_org 101.128/142.437 tilt 8.120/23.300 rpe_r 7.263/12.955 rpe1_r 0.411/0.503
+  offline bias 60 s knots, gaps lerp mild  att_org 78.156/152.811 tilt 25.061/63.130 rpe_r 12.928/26.448 rpe1_r 0.685/1.766
+  offline bias 60 s knots, gaps lerp full  att_org 79.968/129.106 tilt 27.905/60.909 rpe_r 13.313/25.754 rpe1_r 0.714/1.875
+     142 ms per file in Python
+  offline bias 30 s knots, gaps lerp clean att_org 83.167/100.196 tilt 9.932/21.069 rpe_r 8.436/14.663 rpe1_r 0.423/0.520
+  offline bias 30 s knots, gaps lerp mild  att_org 79.453/120.850 tilt 25.130/58.159 rpe_r 14.010/28.430 rpe1_r 0.741/1.863
+  offline bias 30 s knots, gaps lerp full  att_org 82.106/124.031 tilt 27.207/64.014 rpe_r 13.871/25.760 rpe1_r 0.749/1.966
+     143 ms per file in Python
+  offline bias 15 s knots, gaps lerp clean att_org 84.355/127.458 tilt 9.836/21.430 rpe_r 8.679/14.714 rpe1_r 0.423/0.509
+  offline bias 15 s knots, gaps lerp mild  att_org 81.457/127.158 tilt 24.087/76.397 rpe_r 13.500/25.097 rpe1_r 0.696/1.809
+  offline bias 15 s knots, gaps lerp full  att_org 80.934/128.129 tilt 28.132/75.122 rpe_r 13.763/22.229 rpe1_r 0.720/1.792
+     139 ms per file in Python
+  offline bias 30 s, gaps decay      clean att_org 83.167/100.196 tilt 9.932/21.069 rpe_r 8.436/14.663 rpe1_r 0.423/0.520
+  offline bias 30 s, gaps decay      mild  att_org 81.056/122.171 tilt 27.460/80.567 rpe_r 14.590/23.356 rpe1_r 0.825/1.800
+  offline bias 30 s, gaps decay      full  att_org 83.939/119.364 tilt 22.102/64.392 rpe_r 14.515/23.599 rpe1_r 0.819/1.937
+     155 ms per file in Python
+  offline bias 30 s + residual 5 s   clean att_org 83.110/100.192 tilt 9.078/21.023 rpe_r 8.447/14.682 rpe1_r 0.423/0.520
+  offline bias 30 s + residual 5 s   mild  att_org 76.991/120.683 tilt 14.813/43.322 rpe_r 13.899/28.550 rpe1_r 0.732/1.791
+  offline bias 30 s + residual 5 s   full  att_org 79.265/119.480 tilt 16.378/45.073 rpe_r 13.722/25.014 rpe1_r 0.739/1.906
+     156 ms per file in Python
+  offline bias 30 s + residual 15 s  clean att_org 83.113/100.194 tilt 9.076/21.023 rpe_r 8.437/14.669 rpe1_r 0.423/0.520
+  offline bias 30 s + residual 15 s  mild  att_org 77.380/120.726 tilt 17.191/51.259 rpe_r 13.978/28.410 rpe1_r 0.739/1.851
+  offline bias 30 s + residual 15 s  full  att_org 79.909/119.490 tilt 19.335/57.613 rpe_r 13.832/25.582 rpe1_r 0.747/1.955
+     165 ms per file in Python
+
+other bias shapes: mean/worst over dev rooms, seeds, gap modes
+  sine  baseline tilt filter                 att_org 65.62/99.52 tilt 15.43/32.71 rpe_r 13.94/23.16 rpe1_r 0.81/1.75
+  sine  low-gain tilt kp=0.02                att_org 71.55/100.44 tilt 29.96/94.63 rpe_r 13.94/23.08 rpe1_r 0.81/1.75
+  sine  offline bias 60 s knots, gaps lerp   att_org 84.73/143.97 tilt 33.94/55.05 rpe_r 13.62/27.86 rpe1_r 0.73/1.92
+  sine  offline bias 30 s knots, gaps lerp   att_org 73.40/119.68 tilt 38.61/64.39 rpe_r 13.67/23.65 rpe1_r 0.73/1.79
+  sine  offline bias 15 s knots, gaps lerp   att_org 89.24/141.31 tilt 31.61/60.46 rpe_r 14.35/24.10 rpe1_r 0.77/1.79
+  sine  offline bias 30 s + residual 15 s    att_org 66.49/118.52 tilt 23.88/44.98 rpe_r 13.57/23.30 rpe1_r 0.72/1.77
+  euroc baseline tilt filter                 att_org 97.72/123.06 tilt 15.06/30.51 rpe_r 14.53/23.88 rpe1_r 0.81/1.78
+  euroc low-gain tilt kp=0.02                att_org 99.52/123.43 tilt 25.29/47.31 rpe_r 14.53/23.86 rpe1_r 0.81/1.78
+  euroc offline bias 60 s knots, gaps lerp   att_org 99.30/133.85 tilt 43.48/93.04 rpe_r 15.76/24.00 rpe1_r 0.86/2.08
+  euroc offline bias 30 s knots, gaps lerp   att_org 90.97/110.60 tilt 36.71/59.79 rpe_r 14.79/22.20 rpe1_r 0.79/2.02
+  euroc offline bias 15 s knots, gaps lerp   att_org 98.68/124.64 tilt 33.69/67.80 rpe_r 15.17/25.11 rpe1_r 0.78/1.78
+  euroc offline bias 30 s + residual 15 s    att_org 86.71/105.24 tilt 22.12/43.97 rpe_r 14.74/22.17 rpe1_r 0.78/2.01

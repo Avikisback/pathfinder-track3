@@ -1,0 +1,34 @@
+
+=== dev EuRoC, unseen environment: 143 files
+-- clean (11 files)
+  stationary ate_se3 3.446/6.879 ate_org 4.415/8.077 rpe_t 0.763/1.188 rpe_r 0.901/2.854 att_org 8.366/21.462 blind_rel 0.334/0.719 ate_se3_pre 3.453/6.956
+  solver     ate_se3 2.267/4.112 ate_org 3.700/7.345 rpe_t 0.258/0.382 rpe_r 0.901/2.854 att_org 8.366/21.462 blind_rel 0.360/0.650 ate_se3_pre 2.209/4.030
+  stack      ate_se3 2.229/4.053 ate_org 3.054/6.865 rpe_t 0.321/0.431 rpe_r 0.901/2.854 att_org 8.366/21.462 blind_rel 0.344/0.671 ate_se3_pre 2.224/4.048
+  stack beats stationary on share of files: {'ate_se3': 1.0, 'ate_org': 0.73, 'rpe_t': 1.0, 'blind_rel': 0.36}
+-- full (66 files)
+  stationary ate_se3 3.439/6.885 ate_org 4.396/8.077 rpe_t 0.793/1.419 rpe_r 3.463/10.637 att_org 33.279/100.462 blind_rel 0.334/0.719 ate_se3_pre 3.448/6.971
+  solver     ate_se3 2.509/4.523 ate_org 4.122/7.602 rpe_t 0.366/0.595 rpe_r 3.463/10.637 att_org 33.279/100.462 blind_rel 0.352/0.723 ate_se3_pre 2.477/4.431
+  stack      ate_se3 2.457/4.586 ate_org 3.475/7.681 rpe_t 0.412/0.711 rpe_r 3.463/10.637 att_org 33.279/100.462 blind_rel 0.342/0.721 ate_se3_pre 2.458/4.548
+  stack beats stationary on share of files: {'ate_se3': 0.94, 'ate_org': 0.76, 'rpe_t': 1.0, 'blind_rel': 0.52}
+-- mild (66 files)
+  stationary ate_se3 3.439/6.885 ate_org 4.396/8.077 rpe_t 0.793/1.419 rpe_r 3.343/10.303 att_org 22.577/92.222 blind_rel 0.334/0.719 ate_se3_pre 3.448/6.971
+  solver     ate_se3 2.420/4.475 ate_org 3.782/7.491 rpe_t 0.345/0.483 rpe_r 3.343/10.303 att_org 22.577/92.222 blind_rel 0.357/0.708 ate_se3_pre 2.385/4.363
+  stack      ate_se3 2.409/4.324 ate_org 3.320/7.422 rpe_t 0.407/0.719 rpe_r 3.343/10.303 att_org 22.577/92.222 blind_rel 0.346/0.715 ate_se3_pre 2.408/4.314
+  stack beats stationary on share of files: {'ate_se3': 0.92, 'ate_org': 0.73, 'rpe_t': 1.0, 'blind_rel': 0.39}
+
+=== dev TUM rooms, unseen room: 65 files
+-- clean (5 files)
+  stationary ate_se3 1.096/1.250 ate_org 1.238/1.569 rpe_t 0.904/1.122 rpe_r 6.367/12.745 att_org 13.721/25.081 blind_rel 0.490/0.794 ate_se3_pre 1.109/1.268
+  solver     ate_se3 0.828/1.212 ate_org 2.257/3.645 rpe_t 0.196/0.266 rpe_r 6.367/12.745 att_org 13.721/25.081 blind_rel 0.555/0.870 ate_se3_pre 0.737/1.006
+  stack      ate_se3 0.601/1.003 ate_org 0.784/1.131 rpe_t 0.416/0.491 rpe_r 6.367/12.745 att_org 13.721/25.081 blind_rel 0.503/0.826 ate_se3_pre 0.593/1.012
+  stack beats stationary on share of files: {'ate_se3': 1.0, 'ate_org': 1.0, 'rpe_t': 1.0, 'blind_rel': 0.0}
+-- full (30 files)
+  stationary ate_se3 1.093/1.250 ate_org 1.234/1.573 rpe_t 0.919/1.158 rpe_r 11.611/20.786 att_org 37.992/78.461 blind_rel 0.490/0.794 ate_se3_pre 1.106/1.268
+  solver     ate_se3 1.052/1.642 ate_org 1.787/2.541 rpe_t 0.365/0.625 rpe_r 11.611/20.786 att_org 37.992/78.461 blind_rel 0.527/1.007 ate_se3_pre 0.974/1.577
+  stack      ate_se3 0.736/1.026 ate_org 0.966/1.149 rpe_t 0.454/0.546 rpe_r 11.611/20.786 att_org 37.992/78.461 blind_rel 0.506/0.875 ate_se3_pre 0.737/1.035
+  stack beats stationary on share of files: {'ate_se3': 1.0, 'ate_org': 0.93, 'rpe_t': 1.0, 'blind_rel': 0.2}
+-- mild (30 files)
+  stationary ate_se3 1.093/1.250 ate_org 1.234/1.573 rpe_t 0.919/1.158 rpe_r 11.682/20.886 att_org 36.198/75.730 blind_rel 0.490/0.794 ate_se3_pre 1.106/1.268
+  solver     ate_se3 0.916/1.331 ate_org 1.594/2.322 rpe_t 0.322/0.485 rpe_r 11.682/20.886 att_org 36.198/75.730 blind_rel 0.525/1.016 ate_se3_pre 0.882/1.297
+  stack      ate_se3 0.725/1.034 ate_org 0.949/1.156 rpe_t 0.448/0.538 rpe_r 11.682/20.886 att_org 36.198/75.730 blind_rel 0.505/0.878 ate_se3_pre 0.726/1.044
+  stack beats stationary on share of files: {'ate_se3': 1.0, 'ate_org': 1.0, 'rpe_t': 1.0, 'blind_rel': 0.2}

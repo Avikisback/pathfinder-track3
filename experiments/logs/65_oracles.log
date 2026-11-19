@@ -1,0 +1,37 @@
+=== A. drag velocity against truth, by octave band, clean rows, true attitude. Band top frequency: [0.002  0.0039 0.0078 0.0156 0.0312 0.0625 0.125  0.25   0.5    1.    ]
+mean gain  [-0.44  0.05  0.2   0.14  0.27  0.32  0.55  1.83  5.94  4.34]
+mean coh   [0.73 0.6  0.58 0.26 0.46 0.33 0.35 0.23 0.06 0.01]
+truth pow  [7.487 6.94  3.578 6.458 5.468 3.995 2.375 0.82  0.201 0.036]
+error pow  [1.93170e+02 8.67412e+02 2.78961e+02 1.82481e+02 1.03398e+02 5.76700e+01
+ 3.12600e+00 7.00000e-01 1.99000e-01 3.60000e-02]
+  MH01  ATE from drag alone with true attitude 5.43 (stationary 4.31), scale 0.01; coh 0.03 0.86 1.00 0.28 0.25 0.00 0.06 0.01 0.02 0.00
+  MH02  ATE from drag alone with true attitude 4.19 (stationary 4.65), scale 0.01; coh 0.75 0.67 0.81 0.11 0.14 0.00 0.00 0.01 0.00 0.00
+  MH03  ATE from drag alone with true attitude 6.76 (stationary 3.58), scale 0.24; coh 1.00 0.80 0.78 0.02 0.64 0.26 0.35 0.32 0.06 0.00
+  MH04  ATE from drag alone with true attitude 4.38 (stationary 6.82), scale 0.30; coh 0.85 nan 0.99 0.08 0.75 0.18 0.29 0.28 0.01 0.03
+  MH05  ATE from drag alone with true attitude 4.63 (stationary 6.88), scale 0.37; coh 1.00 nan 0.89 0.10 0.56 0.29 0.69 0.17 0.00 0.01
+  V101  ATE from drag alone with true attitude 8.18 (stationary 1.85), scale 0.34; coh 0.57 0.05 0.20 0.73 0.33 0.59 0.15 0.05 0.07 0.01
+  V102  ATE from drag alone with true attitude 2.97 (stationary 1.78), scale 0.68; coh 0.05 nan 0.85 0.04 0.83 0.65 0.63 0.60 0.29 0.00
+  V103  ATE from drag alone with true attitude 4.03 (stationary 1.57), scale 0.26; coh 0.99 nan 0.00 0.14 0.16 0.37 0.55 0.44 0.07 0.04
+  V201  ATE from drag alone with true attitude 3.25 (stationary 2.30), scale 0.14; coh 0.83 nan 0.34 0.06 0.50 0.20 0.01 0.12 0.03 0.00
+  V202  ATE from drag alone with true attitude 4.49 (stationary 2.11), scale 0.65; coh 0.99 nan 0.41 0.42 0.81 0.58 0.66 0.41 0.16 0.00
+  V203  ATE from drag alone with true attitude 4.60 (stationary 2.06), scale 0.30; coh 1.00 nan 0.06 0.88 0.06 0.48 0.46 0.12 0.00 0.00
+mean ATE drag alone 4.81 vs stationary 3.45
+
+=== B. solver rerun with the true attitude: raw ATE
+  EuRoC L60 clean      ATE 2.27 worst 3.76 stationary 3.45
+  EuRoC L60 full       ATE 2.27 worst 4.08 stationary 3.45
+  EuRoC L60 sine       ATE 8.37 worst 12.51 stationary 3.45
+  EuRoC L60 randomwalk ATE 4.56 worst 6.79 stationary 3.44
+  EuRoC L15 clean      ATE 2.26 worst 4.36 stationary 3.45
+  EuRoC L15 full       ATE 2.33 worst 4.10 stationary 3.45
+  EuRoC L15 sine       ATE 6.11 worst 9.69 stationary 3.45
+  EuRoC L15 randomwalk ATE 3.50 worst 5.01 stationary 3.44
+  TUM   L60 clean      ATE 2.23 worst 4.08 stationary 1.10
+  TUM   L60 full       ATE 0.89 worst 1.12 stationary 1.10
+  TUM   L60 sine       ATE 4.46 worst 5.16 stationary 1.10
+  TUM   L60 randomwalk ATE 2.97 worst 4.14 stationary 1.09
+  TUM   L15 clean      ATE 0.94 worst 1.46 stationary 1.10
+  TUM   L15 full       ATE 0.86 worst 1.09 stationary 1.10
+  TUM   L15 sine       ATE 1.08 worst 1.22 stationary 1.10
+  TUM   L15 randomwalk ATE 1.24 worst 1.59 stationary 1.09
+done 159s

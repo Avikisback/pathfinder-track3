@@ -1,0 +1,70 @@
+  step 0 loss 1.320 ate 0.758 rpe1 0.740 rpe5 0.768 a 0.40 b 0.30
+  step 500 loss 1.456 ate 0.888 rpe1 0.745 rpe5 0.783 a 0.33 b 0.31
+  step 1000 loss 1.055 ate 0.634 rpe1 0.562 rpe5 0.561 a 0.33 b 0.34
+  step 1500 loss 0.895 ate 0.499 rpe1 0.534 rpe5 0.519 a 0.35 b 0.31
+  step 2000 loss 0.911 ate 0.527 rpe1 0.528 rpe5 0.480 a 0.36 b 0.30
+/mnt/e/clipping-pipeline/xr_track3/experiments/scripts/53_seq3.py:122: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  pickle.dump(dict(rows=rows, S=(Sxy, Sz), a=float(nets[0].a), b=float(nets[0].b)), open(out, "wb"))
+s3 loso fold 0 test ['MH01'] 72s a 0.36 b 0.29
+  step 0 loss 1.484 ate 0.876 rpe1 0.797 rpe5 0.840 a 0.40 b 0.30
+  step 500 loss 1.254 ate 0.736 rpe1 0.678 rpe5 0.715 a 0.32 b 0.33
+  step 1000 loss 1.175 ate 0.717 rpe1 0.600 rpe5 0.634 a 0.32 b 0.39
+  step 1500 loss 0.849 ate 0.437 rpe1 0.561 rpe5 0.528 a 0.33 b 0.37
+  step 2000 loss 0.901 ate 0.491 rpe1 0.555 rpe5 0.530 a 0.34 b 0.36
+s3 loso fold 1 test ['MH02'] 53s a 0.34 b 0.36
+  step 0 loss 1.549 ate 0.897 rpe1 0.854 rpe5 0.902 a 0.40 b 0.30
+  step 500 loss 1.382 ate 0.800 rpe1 0.771 rpe5 0.786 a 0.23 b 0.32
+  step 1000 loss 1.272 ate 0.737 rpe1 0.716 rpe5 0.708 a 0.27 b 0.36
+  step 1500 loss 0.887 ate 0.494 rpe1 0.521 rpe5 0.530 a 0.29 b 0.36
+  step 2000 loss 1.116 ate 0.656 rpe1 0.617 rpe5 0.605 a 0.29 b 0.35
+s3 loso fold 2 test ['MH03'] 52s a 0.29 b 0.35
+  step 0 loss 1.269 ate 0.754 rpe1 0.674 rpe5 0.713 a 0.40 b 0.30
+  step 500 loss 1.562 ate 0.939 rpe1 0.813 rpe5 0.868 a 0.30 b 0.29
+  step 1000 loss 1.088 ate 0.655 rpe1 0.573 rpe5 0.587 a 0.31 b 0.34
+  step 1500 loss 1.052 ate 0.638 rpe1 0.541 rpe5 0.575 a 0.34 b 0.32
+  step 2000 loss 0.960 ate 0.516 rpe1 0.602 rpe5 0.571 a 0.34 b 0.31
+s3 loso fold 3 test ['MH04'] 64s a 0.34 b 0.30
+  step 0 loss 1.376 ate 0.876 rpe1 0.651 rpe5 0.698 a 0.40 b 0.30
+  step 500 loss 1.512 ate 0.881 rpe1 0.824 rpe5 0.874 a 0.27 b 0.28
+  step 1000 loss 1.223 ate 0.750 rpe1 0.629 rpe5 0.636 a 0.31 b 0.34
+  step 1500 loss 1.223 ate 0.679 rpe1 0.734 rpe5 0.709 a 0.37 b 0.33
+  step 2000 loss 0.818 ate 0.445 rpe1 0.503 rpe5 0.484 a 0.39 b 0.31
+s3 loso fold 4 test ['MH05'] 54s a 0.39 b 0.31
+  step 0 loss 1.424 ate 0.775 rpe1 0.863 rpe5 0.868 a 0.40 b 0.30
+  step 500 loss 1.243 ate 0.782 rpe1 0.599 rpe5 0.644 a 0.24 b 0.35
+  step 1000 loss 1.217 ate 0.636 rpe1 0.778 rpe5 0.765 a 0.30 b 0.38
+  step 1500 loss 1.047 ate 0.595 rpe1 0.608 rpe5 0.590 a 0.29 b 0.37
+  step 2000 loss 0.833 ate 0.466 rpe1 0.495 rpe5 0.480 a 0.30 b 0.36
+s3 loso fold 5 test ['V101'] 58s a 0.30 b 0.36
+  step 0 loss 1.390 ate 0.807 rpe1 0.768 rpe5 0.799 a 0.40 b 0.30
+  step 500 loss 1.322 ate 0.779 rpe1 0.720 rpe5 0.732 a 0.24 b 0.32
+  step 1000 loss 1.279 ate 0.713 rpe1 0.755 rpe5 0.751 a 0.27 b 0.36
+  step 1500 loss 1.148 ate 0.630 rpe1 0.698 rpe5 0.679 a 0.29 b 0.33
+  step 2000 loss 0.882 ate 0.466 rpe1 0.561 rpe5 0.539 a 0.29 b 0.31
+s3 loso fold 6 test ['V102'] 40s a 0.28 b 0.31
+  step 0 loss 1.283 ate 0.779 rpe1 0.661 rpe5 0.693 a 0.40 b 0.30
+  step 500 loss 1.148 ate 0.673 rpe1 0.629 rpe5 0.644 a 0.25 b 0.36
+  step 1000 loss 1.255 ate 0.759 rpe1 0.661 rpe5 0.662 a 0.26 b 0.41
+  step 1500 loss 1.080 ate 0.587 rpe1 0.660 rpe5 0.653 a 0.28 b 0.40
+  step 2000 loss 0.881 ate 0.504 rpe1 0.511 rpe5 0.483 a 0.28 b 0.39
+s3 loso fold 7 test ['V103'] 37s a 0.29 b 0.39
+  step 0 loss 1.119 ate 0.686 rpe1 0.562 rpe5 0.607 a 0.40 b 0.30
+  step 500 loss 1.262 ate 0.772 rpe1 0.642 rpe5 0.675 a 0.33 b 0.32
+  step 1000 loss 1.000 ate 0.597 rpe1 0.539 rpe5 0.535 a 0.33 b 0.34
+  step 1500 loss 0.924 ate 0.560 rpe1 0.491 rpe5 0.474 a 0.36 b 0.31
+  step 2000 loss 0.810 ate 0.447 rpe1 0.498 rpe5 0.457 a 0.37 b 0.29
+s3 loso fold 8 test ['V201'] 47s a 0.37 b 0.29
+  step 0 loss 1.361 ate 0.750 rpe1 0.814 rpe5 0.815 a 0.40 b 0.30
+  step 500 loss 1.268 ate 0.742 rpe1 0.699 rpe5 0.704 a 0.23 b 0.35
+  step 1000 loss 0.983 ate 0.579 rpe1 0.540 rpe5 0.534 a 0.27 b 0.40
+  step 1500 loss 0.985 ate 0.543 rpe1 0.599 rpe5 0.567 a 0.28 b 0.39
+  step 2000 loss 0.768 ate 0.414 rpe1 0.484 rpe5 0.446 a 0.29 b 0.39
+s3 loso fold 9 test ['V202'] 73s a 0.29 b 0.38
+  step 0 loss 1.330 ate 0.782 rpe1 0.724 rpe5 0.745 a 0.40 b 0.30
+  step 500 loss 1.293 ate 0.743 rpe1 0.730 rpe5 0.741 a 0.22 b 0.35
+  step 1000 loss 1.258 ate 0.658 rpe1 0.805 rpe5 0.793 a 0.26 b 0.42
+  step 1500 loss 1.045 ate 0.615 rpe1 0.576 rpe5 0.568 a 0.29 b 0.41
+  step 2000 loss 0.793 ate 0.438 rpe1 0.484 rpe5 0.453 a 0.30 b 0.40
+s3 loso fold 10 test ['V203'] 54s a 0.30 b 0.40
+S3_DONE

@@ -1,0 +1,19 @@
+# Datasets, caches and generated outputs stay out of the repository (several GB, and the datasets have their own licences).
+data/
+out/
+submission/
+.venv-wsl/
+experiments/cache/
+experiments/tmp/
+experiments/results/
+experiments/weights/
+experiments/research_scripts/*
+!experiments/research_scripts/scripts/
+__pycache__/
+*.pyc
+
+# Built binaries: build with the command in README.md
+/pathfinder
+/pathfinder.exe
+src/pathfinder
+src/pathfinder.exe

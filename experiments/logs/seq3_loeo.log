@@ -1,0 +1,49 @@
+  step 0 loss 1.474 ate 0.880 rpe1 0.758 rpe5 0.860 a 0.40 b 0.30
+  step 500 loss 1.393 ate 0.759 rpe1 0.843 rpe5 0.850 a 0.25 b 0.23
+  step 1000 loss 1.101 ate 0.588 rpe1 0.694 rpe5 0.664 a 0.23 b 0.29
+  step 1500 loss 0.809 ate 0.434 rpe1 0.518 rpe5 0.466 a 0.25 b 0.30
+  step 2000 loss 0.655 ate 0.324 rpe1 0.470 rpe5 0.387 a 0.22 b 0.30
+  step 0 loss 1.513 ate 0.834 rpe1 0.897 rpe5 0.922 a 0.40 b 0.30
+  step 500 loss 1.492 ate 0.859 rpe1 0.828 rpe5 0.877 a 0.25 b 0.21
+  step 1000 loss 1.038 ate 0.556 rpe1 0.647 rpe5 0.632 a 0.25 b 0.32
+  step 1500 loss 0.866 ate 0.456 rpe1 0.560 rpe5 0.520 a 0.24 b 0.33
+  step 2000 loss 0.766 ate 0.400 rpe1 0.509 rpe5 0.446 a 0.24 b 0.33
+  step 0 loss 1.481 ate 0.885 rpe1 0.763 rpe5 0.856 a 0.40 b 0.30
+  step 500 loss 1.525 ate 0.879 rpe1 0.852 rpe5 0.880 a 0.26 b 0.23
+  step 1000 loss 1.109 ate 0.704 rpe1 0.542 rpe5 0.533 a 0.24 b 0.32
+  step 1500 loss 0.764 ate 0.407 rpe1 0.496 rpe5 0.435 a 0.24 b 0.33
+  step 2000 loss 0.699 ate 0.338 rpe1 0.500 rpe5 0.445 a 0.23 b 0.34
+seq3 loeo fold 0 test ['MH01', 'MH02', 'MH03'] 159s
+  step 0 loss 1.451 ate 0.844 rpe1 0.801 rpe5 0.825 a 0.40 b 0.30
+  step 500 loss 1.309 ate 0.695 rpe1 0.826 rpe5 0.802 a 0.26 b 0.43
+  step 1000 loss 1.215 ate 0.717 rpe1 0.667 rpe5 0.655 a 0.27 b 0.41
+  step 1500 loss 0.582 ate 0.308 rpe1 0.384 rpe5 0.330 a 0.24 b 0.38
+  step 2000 loss 0.679 ate 0.346 rpe1 0.467 rpe5 0.399 a 0.22 b 0.38
+  step 0 loss 1.362 ate 0.778 rpe1 0.773 rpe5 0.788 a 0.40 b 0.30
+  step 500 loss 1.392 ate 0.847 rpe1 0.715 rpe5 0.746 a 0.27 b 0.39
+  step 1000 loss 0.877 ate 0.461 rpe1 0.568 rpe5 0.529 a 0.27 b 0.29
+  step 1500 loss 0.817 ate 0.401 rpe1 0.581 rpe5 0.501 a 0.25 b 0.26
+  step 2000 loss 0.686 ate 0.358 rpe1 0.461 rpe5 0.389 a 0.24 b 0.26
+  step 0 loss 1.227 ate 0.729 rpe1 0.651 rpe5 0.690 a 0.40 b 0.30
+  step 500 loss 1.027 ate 0.584 rpe1 0.596 rpe5 0.579 a 0.27 b 0.42
+  step 1000 loss 1.144 ate 0.609 rpe1 0.726 rpe5 0.688 a 0.26 b 0.37
+  step 1500 loss 0.911 ate 0.487 rpe1 0.586 rpe5 0.524 a 0.24 b 0.34
+  step 2000 loss 0.779 ate 0.405 rpe1 0.519 rpe5 0.456 a 0.23 b 0.34
+seq3 loeo fold 1 test ['V101', 'V102', 'V103'] 149s
+  step 0 loss 1.267 ate 0.720 rpe1 0.715 rpe5 0.759 a 0.40 b 0.30
+  step 500 loss 1.075 ate 0.648 rpe1 0.555 rpe5 0.597 a 0.43 b 0.36
+  step 1000 loss 0.889 ate 0.496 rpe1 0.528 rpe5 0.515 a 0.50 b 0.32
+  step 1500 loss 0.699 ate 0.405 rpe1 0.396 rpe5 0.381 a 0.48 b 0.30
+  step 2000 loss 0.823 ate 0.447 rpe1 0.509 rpe5 0.488 a 0.48 b 0.28
+  step 0 loss 1.376 ate 0.814 rpe1 0.732 rpe5 0.784 a 0.40 b 0.30
+  step 500 loss 1.281 ate 0.799 rpe1 0.631 rpe5 0.669 a 0.45 b 0.37
+  step 1000 loss 0.899 ate 0.499 rpe1 0.527 rpe5 0.549 a 0.47 b 0.32
+  step 1500 loss 0.631 ate 0.360 rpe1 0.363 rpe5 0.359 a 0.44 b 0.29
+  step 2000 loss 0.609 ate 0.307 rpe1 0.421 rpe5 0.367 a 0.43 b 0.29
+  step 0 loss 1.316 ate 0.747 rpe1 0.752 rpe5 0.770 a 0.40 b 0.30
+  step 500 loss 1.241 ate 0.735 rpe1 0.666 rpe5 0.692 a 0.40 b 0.37
+  step 1000 loss 0.857 ate 0.499 rpe1 0.465 rpe5 0.503 a 0.46 b 0.38
+  step 1500 loss 0.903 ate 0.517 rpe1 0.523 rpe5 0.499 a 0.44 b 0.34
+  step 2000 loss 0.813 ate 0.458 rpe1 0.490 rpe5 0.438 a 0.41 b 0.32
+seq3 loeo fold 2 test ['V201', 'V202', 'V203'] 136s
+SEQ_DONE

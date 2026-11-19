@@ -1,0 +1,29 @@
+EuRoC LOEO fold 0 76s params 94627 macs 1740304
+EuRoC LOEO fold 1 39s params 94627 macs 1740304
+EuRoC LOEO fold 2 40s params 94627 macs 1740304
+== EuRoC LOEO
+  no TCN, calib or zero bias         clean att_org_pre 2.986/6.610 tilt_pre 1.380/2.221 rpe_r_pre 0.221/0.470
+  no TCN, calib or zero bias         mild  att_org_pre 17.579/39.382 tilt_pre 2.157/7.195 rpe_r_pre 3.223/10.230
+  no TCN, calib or zero bias         full  att_org_pre 26.170/54.186 tilt_pre 2.409/7.243 rpe_r_pre 3.371/10.303
+  gyro TCN, per 0.5 s                clean att_org_pre 6.325/10.335 tilt_pre 3.704/6.517 rpe_r_pre 1.834/2.421
+  gyro TCN, per 0.5 s                mild  att_org_pre 19.041/39.824 tilt_pre 4.383/8.312 rpe_r_pre 4.046/10.447
+  gyro TCN, per 0.5 s                full  att_org_pre 27.108/54.205 tilt_pre 4.516/8.565 rpe_r_pre 4.151/10.750
+  gyro TCN, slowly smoothed          clean att_org_pre 4.601/9.561 tilt_pre 2.507/8.538 rpe_r_pre 0.294/0.476
+  gyro TCN, slowly smoothed          mild  att_org_pre 18.018/39.553 tilt_pre 3.238/8.714 rpe_r_pre 3.319/10.292
+  gyro TCN, slowly smoothed          full  att_org_pre 25.485/52.831 tilt_pre 3.405/8.866 rpe_r_pre 3.433/10.425
+TUM dev LORO fold 0 30s params 94627 macs 1740304
+TUM dev LORO fold 1 24s params 94627 macs 1740304
+TUM dev LORO fold 2 27s params 94627 macs 1740304
+TUM dev LORO fold 3 28s params 94627 macs 1740304
+TUM dev LORO fold 4 31s params 94627 macs 1740304
+== TUM dev LORO
+  no TCN, calib or zero bias         clean att_org_pre 2.958/4.203 tilt_pre 2.364/4.154 rpe_r_pre 0.804/0.969
+  no TCN, calib or zero bias         mild  att_org_pre 32.343/53.766 tilt_pre 5.715/25.644 rpe_r_pre 9.075/19.082
+  no TCN, calib or zero bias         full  att_org_pre 33.326/56.312 tilt_pre 5.439/22.166 rpe_r_pre 9.060/19.283
+  gyro TCN, per 0.5 s                clean att_org_pre 21.772/43.029 tilt_pre 7.303/9.207 rpe_r_pre 4.392/5.428
+  gyro TCN, per 0.5 s                mild  att_org_pre 50.597/88.877 tilt_pre 8.403/12.355 rpe_r_pre 10.968/20.479
+  gyro TCN, per 0.5 s                full  att_org_pre 51.889/86.141 tilt_pre 8.418/12.455 rpe_r_pre 10.995/20.451
+  gyro TCN, slowly smoothed          clean att_org_pre 16.937/28.965 tilt_pre 3.049/4.852 rpe_r_pre 1.031/1.358
+  gyro TCN, slowly smoothed          mild  att_org_pre 46.762/81.125 tilt_pre 5.039/14.293 rpe_r_pre 9.359/19.586
+  gyro TCN, slowly smoothed          full  att_org_pre 47.950/75.089 tilt_pre 5.049/14.330 rpe_r_pre 9.340/19.739
+TCN_DONE

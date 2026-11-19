@@ -1,0 +1,64 @@
+rest detection on clean and degraded EuRoC and TUM-VI (blocks found, file-level bias error rad/s against ground truth bias)
+MH01 clean: hard 21 blk err [-0.0001 -0.0005  0.0013] first 23.3 | main.cpp err [ 0.0001 -0.0005  0.0014] | grav err [ 0.006  -0.0003 -0.0023] || full: hard 20 blk err [-0.0017 -0.0005  0.0011] first 23.8 | main.cpp err [-0.0015 -0.0003  0.0011] | grav err [ 0.0031 -0.0007 -0.0034]
+MH02 clean: hard 2 blk err [ 0.0004 -0.001   0.0014] first 28.3 | main.cpp err [-0.     -0.0009  0.0012] | grav err [ 0.005  -0.     -0.0015] || full: hard 4 blk err [-0.0018 -0.0005  0.0008] first 26.8 | main.cpp err [-0.0019 -0.001   0.0009] | grav err [ 0.0068  0.0006 -0.0048]
+MH03 clean: hard 5 blk err [ 0.0005 -0.0009  0.001 ] first 10.7 | main.cpp err [ 0.0005 -0.0008  0.001 ] | grav err [ 0.0253 -0.0029 -0.0126] || full: hard 5 blk err [-0.0001 -0.0005  0.0007] first 10.7 | main.cpp err [-0.0001 -0.0005  0.0007] | grav err [ 0.0247 -0.0027 -0.0156]
+MH04 clean: hard 4 blk err [-0.0002 -0.0005  0.0015] first 12.8 | main.cpp err [-0.0001 -0.0008  0.0014] | grav err [ 0.0265  0.0011 -0.01  ] || full: hard 4 blk err [-0.0016 -0.0005  0.0013] first 12.8 | main.cpp err [-0.0014 -0.0006  0.0013] | grav err [ 0.0263 -0.0019 -0.0136]
+MH05 clean: hard 8 blk err [-0.0002 -0.0006  0.001 ] first 0.3 | main.cpp err [-0.0001 -0.0006  0.001 ] | grav err [ 0.0263  0.0007 -0.0097] || full: hard 8 blk err [-0.0004 -0.0009  0.0009] first 0.3 | main.cpp err [-0.0004 -0.0006  0.001 ] | grav err [ 0.0265  0.0005 -0.0115]
+V101 clean: hard 0 blk err None first None | main.cpp err None | grav err [ 0.0266 -0.0018 -0.0084] || full: hard 0 blk err None first None | main.cpp err None | grav err [ 0.0262 -0.0007 -0.0105]
+V102 clean: hard 0 blk err None first None | main.cpp err None | grav err [ 0.0175 -0.0068 -0.0341] || full: hard 0 blk err None first None | main.cpp err None | grav err [ 0.0162 -0.     -0.0378]
+V103 clean: hard 6 blk err [ 0.0002 -0.0023  0.0008] first 0.2 | main.cpp err [ 0.0002 -0.0022  0.0009] | grav err [ 0.0201  0.006  -0.0272] || full: hard 6 blk err [ 0.0001 -0.0022  0.0007] first 0.2 | main.cpp err [ 0.0001 -0.0023  0.0008] | grav err [ 0.0221  0.0059 -0.0225]
+V201 clean: hard 0 blk err None first None | main.cpp err None | grav err [ 0.0272 -0.0002 -0.0076] || full: hard 0 blk err None first None | main.cpp err None | grav err [ 0.0273  0.0008 -0.0088]
+V202 clean: hard 0 blk err None first None | main.cpp err None | grav err [ 0.0191 -0.0227 -0.0274] || full: hard 0 blk err None first None | main.cpp err None | grav err [ 0.0177 -0.0203 -0.0328]
+V203 clean: hard 0 blk err None first None | main.cpp err None | grav err [ 0.016   0.0075 -0.0387] || full: hard 0 blk err None first None | main.cpp err None | grav err [ 0.0183  0.0046 -0.0325]
+1 clean: hard 0 blk err None first None | main.cpp err None | grav err [-0.024  -0.0057  0.0021] || full: hard 0 blk err None first None | main.cpp err None | grav err [-0.0236 -0.009   0.0024]
+2 clean: hard 0 blk err None first None | main.cpp err None | grav err [-0.0528  0.0183 -0.0009] || full: hard 0 blk err None first None | main.cpp err None | grav err [-0.0097  0.0132 -0.0013]
+3 clean: hard 0 blk err None first None | main.cpp err None | grav err [-0.017   0.0013 -0.0006] || full: hard 0 blk err None first None | main.cpp err None | grav err [-0.0222  0.0008 -0.0005]
+4 clean: hard 0 blk err None first None | main.cpp err None | grav err [-0.003   0.0008 -0.0006] || full: hard 0 blk err None first None | main.cpp err None | grav err [-0.0058  0.0011 -0.0003]
+5 clean: hard 0 blk err None first None | main.cpp err None | grav err [-0.0155 -0.0042  0.0008] || full: hard 0 blk err None first None | main.cpp err None | grav err [-0.0155 -0.003   0.0004]
+
+EuRoC (blind tail excluded in _pre columns)
+  main.cpp-style: still test, tilt filter clean att_org_pre 47.855/118.585 tilt_pre 11.830/30.148 rpe_r_pre 1.999/4.188 att_org 48.904/118.977 rpe_r 2.264/4.956
+  main.cpp-style: still test, tilt filter mild  att_org_pre 56.571/134.390 tilt_pre 12.090/26.427 rpe_r_pre 4.871/11.752 att_org 57.770/135.632 rpe_r 4.908/11.471
+  main.cpp-style: still test, tilt filter full  att_org_pre 59.619/132.443 tilt_pre 12.418/25.375 rpe_r_pre 4.944/11.915 att_org 60.684/132.911 rpe_r 4.978/11.631
+  gravity fit (truncated), offline   clean att_org_pre 45.951/116.879 tilt_pre 2.330/6.615 rpe_r_pre 0.890/1.917 att_org 47.360/117.521 rpe_r 1.348/3.316
+  gravity fit (truncated), offline   mild  att_org_pre 49.708/118.587 tilt_pre 2.967/8.164 rpe_r_pre 3.537/10.229 att_org 50.897/117.726 rpe_r 3.654/10.039
+  gravity fit (truncated), offline   full  att_org_pre 53.727/116.755 tilt_pre 3.278/8.152 rpe_r_pre 3.729/10.309 att_org 54.848/115.409 rpe_r 3.829/10.116
+  hardened rest, else zero, offline  clean att_org_pre 37.887/113.845 tilt_pre 7.889/20.262 rpe_r_pre 1.450/3.598 att_org 38.557/113.239 rpe_r 1.852/3.989
+  hardened rest, else zero, offline  mild  att_org_pre 51.029/118.523 tilt_pre 10.241/32.725 rpe_r_pre 5.492/19.073 att_org 51.746/119.422 rpe_r 5.534/18.646
+  hardened rest, else zero, offline  full  att_org_pre 51.280/114.254 tilt_pre 9.792/33.196 rpe_r_pre 5.539/20.408 att_org 52.271/113.515 rpe_r 5.580/19.953
+  hardened rest with ramp, else zero clean att_org_pre 37.880/113.845 tilt_pre 7.887/20.262 rpe_r_pre 1.450/3.598 att_org 38.550/113.239 rpe_r 1.852/3.989
+  hardened rest with ramp, else zero mild  att_org_pre 50.993/118.523 tilt_pre 10.239/32.725 rpe_r_pre 5.492/19.073 att_org 51.706/119.422 rpe_r 5.534/18.646
+  hardened rest with ramp, else zero full  att_org_pre 51.019/114.254 tilt_pre 9.781/33.196 rpe_r_pre 5.536/20.408 att_org 51.996/113.515 rpe_r 5.577/19.953
+  hardened rest, else calib other envs clean att_org_pre 2.614/5.649 tilt_pre 1.289/2.221 rpe_r_pre 0.219/0.470 att_org 3.149/6.058 rpe_r 0.894/2.848
+  hardened rest, else calib other envs mild  att_org_pre 16.980/39.382 tilt_pre 2.062/7.259 rpe_r_pre 3.224/10.229 att_org 17.906/42.220 rpe_r 3.364/10.039
+  hardened rest, else calib other envs full  att_org_pre 21.928/54.186 tilt_pre 2.326/7.353 rpe_r_pre 3.359/10.309 att_org 23.448/58.496 rpe_r 3.484/10.116
+  calib other envs only, offline     clean att_org_pre 2.986/6.610 tilt_pre 1.380/2.221 rpe_r_pre 0.221/0.470 att_org 3.552/6.810 rpe_r 0.894/2.848
+  calib other envs only, offline     mild  att_org_pre 17.579/39.382 tilt_pre 2.157/7.195 rpe_r_pre 3.223/10.230 att_org 18.524/42.220 rpe_r 3.362/10.040
+  calib other envs only, offline     full  att_org_pre 26.170/54.186 tilt_pre 2.409/7.243 rpe_r_pre 3.371/10.303 att_org 27.820/58.496 rpe_r 3.494/10.111
+  true gt bias, offline (oracle bound) clean att_org_pre 1.261/2.263 tilt_pre 1.232/2.210 rpe_r_pre 0.203/0.444 att_org 2.028/5.675 rpe_r 0.888/2.845
+  true gt bias, offline (oracle bound) mild  att_org_pre 17.475/41.751 tilt_pre 1.977/7.233 rpe_r_pre 3.204/10.229 att_org 18.408/44.746 rpe_r 3.347/10.039
+  true gt bias, offline (oracle bound) full  att_org_pre 25.723/56.673 tilt_pre 2.248/7.303 rpe_r_pre 3.363/10.310 att_org 27.358/61.128 rpe_r 3.487/10.118
+
+TUM dev (blind tail excluded in _pre columns)
+  main.cpp-style: still test, tilt filter clean att_org_pre 2.152/2.754 tilt_pre 1.334/2.080 rpe_r_pre 0.992/1.125 att_org 9.133/19.707 rpe_r 6.412/12.769
+  main.cpp-style: still test, tilt filter mild  att_org_pre 57.725/91.592 tilt_pre 9.975/29.456 rpe_r_pre 11.824/20.582 att_org 59.485/96.339 rpe_r 13.872/23.107
+  main.cpp-style: still test, tilt filter full  att_org_pre 55.076/86.173 tilt_pre 10.241/30.189 rpe_r_pre 11.802/20.569 att_org 56.664/86.559 rpe_r 13.850/23.105
+  gravity fit (truncated), offline   clean att_org_pre 9.447/16.646 tilt_pre 5.915/13.896 rpe_r_pre 1.477/3.198 att_org 13.486/26.217 rpe_r 6.556/12.812
+  gravity fit (truncated), offline   mild  att_org_pre 38.366/90.240 tilt_pre 6.568/23.513 rpe_r_pre 9.547/19.054 att_org 41.086/94.176 rpe_r 12.332/20.846
+  gravity fit (truncated), offline   full  att_org_pre 39.657/92.695 tilt_pre 7.117/27.471 rpe_r_pre 9.573/19.027 att_org 42.120/96.142 rpe_r 12.358/20.739
+  hardened rest, else zero, offline  clean att_org_pre 2.958/4.203 tilt_pre 2.364/4.154 rpe_r_pre 0.804/0.969 att_org 9.735/20.893 rpe_r 6.403/12.776
+  hardened rest, else zero, offline  mild  att_org_pre 32.343/53.766 tilt_pre 5.715/25.644 rpe_r_pre 9.075/19.082 att_org 34.690/54.130 rpe_r 11.895/20.738
+  hardened rest, else zero, offline  full  att_org_pre 33.326/56.312 tilt_pre 5.439/22.166 rpe_r_pre 9.060/19.283 att_org 35.459/60.010 rpe_r 11.872/20.699
+  hardened rest with ramp, else zero clean att_org_pre 2.958/4.203 tilt_pre 2.364/4.154 rpe_r_pre 0.804/0.969 att_org 9.735/20.893 rpe_r 6.403/12.776
+  hardened rest with ramp, else zero mild  att_org_pre 32.343/53.766 tilt_pre 5.715/25.644 rpe_r_pre 9.075/19.082 att_org 34.690/54.130 rpe_r 11.895/20.738
+  hardened rest with ramp, else zero full  att_org_pre 33.326/56.312 tilt_pre 5.439/22.166 rpe_r_pre 9.060/19.283 att_org 35.459/60.010 rpe_r 11.872/20.699
+  hardened rest, else calib other envs clean att_org_pre 2.958/4.203 tilt_pre 2.364/4.154 rpe_r_pre 0.804/0.969 att_org 9.735/20.893 rpe_r 6.403/12.776
+  hardened rest, else calib other envs mild  att_org_pre 32.343/53.766 tilt_pre 5.715/25.644 rpe_r_pre 9.075/19.082 att_org 34.690/54.130 rpe_r 11.895/20.738
+  hardened rest, else calib other envs full  att_org_pre 33.326/56.312 tilt_pre 5.439/22.166 rpe_r_pre 9.060/19.283 att_org 35.459/60.010 rpe_r 11.872/20.699
+  calib other envs only, offline     clean att_org_pre 2.958/4.203 tilt_pre 2.364/4.154 rpe_r_pre 0.804/0.969 att_org 9.735/20.893 rpe_r 6.403/12.776
+  calib other envs only, offline     mild  att_org_pre 32.343/53.766 tilt_pre 5.715/25.644 rpe_r_pre 9.075/19.082 att_org 34.690/54.130 rpe_r 11.895/20.738
+  calib other envs only, offline     full  att_org_pre 33.326/56.312 tilt_pre 5.439/22.166 rpe_r_pre 9.060/19.283 att_org 35.459/60.010 rpe_r 11.872/20.699
+  true gt bias, offline (oracle bound) clean att_org_pre 2.958/4.203 tilt_pre 2.364/4.154 rpe_r_pre 0.804/0.969 att_org 9.735/20.893 rpe_r 6.403/12.776
+  true gt bias, offline (oracle bound) mild  att_org_pre 32.343/53.766 tilt_pre 5.715/25.644 rpe_r_pre 9.075/19.082 att_org 34.690/54.130 rpe_r 11.895/20.738
+  true gt bias, offline (oracle bound) full  att_org_pre 33.326/56.312 tilt_pre 5.439/22.166 rpe_r_pre 9.060/19.283 att_org 35.459/60.010 rpe_r 11.872/20.699
+ATT_V2_DONE

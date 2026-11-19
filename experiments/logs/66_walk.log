@@ -1,0 +1,62 @@
+=== A/B direction of travel against the body, truth attitude, per room
+  1     resultant length & mean angle: x: 0.36 @  -97.1 (0.90) y: 0.36 @  172.2 (0.90) z: 0.44 @    4.0 (0.25) | gait PCA vs travel axis: rms 54.1 deg, median 47.2 deg, eigen ratio 3.2
+  2     resultant length & mean angle: x: 0.82 @  -75.9 (0.93) y: 0.82 @ -165.7 (0.93) z: 0.42 @    6.8 (0.08) | gait PCA vs travel axis: rms 53.2 deg, median 48.9 deg, eigen ratio 1.8
+  3     resultant length & mean angle: x: 0.30 @  -36.3 (0.84) y: 0.30 @ -125.7 (0.84) z: 0.87 @   -2.2 (0.06) | gait PCA vs travel axis: rms 54.7 deg, median 48.1 deg, eigen ratio 1.8
+  4     resultant length & mean angle: x: 0.58 @ -128.5 (0.81) y: 0.58 @  141.8 (0.81) z: 0.19 @  -35.3 (0.41) | gait PCA vs travel axis: rms 48.8 deg, median 37.6 deg, eigen ratio 4.5
+  5     resultant length & mean angle: x: 0.31 @  -89.5 (0.83) y: 0.32 @  178.5 (0.83) z: 0.58 @  -12.4 (0.28) | gait PCA vs travel axis: rms 44.6 deg, median 33.3 deg, eigen ratio 2.6
+  MH01  resultant length & mean angle: x: 0.14 @   48.3 (0.55) y: 0.13 @  145.8 (0.59) z: 0.13 @   56.3 (0.59) | gait PCA vs travel axis: rms 51.6 deg, median 46.3 deg, eigen ratio 3.5
+  MH02  resultant length & mean angle: x: 0.16 @   -7.8 (0.62) y: 0.11 @   86.1 (0.66) z: 0.11 @   -3.6 (0.66) | gait PCA vs travel axis: rms 50.5 deg, median 47.6 deg, eigen ratio 3.3
+  MH03  resultant length & mean angle: x: 0.24 @   -2.3 (0.53) y: 0.21 @  133.5 (0.71) z: 0.20 @   45.8 (0.71) | gait PCA vs travel axis: rms 51.4 deg, median 45.5 deg, eigen ratio 2.8
+  MH04  resultant length & mean angle: x: 0.24 @    4.2 (0.63) y: 0.16 @   95.7 (0.76) z: 0.15 @    5.7 (0.76) | gait PCA vs travel axis: rms 54.7 deg, median 50.8 deg, eigen ratio 4.3
+  MH05  resultant length & mean angle: x: 0.19 @   -6.3 (0.67) y: 0.12 @   67.4 (0.78) z: 0.11 @  -23.8 (0.78) | gait PCA vs travel axis: rms 53.7 deg, median 52.9 deg, eigen ratio 4.5
+  V101  resultant length & mean angle: x: 0.44 @   -1.2 (0.58) y: 0.42 @   84.4 (0.61) z: 0.41 @   -5.8 (0.61) | gait PCA vs travel axis: rms 53.1 deg, median 42.5 deg, eigen ratio 2.7
+  V102  resultant length & mean angle: x: 0.35 @   10.5 (0.64) y: 0.34 @  118.7 (0.86) z: 0.34 @   29.9 (0.86) | gait PCA vs travel axis: rms 51.1 deg, median 40.2 deg, eigen ratio 3.8
+  V103  resultant length & mean angle: x: 0.19 @   38.2 (0.47) y: 0.25 @  158.9 (0.77) z: 0.26 @   69.5 (0.77) | gait PCA vs travel axis: rms 52.0 deg, median 42.8 deg, eigen ratio 5.7
+  V201  resultant length & mean angle: x: 0.61 @   22.1 (0.41) y: 0.59 @  112.2 (0.45) z: 0.59 @   22.0 (0.45) | gait PCA vs travel axis: rms 51.3 deg, median 45.7 deg, eigen ratio 3.8
+  V202  resultant length & mean angle: x: 0.34 @  -14.5 (0.55) y: 0.26 @   92.6 (0.77) z: 0.26 @    3.8 (0.77) | gait PCA vs travel axis: rms 55.4 deg, median 52.1 deg, eigen ratio 5.8
+  V203  resultant length & mean angle: x: 0.53 @   26.2 (0.54) y: 0.48 @  126.5 (0.81) z: 0.48 @   36.8 (0.81) | gait PCA vs travel axis: rms 54.3 deg, median 45.9 deg, eigen ratio 7.3
+
+=== C. yaw jump across gaps chosen by compactness
+-- TUM, prior width factor 0.5
+   mild       stat 1.09 base 0.73 solved 0.74 oracle 0.74 | true jump rms 132.9 deg, error after search rms  54.2 deg
+   full       stat 1.09 base 0.75 solved 0.76 oracle 0.73 | true jump rms 115.5 deg, error after search rms  57.1 deg
+   burst      stat 1.10 base 0.73 solved 0.73 oracle 0.72 | true jump rms  70.6 deg, error after search rms  33.2 deg
+   steps      stat 1.09 base 0.97 solved 0.96 oracle 0.95 | true jump rms 131.6 deg, error after search rms  98.7 deg
+   randomwalk stat 1.09 base 0.98 solved 0.98 oracle 0.96 | true jump rms 126.9 deg, error after search rms  76.5 deg
+   sine       stat 1.10 base 0.95 solved 0.95 oracle 0.92 | true jump rms 149.1 deg, error after search rms  68.4 deg
+-- TUM, prior width factor 1.0
+   mild       stat 1.09 base 0.73 solved 0.74 oracle 0.74 | true jump rms 132.9 deg, error after search rms  54.2 deg
+   full       stat 1.09 base 0.75 solved 0.76 oracle 0.73 | true jump rms 115.5 deg, error after search rms  57.3 deg
+   burst      stat 1.10 base 0.73 solved 0.73 oracle 0.72 | true jump rms  70.6 deg, error after search rms  33.2 deg
+   steps      stat 1.09 base 0.97 solved 0.96 oracle 0.95 | true jump rms 131.6 deg, error after search rms  99.2 deg
+   randomwalk stat 1.09 base 0.98 solved 0.97 oracle 0.96 | true jump rms 126.9 deg, error after search rms  75.5 deg
+   sine       stat 1.10 base 0.95 solved 0.95 oracle 0.92 | true jump rms 149.1 deg, error after search rms  67.6 deg
+-- TUM, prior width factor 2.0
+   mild       stat 1.09 base 0.73 solved 0.76 oracle 0.74 | true jump rms 132.9 deg, error after search rms  55.0 deg
+   full       stat 1.09 base 0.75 solved 0.77 oracle 0.73 | true jump rms 115.5 deg, error after search rms  58.3 deg
+   burst      stat 1.10 base 0.73 solved 0.73 oracle 0.72 | true jump rms  70.6 deg, error after search rms  32.0 deg
+   steps      stat 1.09 base 0.97 solved 0.96 oracle 0.95 | true jump rms 131.6 deg, error after search rms  98.7 deg
+   randomwalk stat 1.09 base 0.98 solved 0.98 oracle 0.96 | true jump rms 126.9 deg, error after search rms  74.3 deg
+   sine       stat 1.10 base 0.95 solved 0.95 oracle 0.92 | true jump rms 149.1 deg, error after search rms  67.1 deg
+-- EuRoC, prior width factor 0.5
+   mild       stat 3.44 base 2.62 solved 2.76 oracle 2.61 | true jump rms  20.5 deg, error after search rms  23.9 deg
+   full       stat 3.44 base 2.59 solved 2.72 oracle 2.59 | true jump rms  21.7 deg, error after search rms  26.3 deg
+   burst      stat 3.45 base 2.46 solved 2.65 oracle 2.48 | true jump rms  11.1 deg, error after search rms  15.6 deg
+   steps      stat 3.45 base 2.84 solved 2.88 oracle 2.90 | true jump rms  32.4 deg, error after search rms  40.8 deg
+   randomwalk stat 3.45 base 3.72 solved 3.66 oracle 3.65 | true jump rms  29.7 deg, error after search rms  44.2 deg
+   sine       stat 3.45 base 4.05 solved 3.90 oracle 4.07 | true jump rms  21.5 deg, error after search rms  44.8 deg
+-- EuRoC, prior width factor 1.0
+   mild       stat 3.44 base 2.62 solved 2.83 oracle 2.61 | true jump rms  20.5 deg, error after search rms  28.8 deg
+   full       stat 3.44 base 2.59 solved 2.81 oracle 2.59 | true jump rms  21.7 deg, error after search rms  35.0 deg
+   burst      stat 3.45 base 2.46 solved 2.67 oracle 2.48 | true jump rms  11.1 deg, error after search rms  16.7 deg
+   steps      stat 3.45 base 2.84 solved 2.90 oracle 2.90 | true jump rms  32.4 deg, error after search rms  49.9 deg
+   randomwalk stat 3.45 base 3.72 solved 3.66 oracle 3.65 | true jump rms  29.7 deg, error after search rms  51.9 deg
+   sine       stat 3.45 base 4.05 solved 3.95 oracle 4.07 | true jump rms  21.5 deg, error after search rms  56.9 deg
+-- EuRoC, prior width factor 2.0
+   mild       stat 3.44 base 2.62 solved 2.89 oracle 2.61 | true jump rms  20.5 deg, error after search rms  39.7 deg
+   full       stat 3.44 base 2.59 solved 2.81 oracle 2.59 | true jump rms  21.7 deg, error after search rms  42.8 deg
+   burst      stat 3.45 base 2.46 solved 2.76 oracle 2.48 | true jump rms  11.1 deg, error after search rms  20.3 deg
+   steps      stat 3.45 base 2.84 solved 2.92 oracle 2.90 | true jump rms  32.4 deg, error after search rms  56.5 deg
+   randomwalk stat 3.45 base 3.72 solved 3.69 oracle 3.65 | true jump rms  29.7 deg, error after search rms  57.0 deg
+   sine       stat 3.45 base 4.05 solved 3.96 oracle 4.07 | true jump rms  21.5 deg, error after search rms  64.5 deg
+done 48s

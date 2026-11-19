@@ -1,0 +1,28 @@
+done (5, ('sine', 'x', 1))
+80
+SUMMARY 80 files: worst position diff 0.22 mm, mean ATE cpp 2.0574 py 2.0574, peak memory 3.99 MB, worst 1.79 ms per s of IMU
+v8 / kinds: 128 files
+  euroc_burst    n 11 | ATE 2.481 (still 3.446) origin-ATE 3.327 (4.415) | RPE 1 s 0.392 m (0.763) 2.52 deg (17.9) | attitude 14.4 deg | blind 0.300 (hold 0.334) | 3.80 MB 2.7 ms/s
+  euroc_longgap  n 11 | ATE 2.430 (still 3.446) origin-ATE 3.695 (4.415) | RPE 1 s 0.371 m (0.763) 5.61 deg (17.9) | attitude 34.7 deg | blind 0.289 (hold 0.334) | 3.80 MB 2.4 ms/s
+  euroc_mild     n 11 | ATE 2.334 (still 3.446) origin-ATE 3.332 (4.415) | RPE 1 s 0.342 m (0.763) 3.09 deg (17.9) | attitude 18.8 deg | blind 0.284 (hold 0.334) | 3.80 MB 2.6 ms/s
+  euroc_noisy    n 11 | ATE 2.526 (still 3.446) origin-ATE 3.490 (4.415) | RPE 1 s 0.373 m (0.763) 4.01 deg (17.9) | attitude 21.0 deg | blind 0.287 (hold 0.334) | 3.80 MB 2.5 ms/s
+  euroc_randomwalk n 11 | ATE 3.054 (still 3.443) origin-ATE 4.858 (4.379) | RPE 1 s 0.608 m (0.826) 4.71 deg (18.9) | attitude 41.5 deg | blind 0.302 (hold 0.334) | 3.99 MB 2.6 ms/s
+  euroc_sine     n 11 | ATE 3.505 (still 3.446) origin-ATE 4.749 (4.415) | RPE 1 s 0.733 m (0.763) 4.58 deg (17.9) | attitude 40.2 deg | blind 0.320 (hold 0.334) | 3.61 MB 2.6 ms/s
+  euroc_steps    n 11 | ATE 2.758 (still 3.451) origin-ATE 4.092 (4.410) | RPE 1 s 0.459 m (0.817) 3.13 deg (19.6) | attitude 18.9 deg | blind 0.347 (hold 0.334) | 3.89 MB 2.4 ms/s
+  euroc_warmup   n 11 | ATE 2.823 (still 3.429) origin-ATE 4.471 (4.374) | RPE 1 s 0.536 m (0.817) 3.62 deg (19.5) | attitude 47.7 deg | blind 0.285 (hold 0.334) | 3.99 MB 2.6 ms/s
+  room_burst     n  5 | ATE 0.823 (still 1.096) origin-ATE 1.066 (1.238) | RPE 1 s 0.339 m (0.904) 8.22 deg (60.7) | attitude 37.0 deg | blind 0.507 (hold 0.490) | 3.38 MB 1.3 ms/s
+  room_longgap   n  5 | ATE 0.802 (still 1.096) origin-ATE 1.049 (1.238) | RPE 1 s 0.322 m (0.904) 19.78 deg (60.7) | attitude 59.7 deg | blind 0.494 (hold 0.490) | 3.56 MB 1.2 ms/s
+  room_mild      n  5 | ATE 0.681 (still 1.096) origin-ATE 0.923 (1.238) | RPE 1 s 0.304 m (0.904) 10.81 deg (60.7) | attitude 34.5 deg | blind 0.492 (hold 0.490) | 3.56 MB 1.2 ms/s
+  room_noisy     n  5 | ATE 0.938 (still 1.096) origin-ATE 1.115 (1.238) | RPE 1 s 0.401 m (0.904) 10.31 deg (60.7) | attitude 54.3 deg | blind 0.493 (hold 0.490) | 3.56 MB 1.2 ms/s
+  room_randomwalk n  5 | ATE 0.971 (still 1.095) origin-ATE 1.174 (1.237) | RPE 1 s 0.684 m (0.937) 11.59 deg (61.5) | attitude 57.8 deg | blind 0.490 (hold 0.490) | 3.56 MB 1.2 ms/s
+  room_sine      n  5 | ATE 0.996 (still 1.096) origin-ATE 1.179 (1.238) | RPE 1 s 0.664 m (0.904) 15.91 deg (60.7) | attitude 55.8 deg | blind 0.494 (hold 0.490) | 3.38 MB 1.3 ms/s
+  room_steps     n  5 | ATE 0.951 (still 1.092) origin-ATE 1.271 (1.228) | RPE 1 s 0.521 m (0.933) 18.08 deg (62.4) | attitude 77.4 deg | blind 0.515 (hold 0.490) | 3.38 MB 1.2 ms/s
+  room_warmup    n  5 | ATE 1.035 (still 1.089) origin-ATE 1.281 (1.235) | RPE 1 s 0.599 m (0.933) 10.87 deg (62.1) | attitude 63.7 deg | blind 0.510 (hold 0.490) | 3.56 MB 1.2 ms/s
+v8 / long: 44 files
+  walk_clean     n 22 | ATE 0.599 (still 0.881) origin-ATE 0.727 (1.013) | RPE 1 s 0.281 m (0.702) 2.70 deg (43.2) | attitude 15.0 deg | blind 0.846 (hold 0.891) | 6.25 MB 4.6 ms/s
+  walk_full      n 22 | ATE 0.737 (still 0.881) origin-ATE 0.908 (1.013) | RPE 1 s 0.362 m (0.702) 7.20 deg (43.2) | attitude 38.9 deg | blind 0.834 (hold 0.891) | 5.96 MB 4.6 ms/s
+MH01_full.csv                  179.1s of IMU    0.29 s    1.62 ms/s    4084 KB
+V203_sine.csv                  111.8s of IMU    0.14 s    1.25 ms/s    3072 KB
+mo_MOO02_cal_clean.csv         174.9s of IMU    0.35 s    2.00 ms/s    3896 KB
+room1_full.csv                 136.0s of IMU    0.10 s    0.74 ms/s    3264 KB
+tv_outdoors6_clean.csv        1465.2s of IMU    2.72 s    1.86 ms/s    6396 KB

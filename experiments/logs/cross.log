@@ -1,0 +1,78 @@
+eu2s_loso fold 0 test ['MH01'] done 641s
+eu2s_loeo fold 0 test ['MH01', 'MH02', 'MH03'] done 668s
+eu2sc_loso fold 0 test ['MH01'] done 664s
+tum_loro fold 0 test [1] done 489s
+eu2s_loso fold 0 test ['MH01'] done 493s
+tumc_loro fold 0 test [1] done 535s
+tum_loro fold 1 test [2] done 346s
+eu2s_loso fold 1 test ['MH02'] done 343s
+tumc_loro fold 1 test [2] done 396s
+eu2s_loso fold 2 test ['MH03'] done 19074s
+tum_loro fold 2 test [3] done 19074s
+tumc_loro fold 2 test [3] done 18922s
+eu2s_loso fold 3 test ['MH04'] done 31s
+tum_loro fold 3 test [4] done 31s
+tumc_loro fold 3 test [4] done 30s
+eu2s_loso fold 4 test ['MH05'] done 27s
+tum_loro fold 4 test [5] done 29s
+tum_loro ALL_DONE
+tumc_loro fold 4 test [5] done 25s
+tumc_loro ALL_DONE
+eu2s_loso fold 5 test ['V101'] done 19s
+eu2s_loso fold 6 test ['V102'] done 22s
+eu2s_loeo fold 0 test ['MH01', 'MH02', 'MH03'] done 43s
+eu2sc_loso fold 0 test ['MH01'] done 40s
+eu2s_loso fold 7 test ['V103'] done 25s
+eu2s_loeo fold 1 test ['V101', 'V102', 'V103'] done 31s
+eu2sc_loso fold 1 test ['MH02'] done 28s
+eu2s_loso fold 8 test ['V201'] done 29s
+eu2sc_loso fold 2 test ['MH03'] done 32s
+eu2s_loeo fold 2 test ['V201', 'V202', 'V203'] done 35s
+eu2s_loeo ALL_DONE
+eu2s_loso fold 9 test ['V202'] done 30s
+eu2sc_loso fold 3 test ['MH04'] done 22s
+eu2s_loso fold 10 test ['V203'] done 22s
+eu2s_loso ALL_DONE
+eu2sc_loso fold 4 test ['MH05'] done 18s
+eu2sc_loso fold 5 test ['V101'] done 22s
+eu2s_tum2euroc fold 0 test ['MH01', 'MH02', 'MH03'] done 48s
+eu2s_tum2euroc ALL_DONE
+eu2s_euroc2tum fold 0 test [1, 2, 3] done 40s
+eu2s_euroc2tum ALL_DONE
+eu2sc_loso fold 6 test ['V102'] done 18s
+eu2sc_loso fold 7 test ['V103'] done 17s
+eu2sc_loso fold 8 test ['V201'] done 26s
+xd_tum2euroc fold 0 test ['MH01', 'MH02', 'MH03'] done 55s
+xd_tum2euroc ALL_DONE
+xd_euroc2tum fold 0 test [1, 2, 3] done 48s
+xd_euroc2tum ALL_DONE
+eu2sc_loso fold 9 test ['V202'] done 18s
+eu2sc_loso fold 10 test ['V203'] done 20s
+eu2sc_loso ALL_DONE
+xd_both fold 0 test ['MH01'] done 48s
+eu2sy_loso fold 0 test ['MH01'] done 52s
+xd_both fold 1 test ['MH02'] done 32s
+eu2sy_loso fold 1 test ['MH02'] done 30s
+xd_both fold 2 test ['MH03'] done 24s
+eu2sy_loso fold 2 test ['MH03'] done 24s
+xd_both fold 3 test ['MH04'] done 22s
+eu2sy_loso fold 3 test ['MH04'] done 22s
+xd_both fold 4 test ['MH05'] done 27s
+eu2sy_loso fold 4 test ['MH05'] done 29s
+xd_both fold 5 test ['V101'] done 29s
+eu2sy_loso fold 5 test ['V101'] done 28s
+xd_both fold 6 test ['V102'] done 25s
+eu2sy_loso fold 6 test ['V102'] done 25s
+xd_both fold 7 test ['V103'] done 24s
+eu2sy_loso fold 7 test ['V103'] done 25s
+xd_both fold 8 test ['V201'] done 25s
+eu2sy_loso fold 8 test ['V201'] done 25s
+xd_both fold 9 test ['V202'] done 28s
+eu2sy_loso fold 9 test ['V202'] done 28s
+xd_both fold 10 test ['V203'] done 52s
+eu2sy_loso fold 10 test ['V203'] done 64s
+eu2sy_loso ALL_DONE
+xd_both fold 11 test [1] done 64s
+xd_both fold 12 test [2] done 65s
+xd_both fold 13 test [3] done 51s
+xd_both fold 14 test [4] done 67s

@@ -1,0 +1,31 @@
+  step 0 loss 1.376 ate 0.808 rpe1 0.737 rpe5 0.796 a 0.40 b 0.30
+  step 500 loss 1.753 ate 1.044 rpe1 0.932 rpe5 0.971 a 0.40 b 0.30
+  step 1000 loss 1.187 ate 0.695 rpe1 0.669 rpe5 0.628 a 0.32 b 0.30
+  step 1500 loss 1.174 ate 0.680 rpe1 0.687 rpe5 0.603 a 0.30 b 0.30
+  step 2000 loss 0.807 ate 0.471 rpe1 0.466 rpe5 0.413 a 0.29 b 0.30
+seq loro fold 0 test [1] 46s
+  step 0 loss 1.605 ate 0.962 rpe1 0.822 rpe5 0.926 a 0.40 b 0.30
+  step 500 loss 1.411 ate 0.824 rpe1 0.775 rpe5 0.797 a 0.29 b 0.30
+  step 1000 loss 1.251 ate 0.777 rpe1 0.648 rpe5 0.600 a 0.20 b 0.30
+  step 1500 loss 0.715 ate 0.424 rpe1 0.404 rpe5 0.356 a 0.16 b 0.30
+  step 2000 loss 0.727 ate 0.425 rpe1 0.421 rpe5 0.365 a 0.14 b 0.30
+seq loro fold 1 test [2] 34s
+  step 0 loss 1.767 ate 1.049 rpe1 0.914 rpe5 1.043 a 0.40 b 0.30
+  step 500 loss 1.431 ate 0.827 rpe1 0.799 rpe5 0.815 a 0.30 b 0.30
+  step 1000 loss 1.292 ate 0.754 rpe1 0.734 rpe5 0.682 a 0.21 b 0.30
+  step 1500 loss 0.842 ate 0.502 rpe1 0.479 rpe5 0.403 a 0.18 b 0.30
+  step 2000 loss 0.894 ate 0.511 rpe1 0.541 rpe5 0.449 a 0.17 b 0.30
+seq loro fold 2 test [3] 37s
+  step 0 loss 1.474 ate 0.892 rpe1 0.754 rpe5 0.820 a 0.40 b 0.30
+  step 500 loss 0.989 ate 0.621 rpe1 0.485 rpe5 0.503 a 0.40 b 0.30
+  step 1000 loss 1.025 ate 0.662 rpe1 0.488 rpe5 0.476 a 0.28 b 0.30
+  step 1500 loss 0.678 ate 0.412 rpe1 0.368 rpe5 0.325 a 0.24 b 0.30
+  step 2000 loss 0.703 ate 0.428 rpe1 0.369 rpe5 0.360 a 0.22 b 0.30
+seq loro fold 3 test [4] 52s
+  step 0 loss 1.789 ate 1.010 rpe1 1.014 rpe5 1.087 a 0.40 b 0.30
+  step 500 loss 1.447 ate 0.874 rpe1 0.749 rpe5 0.793 a 0.42 b 0.30
+  step 1000 loss 1.003 ate 0.629 rpe1 0.502 rpe5 0.491 a 0.36 b 0.30
+  step 1500 loss 1.034 ate 0.632 rpe1 0.540 rpe5 0.530 a 0.30 b 0.30
+  step 2000 loss 0.560 ate 0.349 rpe1 0.285 rpe5 0.274 a 0.27 b 0.30
+seq loro fold 4 test [5] 47s
+SEQ_DONE

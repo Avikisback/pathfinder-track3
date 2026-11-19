@@ -1,0 +1,70 @@
+== tum_loro
+  stationary                         clean ate_se3 1.096/1.250 ate_org 1.238/1.569 rpe_t 0.904/1.122 blind_rel 0.490/0.794
+  stationary                         mild  ate_se3 1.093/1.250 ate_org 1.234/1.573 rpe_t 0.919/1.158 blind_rel 0.490/0.794
+  stationary                         full  ate_se3 1.093/1.250 ate_org 1.234/1.573 rpe_t 0.919/1.158 blind_rel 0.490/0.794
+  baseline binary                    clean ate_se3 0.987/1.197 ate_org 1.401/1.806 rpe_t 1.000/1.366 blind_rel 0.589/0.918
+  baseline binary                    mild  ate_se3 1.693/3.652 ate_org 1.940/3.827 rpe_t 1.117/1.482 blind_rel 0.728/1.873
+  baseline binary                    full  ate_se3 1.706/3.668 ate_org 1.957/3.848 rpe_t 1.123/1.471 blind_rel 0.748/1.925
+  linear filter                      clean ate_se3 1.053/1.246 ate_org 1.210/1.572 rpe_t 0.876/1.121 blind_rel 0.495/0.791
+  linear filter                      mild  ate_se3 1.034/1.248 ate_org 1.212/1.575 rpe_t 0.857/1.157 blind_rel 0.491/0.796
+  linear filter                      full  ate_se3 1.034/1.247 ate_org 1.213/1.573 rpe_t 0.856/1.157 blind_rel 0.494/0.798
+   mean gains by band Hz: {0.01: 0.0, 0.02: 0.001, 0.05: 0.002, 0.1: 0.013, 0.2: 0.164, 0.5: 0.092, 1.0: 0.499, 2.0: 0.096, 5.0: 1.987}
+   beats stationary on ate_se3: 1.00
+   beats stationary on ate_org: 0.51
+   beats stationary on rpe_t: 0.92
+== euroc_loso
+  stationary                         clean ate_se3 3.446/6.879 ate_org 4.415/8.077 rpe_t 0.763/1.188 blind_rel 0.334/0.719
+  stationary                         mild  ate_se3 3.439/6.885 ate_org 4.396/8.077 rpe_t 0.793/1.419 blind_rel 0.334/0.719
+  stationary                         full  ate_se3 3.439/6.885 ate_org 4.396/8.077 rpe_t 0.793/1.419 blind_rel 0.334/0.719
+  baseline binary                    clean ate_se3 4.244/6.795 ate_org 5.681/8.182 rpe_t 1.051/1.404 blind_rel 0.930/2.169
+  baseline binary                    mild  ate_se3 4.134/6.763 ate_org 5.590/8.247 rpe_t 1.078/1.530 blind_rel 0.877/1.809
+  baseline binary                    full  ate_se3 4.097/6.735 ate_org 5.599/8.407 rpe_t 1.078/1.529 blind_rel 0.877/1.940
+  linear filter                      clean ate_se3 3.367/6.828 ate_org 4.444/8.092 rpe_t 0.625/1.016 blind_rel 0.476/1.176
+  linear filter                      mild  ate_se3 3.440/6.856 ate_org 4.594/8.105 rpe_t 0.685/1.290 blind_rel 0.471/1.499
+  linear filter                      full  ate_se3 3.480/6.858 ate_org 4.695/10.072 rpe_t 0.695/1.299 blind_rel 0.497/2.334
+   mean gains by band Hz: {0.01: 0.002, 0.02: 0.008, 0.05: 0.029, 0.1: 0.472, 0.2: 0.325, 0.5: 0.332, 1.0: 0.452, 2.0: 0.039, 5.0: 38.855}
+   beats stationary on ate_se3: 0.87
+   beats stationary on ate_org: 0.18
+   beats stationary on rpe_t: 0.90
+== euroc_loeo
+  stationary                         clean ate_se3 3.446/6.879 ate_org 4.415/8.077 rpe_t 0.763/1.188 blind_rel 0.334/0.719
+  stationary                         mild  ate_se3 3.439/6.885 ate_org 4.396/8.077 rpe_t 0.793/1.419 blind_rel 0.334/0.719
+  stationary                         full  ate_se3 3.439/6.885 ate_org 4.396/8.077 rpe_t 0.793/1.419 blind_rel 0.334/0.719
+  baseline binary                    clean ate_se3 4.244/6.795 ate_org 5.681/8.182 rpe_t 1.051/1.404 blind_rel 0.930/2.169
+  baseline binary                    mild  ate_se3 4.134/6.763 ate_org 5.590/8.247 rpe_t 1.078/1.530 blind_rel 0.877/1.809
+  baseline binary                    full  ate_se3 4.097/6.735 ate_org 5.599/8.407 rpe_t 1.078/1.529 blind_rel 0.877/1.940
+  linear filter                      clean ate_se3 3.397/6.865 ate_org 4.521/8.098 rpe_t 0.651/1.189 blind_rel 0.549/1.548
+  linear filter                      mild  ate_se3 3.516/6.874 ate_org 4.732/8.951 rpe_t 0.736/1.419 blind_rel 0.576/2.271
+  linear filter                      full  ate_se3 3.573/6.958 ate_org 4.860/12.793 rpe_t 0.746/1.477 blind_rel 0.638/3.714
+   mean gains by band Hz: {0.01: 0.003, 0.02: 0.014, 0.05: 0.027, 0.1: 0.516, 0.2: 0.2, 0.5: 0.309, 1.0: 0.282, 2.0: 0.065, 5.0: 60.555}
+   beats stationary on ate_se3: 0.76
+   beats stationary on ate_org: 0.16
+   beats stationary on rpe_t: 0.73
+== tum2euroc
+  stationary                         clean ate_se3 3.446/6.879 ate_org 4.415/8.077 rpe_t 0.763/1.188 blind_rel 0.334/0.719
+  stationary                         mild  ate_se3 3.439/6.885 ate_org 4.396/8.077 rpe_t 0.793/1.419 blind_rel 0.334/0.719
+  stationary                         full  ate_se3 3.439/6.885 ate_org 4.396/8.077 rpe_t 0.793/1.419 blind_rel 0.334/0.719
+  baseline binary                    clean ate_se3 4.244/6.795 ate_org 5.681/8.182 rpe_t 1.051/1.404 blind_rel 0.930/2.169
+  baseline binary                    mild  ate_se3 4.134/6.763 ate_org 5.590/8.247 rpe_t 1.078/1.530 blind_rel 0.877/1.809
+  baseline binary                    full  ate_se3 4.097/6.735 ate_org 5.599/8.407 rpe_t 1.078/1.529 blind_rel 0.877/1.940
+  linear filter                      clean ate_se3 3.437/6.873 ate_org 4.415/8.078 rpe_t 0.760/1.185 blind_rel 0.331/0.718
+  linear filter                      mild  ate_se3 3.429/6.880 ate_org 4.399/8.079 rpe_t 0.791/1.416 blind_rel 0.333/0.718
+  linear filter                      full  ate_se3 3.427/6.878 ate_org 4.401/8.079 rpe_t 0.791/1.417 blind_rel 0.334/0.715
+   mean gains by band Hz: {0.01: 0.0, 0.02: 0.002, 0.05: 0.011, 0.1: 0.0, 0.2: 0.0, 0.5: 0.0, 1.0: 0.449, 2.0: 0.0, 5.0: 0.0}
+   beats stationary on ate_se3: 1.00
+   beats stationary on ate_org: 0.36
+   beats stationary on rpe_t: 0.97
+== euroc2tum
+  stationary                         clean ate_se3 1.096/1.250 ate_org 1.238/1.569 rpe_t 0.904/1.122 blind_rel 0.490/0.794
+  stationary                         mild  ate_se3 1.093/1.250 ate_org 1.234/1.573 rpe_t 0.919/1.158 blind_rel 0.490/0.794
+  stationary                         full  ate_se3 1.093/1.250 ate_org 1.234/1.573 rpe_t 0.919/1.158 blind_rel 0.490/0.794
+  baseline binary                    clean ate_se3 0.987/1.197 ate_org 1.401/1.806 rpe_t 1.000/1.366 blind_rel 0.589/0.918
+  baseline binary                    mild  ate_se3 1.693/3.652 ate_org 1.940/3.827 rpe_t 1.117/1.482 blind_rel 0.728/1.873
+  baseline binary                    full  ate_se3 1.706/3.668 ate_org 1.957/3.848 rpe_t 1.123/1.471 blind_rel 0.748/1.925
+  linear filter                      clean ate_se3 1.020/1.206 ate_org 1.472/1.870 rpe_t 0.686/0.980 blind_rel 0.768/1.084
+  linear filter                      mild  ate_se3 1.432/5.623 ate_org 2.202/9.995 rpe_t 0.716/1.289 blind_rel 0.675/1.485
+  linear filter                      full  ate_se3 1.473/6.716 ate_org 2.280/12.010 rpe_t 0.714/1.377 blind_rel 0.678/1.682
+   mean gains by band Hz: {0.01: 0.002, 0.02: 0.026, 0.05: 0.0, 0.1: 0.536, 0.2: 0.231, 0.5: 0.217, 1.0: 0.395, 2.0: 0.0, 5.0: 59.92}
+   beats stationary on ate_se3: 0.62
+   beats stationary on ate_org: 0.38
+   beats stationary on rpe_t: 0.94

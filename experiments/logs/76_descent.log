@@ -1,0 +1,43 @@
+
+=== EuRoC, all degradations  (132 files; drone flagged on 1.00)
+  rotors on at the end in 1.00 of files; truth drop over blind 5 s: median -0.25 m, range -0.59 to -0.01
+  D 0.00 T 3: blind_rel 0.352 (gated 0.352)  blind_abs 2.671  ate 2.786
+  D 0.15 T 2: blind_rel 0.317 (gated 0.317)  blind_abs 2.653  ate 2.786
+  D 0.15 T 3: blind_rel 0.319 (gated 0.319)  blind_abs 2.656  ate 2.786
+  D 0.25 T 2: blind_rel 0.321 (gated 0.321)  blind_abs 2.642  ate 2.785
+  D 0.25 T 3: blind_rel 0.317 (gated 0.317)  blind_abs 2.646  ate 2.786
+  D 0.35 T 2: blind_rel 0.346 (gated 0.346)  blind_abs 2.632  ate 2.785
+  D 0.35 T 3: blind_rel 0.333 (gated 0.333)  blind_abs 2.637  ate 2.785
+
+=== EuRoC, known only  (33 files; drone flagged on 1.00)
+  rotors on at the end in 1.00 of files; truth drop over blind 5 s: median -0.25 m, range -0.59 to -0.01
+  D 0.00 T 3: blind_rel 0.334 (gated 0.334)  blind_abs 2.314  ate 2.296
+  D 0.15 T 2: blind_rel 0.290 (gated 0.290)  blind_abs 2.291  ate 2.295
+  D 0.15 T 3: blind_rel 0.293 (gated 0.293)  blind_abs 2.296  ate 2.295
+  D 0.25 T 2: blind_rel 0.291 (gated 0.291)  blind_abs 2.271  ate 2.295
+  D 0.25 T 3: blind_rel 0.288 (gated 0.288)  blind_abs 2.278  ate 2.295
+  D 0.35 T 2: blind_rel 0.317 (gated 0.317)  blind_abs 2.256  ate 2.294
+  D 0.35 T 3: blind_rel 0.303 (gated 0.303)  blind_abs 2.264  ate 2.294
+
+=== EuRoC, hostile only  (44 files; drone flagged on 1.00)
+  rotors on at the end in 1.00 of files; truth drop over blind 5 s: median -0.25 m, range -0.59 to -0.01
+  D 0.00 T 3: blind_rel 0.378 (gated 0.378)  blind_abs 3.071  ate 3.274
+  D 0.15 T 2: blind_rel 0.348 (gated 0.348)  blind_abs 3.054  ate 3.273
+  D 0.15 T 3: blind_rel 0.349 (gated 0.349)  blind_abs 3.056  ate 3.274
+  D 0.25 T 2: blind_rel 0.353 (gated 0.353)  blind_abs 3.043  ate 3.273
+  D 0.25 T 3: blind_rel 0.349 (gated 0.349)  blind_abs 3.047  ate 3.273
+  D 0.35 T 2: blind_rel 0.376 (gated 0.376)  blind_abs 3.034  ate 3.273
+  D 0.35 T 3: blind_rel 0.364 (gated 0.364)  blind_abs 3.040  ate 3.273
+
+=== EuRoC, robust only  (55 files; drone flagged on 1.00)
+  rotors on at the end in 1.00 of files; truth drop over blind 5 s: median -0.25 m, range -0.59 to -0.01
+  D 0.00 T 3: blind_rel 0.343 (gated 0.343)  blind_abs 2.564  ate 2.691
+  D 0.15 T 2: blind_rel 0.308 (gated 0.308)  blind_abs 2.550  ate 2.690
+  D 0.15 T 3: blind_rel 0.310 (gated 0.310)  blind_abs 2.552  ate 2.690
+  D 0.25 T 2: blind_rel 0.313 (gated 0.313)  blind_abs 2.542  ate 2.690
+  D 0.25 T 3: blind_rel 0.309 (gated 0.309)  blind_abs 2.545  ate 2.690
+  D 0.35 T 2: blind_rel 0.338 (gated 0.338)  blind_abs 2.535  ate 2.690
+  D 0.35 T 3: blind_rel 0.325 (gated 0.325)  blind_abs 2.539  ate 2.690
+
+TUM rooms: drone flagged on 0 of 15 files
+done eu/tum
