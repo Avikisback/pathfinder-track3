@@ -1,0 +1,4 @@
+# Keep LF line endings everywhere: the shell scripts and the Docker build run on Linux.
+* text=auto eol=lf
+*.zip binary
+*.png binary
