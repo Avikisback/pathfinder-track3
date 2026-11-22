@@ -12,7 +12,7 @@ Python file, `src/main.py`, that needs only NumPy (the organisers' FAQ of 17 Nov
 | Submission package (Track 3 bundle) | [`submission/Xeno.zip`](submission/Xeno.zip), unpacked in [`submission/Xeno/`](submission/Xeno/): `estimated_trajectory.txt`, `metadata.json`, `src/main.py`, `src/README.md`, `Dockerfile`, `requirements.txt` |
 | Source code | [`src/main.py`](src/main.py) (the entry), tools in [`tools/`](tools/), experiments in [`experiments/scripts/`](experiments/scripts/) |
 | Presentation | [`docs/VIT_Vellore_Xeno.pdf`](docs/VIT_Vellore_Xeno.pdf) |
-| Demo video | [VIDEO_LINK] |
+| Demo video | [Google Drive, 2:38](https://drive.google.com/file/d/1mskB7X1p1iXZMjdSCOmnPFWecnpA0lzT/view?usp=sharing) |
 | AI disclosure | [`AI_DISCLOSURE.md`](AI_DISCLOSURE.md) |
 | README | this file; how to run: [`src/README.md`](src/README.md) |
 
