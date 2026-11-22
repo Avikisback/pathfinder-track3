@@ -1,0 +1,14 @@
+{
+  "input": "MH01_sw.csv",
+  "imu_rows": 35629,
+  "imu_seconds": 184.095,
+  "runtime_seconds": 1.324,
+  "runtime_ms_per_imu_second": 7.19,
+  "peak_heap_mb": 4.832,
+  "peak_heap_note": "tracemalloc peak of the estimation itself (after Python and NumPy are loaded)",
+  "peak_process_rss_mb": 48.8,
+  "threads": 1,
+  "python": "3.12.3",
+  "numpy": "1.26.4",
+  "machine": "Linux 6.6.87.2-microsoft-standard-WSL2, x86_64"
+}

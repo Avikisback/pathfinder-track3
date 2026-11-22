@@ -4,6 +4,21 @@ Our entry for the Samsung XR Hackathon 2026, Track 3. It reads an IMU CSV (EuRoC
 every input row, including the rows of the 5 s blind window at the end. No network, no learned weights: one standalone
 Python file, `src/main.py`, that needs only NumPy (the organisers' FAQ of 17 Nov asks for Python and a `main.py`).
 
+## Submission
+
+| Item | Where |
+|---|---|
+| Team | Xeno · Vellore Institute of Technology, Vellore · Aviral Malik (solo) |
+| Submission package (Track 3 bundle) | [`submission/Xeno.zip`](submission/Xeno.zip), unpacked in [`submission/Xeno/`](submission/Xeno/): `estimated_trajectory.txt`, `metadata.json`, `src/main.py`, `src/README.md`, `Dockerfile`, `requirements.txt` |
+| Source code | [`src/main.py`](src/main.py) (the entry), tools in [`tools/`](tools/), experiments in [`experiments/scripts/`](experiments/scripts/) |
+| Presentation | [`docs/VIT_Vellore_Xeno.pdf`](docs/VIT_Vellore_Xeno.pdf) |
+| Demo video | [VIDEO_LINK] |
+| AI disclosure | [`AI_DISCLOSURE.md`](AI_DISCLOSURE.md) |
+| README | this file; how to run: [`src/README.md`](src/README.md) |
+
+The bundle's `estimated_trajectory.txt` is for EuRoC MH01 degraded with the organisers' script (seed 42); no
+evaluation file was distributed, and the organisers run `main.py` on their own hidden data.
+
 ## Run it
 
 ```bash

@@ -1,7 +1,9 @@
 # Datasets, caches and generated outputs stay out of the repository (several GB, and the datasets have their own licences).
 data/
 out/
-submission/
+submission/*
+!submission/Xeno.zip
+!submission/Xeno/
 .venv-wsl/
 experiments/cache/
 experiments/tmp/
