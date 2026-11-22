@@ -168,7 +168,7 @@ the FAQ measures at the heap level, which is the first column.
 - **True turn across every dropout** (an oracle). No help (rooms 0.68 to 0.78 m): what a gap costs is the velocity lost
   inside it, not the heading.
 - **Homing or centre-seeking blind tail, restoring the drone's mean forward speed, a per-file walking-direction axis.**
-  All rejected with numbers in `research_notes/`.
+  All rejected with numbers in `docs/experiments.md` (the full experiment log).
 
 ## Known weaknesses
 
