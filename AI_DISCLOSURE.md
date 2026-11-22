@@ -11,8 +11,18 @@ Team Xeno (Aviral Malik, Vellore Institute of Technology, Vellore), Samsung XR H
 
 ## What the author did
 
-Aviral Malik chose the track, set the direction and the constraints, decided which results and changes to keep, checked
-the outputs, ran the demo and recorded the video.
+Aviral Malik led the project and made its decisions; the AI tools worked under his direction.
+
+- **Problem and rules.** Chose Track 3, collected the organisers' material (brief, FAQ, degradation script and the
+  submission template) and kept the entry to their rules, including the switch to a Python-only `main.py` after the
+  FAQ of 17 November.
+- **Direction.** Set the goals for each round of work (accuracy on the official degradation, memory and runtime limits,
+  robustness to malformed input) and decided which results and changes went into the entry.
+- **Independent review.** Brought in a second AI tool (Codex) as an outside reviewer of the code, and had every finding
+  re-tested before anything was changed.
+- **Checking.** Reviewed the presentation slide by slide and asked for corrections (names, diagram, layout, theme,
+  consistency of the numbers), ran the entry and its checks himself, and confirmed the outputs.
+- **Delivery.** Prepared the submission (repository, package, presentation), ran the live demo and recorded the video.
 
 ## AI inside the submission
 
